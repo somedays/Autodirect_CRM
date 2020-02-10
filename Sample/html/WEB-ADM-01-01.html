@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>사용자 관리 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">사용자 관리</h1>
+					<div class="cellR btn_area">
+						<a href="#" class="btnS styA pd1">사용자 추가</a>
+						<!-- search_box 영역이 닫히는 경우 open 클래스 삭제 -->
+						<a href="#search_box" class="btn_cm btn_view3 open"><span class="blind">다음보기</span></a>
+					</div>
+				</div><!-- //sub_tit -->
+
+				<form action="" method="post">
+					<fieldset>
+						<!-- search_box -->
+						<div class="split search_box" id="search_box">
+							<div class="cell">
+								<table class="tbl col3"><!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+									<colgroup>
+										<col style="width:1%;"/>
+										<col style="width:auto;" />
+										<col style="width:1%;"/>
+										<col style="width:26%;"/>
+										<col style="width:1%;"/>
+										<col style="width:26%;"/>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label class="tit_fld" for="lab_belong">소속</label></th>
+											<td>
+												<select class="select" id="lab_belong">
+													<option>---- 선택 ----</option>
+												</select>
+											</td>
+											<th><label class="tit_fld" for="lab_team">팀/부서</label></th>
+											<td>
+												<select class="select" id="lab_team">
+													<option>---- 선택 ----</option>
+												</select>
+											</td>
+											<th><label class="tit_fld" for="lab_store_name">매장 명</label></th>
+											<td>
+												<input type="text" class="inp" id="lab_store_name" />
+											</td>
+										</tr>
+										<tr>
+											<th><label class="tit_fld" for="lab_name">이름</label></th>
+											<td>
+												<input type="text" class="inp" id="lab_name" />
+											</td>
+											<th><label class="tit_fld" for="lab_state">상태</label></th>
+											<td>
+												<select class="select" id="lab_state">
+													<option>---- 선택 ----</option>
+												</select>
+											</td>
+											<td colspan="2">&nbsp;</td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- //cell -->
+							<div class="cellR">
+								<button type="button" class="btnS styE pd1">조회</button>
+							</div><!-- //cellR -->
+						</div>
+						<!--//search_box -->
+					</fieldset>
+				</form>
+				
+				<!-- sheet_table -->
+				<div class="tbl_sheet">
+					<!-- table_col -->
+					<div class="tbl_col">
+					    <table class="tbl">
+					        <colgroup>
+					            <col style="width:4%;">
+					            <col style="width:7%;">
+					            <col style="width:9%;">
+					            <col style="width:7%;">
+					            <col style="width:9%;">
+					            <col style="width:6%;">
+					            <col style="width:6%;">
+					            <col style="width:6%;">
+					            <col style="width:9%;">
+					            <col style="width:10%;">
+					            <col style="width:auto;">
+					            <col style="width:6%;">
+					        </colgroup>
+					        <thead>
+					            <tr>
+					                <th scope="col">No.</th>
+					                <th scope="col">소속</th>
+					                <th scope="col">아이디</th>
+					                <th scope="col">이름</th>
+					                <th scope="col">팀/부서/매장</th>
+					                <th scope="col">직위</th>
+					                <th scope="col">직책</th>
+					                <th scope="col">성별</th>
+					                <th scope="col">생년월일</th>
+					                <th scope="col">연락처</th>
+					                <th scope="col">E-mail</th>
+					                <th scope="col">상태</th>
+					            </tr>
+				        	</thead>
+					        <tbody>
+					        	<!-- 상태가 임시인경우 check_disabled 클래스 추가 -->
+					            <tr class="check_disabled">
+					                <td>-</td>
+					                <td>임차인</td>
+					                <td>TS0001</td>
+					                <td>홍길동</td>
+					                <td>매장 명</td>
+					                <td>책임자</td>
+					                <td>-</td>
+					                <td>-</td>
+					                <td>-</td>
+					                <td>010-0000-0000</td>
+					                <td>mail@mail.com</td>
+					                <td>임시</td>
+					            </tr>
+					            <!-- //상태가 임시인경우 check_disabled 클래스 추가 -->
+					            <tr>
+					                <td>1</td>
+					                <td>관리 회사</td>
+					                <td>aaa113</td>
+					                <td><a href="#" class="alink">이길동</a></td>
+					                <td>에이콘 관리</td>
+					                <td>과장</td>
+					                <td>팀장</td>
+					                <td>남</td>
+					                <td>1967-05-04</td>
+					                <td>010-0000-0000</td>
+					                <td><a href="#" class="alink">mail@mail.com</a></td>
+					                <td>휴직</td>
+					            </tr>
+					            <tr>
+					                <td>1</td>
+					                <td>관리 회사</td>
+					                <td>aaa113</td>
+					                <td><a href="#" class="alink">이길동</a></td>
+					                <td>에이콘 관리</td>
+					                <td>과장</td>
+					                <td>팀장</td>
+					                <td>남</td>
+					                <td>1967-05-04</td>
+					                <td>010-0000-0000</td>
+					                <td><a href="#" class="alink">mail@mail.com</a></td>
+					                <td>재직</td>
+					            </tr>
+					            <tr>
+					                <td>1</td>
+					                <td>관리 회사</td>
+					                <td>aaa113</td>
+					                <td><a href="#" class="alink">이길동</a></td>
+					                <td>에이콘 관리</td>
+					                <td>과장</td>
+					                <td>팀장</td>
+					                <td>남</td>
+					                <td>1967-05-04</td>
+					                <td>010-0000-0000</td>
+					                <td><a href="#" class="alink">mail@mail.com</a></td>
+					                <td>퇴직</td>
+					            </tr>
+					        </tbody>
+					    </table>
+					</div>
+					<!-- //table_col -->
+				</div>
+				<!-- //sheet_table -->
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

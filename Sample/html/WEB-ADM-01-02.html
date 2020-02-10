@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>사용자 관리 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">사용자 등록</h1>
+				</div><!-- //sub_tit -->
+
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+										<col style="width:34%;" />
+										<col style="width:20%;" />
+										<col style="width:34%;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label for="lab_c_type">소속 구분</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<select class="select" id="lab_c_type" style="width:38.7%">
+													<option>임직원</option>
+												</select>
+												<!-- error인경우 -->
+												<div class="box_error" style="width:38.7%">
+													<p class="ico_cm ico_imp"><span class="txt">소속구분을 선택해주세요.</span></p>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_user_id">사용자ID</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<div class="split box_nowrap" style="width:38.7%">
+													<div class="cell"><input type="text" class="inp" id="lab_user_id" placeholder="사용자ID" /></div>
+													<div class="cell"><a href="#" class="btnM styC">중복확인</a></div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_user_name">이름</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<input type="text" class="inp" style="width:38.7%" id="lab_user_name" placeholder="이름"/>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_pw">비밀번호</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td><input type="password" class="inp w100" id="lab_pw" placeholder="비밀번호" /></td>
+											<th><label for="lab_pw_re">비밀번호 확인</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td><input type="password" class="inp w100" id="lab_pw_re" placeholder="비밀번호 확인" /></td>
+										</tr>
+										<tr>
+											<th><label for="lab_depart">부서</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<select class="select" id="lab_depart" style="width:38.7%">
+													<option>선택</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_store2">매장</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<!-- popup_layer -->
+												<div class="popup pl_small" style="width:38.7%">
+													<div class="inp_area w100">
+														<input type="text" class="inp" id="lab_store2" placeholder="Search" />
+														<a href="#" class="btn_cm btn_search"><span class="blind">검색</span></a>
+													</div>
+													<div class="inner">
+														<h1 class="tit_deps1">매장선택</h1>
+														<div w3-include-html="../popup/popup_chklist.html"></div>
+													</div><!-- //inner -->
+												</div>
+												<!-- //popup_layer -->
+												<ul class="list_str_box">
+													<li>
+														<span class="txt">나이키</span>
+														<a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+													</li>
+													<li>
+														<span class="txt">나이키</span>
+														<a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+													</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_spot">직위</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<select class="select w100" id="lab_spot">
+													<option>선택</option>
+												</select>
+											</td>
+											<th><label for="lab_position">직책</label></th>
+											<td>
+												<select class="select w100" id="lab_position">
+													<option>선택</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th>성별<strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="fld">
+													<span class="chk_area"><input type="radio" class="rd" name="rd_sex" id="rd_sex1" /><label for="rd_sex1">남</label></span>
+													<span class="chk_area"><input type="radio" class="rd" name="rd_sex" id="rd_sex2" /><label for="rd_sex2">여</label></span>
+												</div>
+											</td>
+											<th><label for="lab_date_birth">생년월일</label></th>
+											<td>
+												<div class="inp_area w100">
+													<input type="text" class="inp" id="lab_date_birth"/>
+													<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_tel">연락처</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="split tel_area">
+													<div class="cell w30">
+														<select class="select" title="연락처 첫번째자리" id="lab_tel">
+															<option>선택</option>
+															<option>010</option>
+														</select>
+													</div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w35"><input type="text" class="inp" title="연락처 중간자리" /></div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w35"><input type="text" class="inp" title="연락처 끝자리" /></div>
+												</div>
+											</td>
+											<th><label for="lab_hp">휴대전화</label></th>
+											<td>
+												<div class="split tel_area">
+													<div class="cell w30">
+														<select class="select" title="휴대전화 첫번째자리" id="lab_hp">
+															<option>선택</option>
+														</select>
+													</div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w35"><input type="text" class="inp" title="휴대전화 중간자리" /></div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w35"><input type="text" class="inp" title="휴대전화 끝자리" /></div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_email">이메일</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<input type="text" class="inp w25" title="이메일 계정 ID" placeholder="이메일 ID" id="lab_email" /> @
+												<input type="text" class="inp w25 unit_mr" title="이메일 주소 입력" />
+												<select class="select w30" title="이메일 주소">
+													<option>직접입력</option>
+													<option>naver.com</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th class="vt"><label for="lab_addr">주소</label></th>
+											<td colspan="3">
+												<div class="tbl_group">
+													<div class="inp_area w25">
+														<input type="text" class="inp" title="우편번호입력" placeholder="우편번호" id="lab_addr" />
+														<a href="#" class="btn_cm btn_search"><span class="blind">검색</span></a>
+													</div>
+													<div class="unit_ml">
+														<ul class="list_str_box">
+															<li>
+																<span class="txt">21996  인천 연수구 송도동</span>
+																<a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="tbl_group">
+													<input type="text" class="inp w100 tbl_group" title="상세주소 입력" placeholder="상세주소 입력" />
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_state">상태</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<select class="select" id="lab_state" style="width:38.7%">
+													<option>선택</option>
+												</select>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="btn_area">
+							<button type="submit" class="btnL styA">저장</button>
+							<button type="button" class="btnL styB">취소</button>
+						</div>
+						<!-- view화면인경우
+						<div class="btn_area">
+							<button type="submit" class="btnL styA">수정</button>
+                            <a href="#" class="btnL styB">사용자 삭제</a>   
+                            <a href="#" class="btnL styB">목록</a>  
+						</div>
+						 -->
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

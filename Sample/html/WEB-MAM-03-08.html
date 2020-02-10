@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>쿠폰 등록 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">쿠폰 등록</h1>
+				</div><!-- //sub_tit -->
+				
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+										<col style="width:34%;" />
+										<col style="width:20%;" />
+										<col style="width:34%;" />
+									</colgroup>
+									<tbody>
+                                        <tr>
+                                            <th>카테고리<strong class="txt_ess">* 필수입력</strong></th>
+                                            <td colspan="3">
+                                                <div class="fld">
+                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_cate" id="chk_cate1" /><label for="chk_cate1">먹을거</label></span>
+                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_cate" id="chk_cate2" /><label for="chk_cate2">입을거</label></span>
+                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_cate" id="chk_cate3" /><label for="chk_cate3">살거</label></span>
+                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_cate" id="chk_cate4" /><label for="chk_cate4">즐길거</label></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>쿠폰종류<strong class="txt_ess">* 필수입력</strong></th>
+                                            <td colspan="3">
+                                                <div class="fld tbl_group">
+                                                    <span class="chk_area">
+                                                        <input type="radio" class="rd" name="rd_cptype" id="rd_cptype1" /><label for="rd_cptype1" class="unit_tmr">% 할인</label>
+                                                    </span>
+                                                    <span class="chk_area">
+                                                        <input type="radio" class="rd" name="rd_cptype" id="rd_cptype2" /><label for="rd_cptype2" class="unit_tmr">금액 할인</label>
+                                                    </span>
+                                                    <span class="chk_area">
+                                                        <input type="radio" class="rd" name="rd_cptype" id="rd_cptype3" /><label for="rd_cptype3" class="unit_tmr">교환권</label>
+                                                    </span>
+                                                    <span class="chk_area">
+                                                        <input type="radio" class="rd" name="rd_cptype" id="rd_cptype4" /><label for="rd_cptype4" class="unit_tmr">1+1</label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>인증방식<strong class="txt_ess">* 필수입력</strong></th>
+                                            <td colspan="3">
+                                                <div class="fld tbl_group">
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_method" id="rd_method1" /><label for="rd_method1">바코드</label></span>
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_method" id="rd_method2" /><label for="rd_method2">PIN번호</label></span>
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_method" id="rd_method3" /><label for="rd_method3">버튼</label></span>
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_method" id="rd_method4" /><label for="rd_method4">이미지</label></span>
+                                                </div>
+                                                <div class="tbl_group marT2">
+                                                    <div w3-include-html="../include/cm_filebox.html"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+										<tr>
+											<th><label for="lab_coupon_name">쿠폰명</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<input type="text" class="inp w100" id="lab_coupon_name" placeholder="할인율을 입력해주세요. (한글 25자까지 입력가능)" />
+											</td>
+										</tr>
+                                        <tr>
+                                            <th><label for="lab_coupon_con">사용조건</label><strong class="txt_ess">* 필수입력</strong></th>
+                                            <td colspan="3">
+                                                <input type="text" class="inp w100" id="lab_coupon_con" placeholder="한글 40자 이내로 입력" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>쿠폰 발행대상</th>
+                                            <td colspan="3">
+                                                <a href="#" class="btnM styC pd1">쿠폰 발행대상 등록</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>수량제한<strong class="txt_ess">* 필수입력</strong></th>
+                                            <td colspan="3">
+                                                <div class="fld">
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_qu" id="rd_qu1" /><label for="rd_qu1">제한없음</label></span>
+                                                    <span class="chk_area">
+                                                        <input type="radio" class="rd" name="rd_qu" id="rd_qu2" /><label for="rd_qu2">사용수 제한</label>
+                                                        <input type="text" class="inp w20 unit_tml unit_tmr" title="사용 제한 건수" />건 이하
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>발급제한<strong class="txt_ess">* 필수입력</strong></th>
+                                            <td colspan="3">
+                                                <div class="fld">
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_iss" id="rd_iss1" /><label for="rd_iss1">재사용 불가(1회 사용가능)</label></span>
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_iss" id="rd_iss2" /><label for="rd_iss2">재사용 가능(1일 1회 한정)</label></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+										<tr>
+											<th><label for="lab_use_date">이용안내</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<textarea rows="4" cols="10" placeholder="내용을 입력해 주세요" class="textarea" id="lab_use_date"></textarea>
+											</td>
+										</tr>
+                                        <tr>
+                                            <th>오늘의 쿠폰</th>
+                                            <td>
+                                                <div class="split img_modify tbl_group">
+                                                    <div class="cell w10">
+                                                        <div class="img"><img src="../images/index/temp/temp_img_logo.jpg" /></div>
+                                                    </div>
+                                                    <div class="cell btn_area vb">
+                                                        <ul class="list_img_info">
+                                                            <li>메인페이지 오늘의 쿠폰에서 노출될 썸네일입니다.</li>
+                                                            <li>이미지 크기 : 500px * 400px / 이미지 종류 : jpg, png, gif</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tbl_group">
+                                                    <div w3-include-html="../include/cm_filebox.html"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="btn_area">
+							<button type="button" class="btnL styA">저장</button>
+							<button type="button" class="btnL styB">취소</button>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>고객 주차 쿠폰 관리 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">고객 주차 쿠폰 관리</h1>
+				</div><!-- //sub_tit -->
+
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+										<col style="width:87%;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label for="lab_coupon">고객주차 쿠폰</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<input type="text" class="inp w30" id="lab_coupon" />
+												<span class="txt_unit unit_tml list_dot_caution">‘주차쿠폰 정보’ 항목에서 원하는 주차쿠폰의 종류를 찾아 해당코드를 입력해주세요.</span>
+											</td>
+										</tr>
+										<tr>
+											<th>주차쿠폰 정보</th>
+											<td>
+												<!-- tbl_inner -->
+												<div class="tbl_col tbl_inner">
+												    <table class="tbl">
+												        <colgroup>
+												            <col style="width:auto;">
+												            <col style="width:50%;">
+												        </colgroup>
+												        <thead>
+												            <tr>
+												                <th scope="col">종류</th>
+												                <th scope="col">코드</th>
+												            </tr>
+												        </thead>
+												        <tbody>
+												            <tr>
+												                <td>1 시간 무료</td>
+												                <td>FREE1</td>
+												            </tr>
+												            <tr>
+												                <td>2 시간 무료</td>
+												                <td>FREE2</td>
+												            </tr>
+												            <tr>
+												                <td>5 시간 무료</td>
+												                <td>FREE5</td>
+												            </tr>
+												            <tr>
+												                <td>종일 무료</td>
+												                <td>FREEA</td>
+												            </tr>
+												        </tbody>
+												    </table>
+												</div>
+												<!-- //tbl_inner -->
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="btn_area">
+							<button type="submit" class="btnL styA">저장</button>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

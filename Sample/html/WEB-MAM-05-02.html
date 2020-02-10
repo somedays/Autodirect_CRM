@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>전체 광고 요청 등록 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">전체 광고 요청 등록</h1>
+				</div><!-- //sub_tit -->
+				
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+										<col style="width:32%;" />
+										<col style="width:21%;" />
+										<col style="width:32%;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>종류<strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<div class="fld img_chk">
+													<span class="chk_area">
+                                                        <input type="radio" class="rd" name="rd_item" id="rd_item1" />
+                                                        <label for="rd_item1">로테이팅 전광판 : LED<img src="../images/index/img_ad01.jpg" alt="로테이팅 전광판 : LED" /></label>
+                                                    </span>
+													<span class="chk_area">
+                                                        <input type="radio" class="rd" name="rd_item" id="rd_item2" />
+                                                        <label for="rd_item2">스크롤링전동식와이드칼라<img src="../images/index/img_ad02.jpg" alt="스크롤링전동식와이드칼라" /></label>
+                                                    </span>
+													<span class="chk_area">
+                                                        <input type="radio" class="rd" name="rd_item" id="rd_item3" />
+                                                        <label for="rd_item3">엘리베이터홀 와이드<img src="../images/index/img_ad03.jpg" alt="엘리베이터홀 와이드" /></label>
+                                                    </span>
+													<span class="chk_area">
+                                                        <input type="radio" class="rd rd_ad4" name="rd_item" id="rd_item4" disabled="disabled" /><!-- disabled 상태가 되면 이미지가 바뀜 -->
+                                                        <label for="rd_item4">엘리베이터 DID 광고<img src="../images/index/img_ad04.jpg" alt="엘리베이터 DID 광고" /><img src="../images/index/img_ad04_d.jpg" alt="엘리베이터 DID는 쿠폰/이벤트를 진행중인 매장만 신청이 가능합니다." class="img_disa" /></label>
+                                                    </span>
+												</div>
+                                                <div class="txt_box">
+                                                    <!-- 위 내용 클릭시 내용 바뀜 -->
+                                                    <ul>
+                                                        <li><strong>- 위치</strong> : A동 광장</li>
+                                                        <li><strong>- 매체구성</strong> : 해상도 72 (2150x1250 9 SET) (영상,사운드 가능 / 민원시 음소거)</li>
+                                                        <li><strong>- 매체단가</strong> : 기존단가 : 1,500,000원 / 월 구좌당 & 입점업체 : 800,000원 / 월 구좌당 (50% 할인금액)</li>
+                                                        <li><strong>- 제작비용</strong> : 800,000원 20초 소재, VAT별도</li>
+                                                        <li><strong>- 노출횟수</strong> : 160회/일</li>
+                                                    </ul>
+                                                </div>
+											</td>
+										</tr>
+                                        <tr>
+                                            <th><label for="lab_name">작성자</label><strong class="txt_ess">* 필수입력</strong></th>
+                                            <td><input type="text" class="inp w100" id="lab_name" placeholder="작성자 이름" /></td>
+                                            <th></th>
+                                            <td></td>
+                                        </tr>
+										<tr>
+											<th><label for="lab_name">담당자</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td><input type="text" class="inp w100" id="lab_name"  placeholder="담당자 이름" /></td>
+											<th><span class="blind">연락처</span></th>
+											<td>
+												<div class="split tel_area">
+													<div class="cell w30">
+														<select class="select" title="연락처 첫번째자리">
+															<option>010</option>
+														</select>
+													</div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w35"><input type="text" class="inp" title="연락처 중간자리" /></div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w35"><input type="text" class="inp" title="연락처 끝자리" /></div>
+												</div>
+											</td>
+										</tr>
+                                        <tr>
+                                            <th><label for="lab_tit">제목</label><strong class="txt_ess">* 필수입력</strong></th>
+                                            <td colspan="3"><input type="text" class="inp w100" id="lab_tit" placeholder="제목 입력" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <dl class="bbs_cont">
+                                                    <dt class="th blind">내용<strong class="txt_ess">* 필수입력</strong></dt>
+                                                    <dd class="edit_wrap"><img src="../images/index/temp/@temp_edit.jpg" alt=""></dd>
+                                                </dl>
+                                            </td>
+                                        </tr>
+										<tr>
+											<th>첨부파일</th>
+											<td colspan="3">
+												<div w3-include-html="../include/cm_filebox.html"></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="btn_area">
+							<button type="button" class="btnL styA">저장</button>
+							<button type="button" class="btnL styB">취소</button>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>ENJOY | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">ENJOY 등록</h1>
+				</div><!-- //sub_tit -->
+
+                <form action="none" method="post">
+                    <fieldset>
+                        <div class="bbs bbs_write">
+                            <!-- tbl_row -->
+                            <div class="tbl_row">
+                                <table class="tbl">
+                                    <colgroup>
+                                        <col style="width:auto;" />
+                                        <col style="width:85%;" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><label for="lab_keyword">키워드</label><strong class="txt_ess">* 필수입력</strong></th>
+                                            <td><input type="text" class="inp w100" id="lab_keyword" placeholder="키워드를 입력하세요." /></td>
+                                        </tr>
+                                        <tr>
+                                            <th>키워드 배경 컬러<strong class="txt_ess">* 필수입력</strong></th>
+                                            <td>
+                                                <div class="fld marT3">
+                                                    <span class="chk_area" style="width:116px;"><input type="radio" class="rd" name="rd_key_col" id="rd_my_cal1" /><label for="rd_my_cal1">없음(기본값)</label></span>
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_key_col" id="rd_my_cal2" /><label for="rd_my_cal2">랜덤으로 설정</label></span>
+                                                </div>
+                                                <div class="fld kwc_list marT3">
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_key_col" id="rd_my_cal3" /><label for="rd_my_cal3"><span class="kwb1">#f1687c</span></label></span>
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_key_col" id="rd_my_cal4" /><label for="rd_my_cal4"><span class="kwb2">#f4af3a</span></label></span>
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_key_col" id="rd_my_cal5" /><label for="rd_my_cal5"><span class="kwb3">#32c6a2</span></label></span>
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_key_col" id="rd_my_cal6" /><label for="rd_my_cal6"><span class="kwb4">#476cd4</span></label></span>
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_key_col" id="rd_my_cal7" /><label for="rd_my_cal7"><span class="kwb5">#9e83e2</span></label></span>
+                                                </div>
+                                                <div class="fld marT3">
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_key_col" id="rd_my_cal1" /><label for="rd_my_cal1">직접 설정 (원하는 배경색을 직접 설정할 수 있습니다.)</label><button type="button" class="btnM styC unit_tml">색상선택</button><span class="kw_select_col unit_tml" style="background-color:#fff;"><!-- 설정한 색상이 나오게 됨 --></span></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th><label for="lab_store">관련 매장</label><strong class="txt_ess">* 필수입력</strong></th>
+                                            <td>
+                                                <div class="w100">
+                                                    <div class="inp_area">
+                                                        <input class="inp" id="lab_store" type="text" placeholder="Search" />
+                                                        <a class="btn_cm btn_search" href="#"><span class="blind">매장검색</span></a>
+                                                    </div>
+                                                    <span class="txt_unit unit_tml2 list_dot_caution">등록한 키워드에 연관된 매장을 등록해주세요.</span>
+                                                </div>
+                                                <div class="marT3">
+                                                    <ul class="list_str_box">
+                                                        <li>
+                                                            <span class="txt">H&amp;M</span>
+                                                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <span class="txt">ZARA</span>
+                                                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //tbl_row -->
+                        </div><!-- //bbs -->
+                        <div class="btn_area">
+                            <button type="submit" class="btnL styA">저장</button>
+                            <button type="button" class="btnL styB">취소</button>
+                        </div>
+                    </fieldset>
+                </form>
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

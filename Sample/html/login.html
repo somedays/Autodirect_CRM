@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>로그인 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script>
+		
+	</script>
+</head>
+<body>
+<div id="wrap" class="wrap login"><!-- 로그인인경우 login 클래스 추가 -->
+	<form action="none" method="post">
+		<fieldset class="fld">
+			<legend>로그인 정보 입력</legend>
+			<div class="login_wrap">
+				<h1 class="logo"><img src="../images/index/img_login_logo.png" alt="TRIPLE STREET TS Portal" /></h1>
+				<input type="text" class="inp" placeholder="아이디" title="아이디" />
+				<input type="password" class="inp" placeholder="비밀번호" title="비밀번호" />
+				<div class="btn_w">
+					<span class="chk_area"><input type="checkbox" class="chk" id="id_save" /><label for="id_save">아이디 저장</label></span>
+					<button type="submit" class="btn_login">로그인</button>
+					<a href="#" class="btn_search_idpw">아이디/비밀번호 찾기</a>
+				</div>
+				<!-- 에러메시지 -->
+				<p class="ico_cm ico_imp"><span class="txt">아이디나 로그인 정보가 일치하지 않습니다. 다시 입력해주세요.</span></p>
+				<!--// 에러메시지 -->
+			</div>
+		</fieldset>
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>ENJOY | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">ENJOY 관리</h1>
+					<div class="cellR btn_area">
+						<div class="box_pos ilb w50">
+                            <a href="#" class="btnS styA">ENJOY 등록</a>
+						</div>
+					</div>
+				</div><!-- //sub_tit -->
+			
+
+                <form action="none" method="post">
+                    <fieldset>
+                        <!-- search_box -->
+                        <div class="split search_box" id="search_box">
+                            <div class="cell">
+                                <table class="tbl col3">
+                                    <!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+                                    <colgroup>
+                                        <col style="width:1%;">
+                                        <col style="width:auto;">
+                                        <col style="width:1%;">
+                                        <col style="width:24%;">
+                                        <col style="width:1%;">
+                                        <col style="width:24%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><label class="tit_fld" for="lab_date">등록일</label></th>
+                                            <td>
+                                                <div class="split date_area">
+                                                    <div class="cell inp_area">
+                                                        <input title="시작 기간" class="inp" id="lab_date" type="text">
+                                                        <a class="btn_cm btn_cal" href="#"><span class="blind">날짜선택</span></a>
+                                                    </div>
+                                                    <span class="cell txt_c">~</span>
+                                                    <div class="cell inp_area">
+                                                        <input title="종료 기간" class="inp" type="text">
+                                                        <a class="btn_cm btn_cal" href="#"><span class="blind">날짜선택</span></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th><label class="tit_fld" for="lab_keyword">키워드</label></th>
+                                            <td>
+                                                <input id="lab_keyword" class="inp" type="text" />
+                                            </td>
+                                            <th><label class="tit_fld" for="lab_store">관련 매장</label></th>
+                                            <td>
+                                                <input id="lab_store" class="inp" type="text" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div><!-- //cell -->
+                            <div class="cellR btn_area">
+                                <button class="btnS styE pd1" type="button">조회</button>
+                            </div><!-- //cellR -->
+                        </div>
+                        <!--//search_box -->
+                    </fieldset>
+                </form>
+
+                <!-- sheet_scroll -->
+                <div class="tbl_col sheet_scroll">
+                    <div class="thead_wrap">
+                        <table class="tbl">
+                            <colgroup>
+                                <col style="width:52px;">
+                                <col style="width:302px;">
+                                <col style="width:auto;">
+                                <col style="width:104px;">
+                                <col style="width:197px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">ENJOY 키워드</th>
+                                    <th scope="col">Microsite 바로가기</th>
+                                    <th scope="col">등록매장 갯수</th>
+                                    <th scope="col">등록일</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div><!-- //tbl_thead -->
+                    <div class="tbody_wrap lineH15">
+                        <!-- 라인에 따른 갯수지정 lineH2~lineHOO -->
+                        <table class="tbl">
+                            <colgroup>
+                                <col style="width:52px;">
+                                <col style="width:302px;">
+                                <col style="width:auto;">
+                                <col style="width:104px;">
+                                <col style="width:180px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <span class="keyword_box kc1"><span class="txt">친구와 쇼핑</span></span>
+                                    </td>
+                                    <td class="tl">
+                                        <ul class="list_str_box small">
+                                            <li>
+                                                <a href="#" class="txt">ZARA</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">ADIDAS</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">H&amp;M</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>3</td>
+                                    <td>2017.05.17 13:23</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <span class="keyword_box kc2"><span class="txt">연인과 야외에서 데이트</span></span>
+                                    </td>
+                                    <td class="tl">
+                                        <ul class="list_str_box small">
+                                            <li>
+                                                <a href="#" class="txt">ABC마트</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">투썸플레이스</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">토니버거</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>3</td>
+                                    <td>2017.05.17 13:23</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <span class="keyword_box kc3"><span class="txt">뉴욕 브런치</span></span>
+                                    </td>
+                                    <td class="tl">
+                                        <ul class="list_str_box small">
+                                            <li>
+                                                <a href="#" class="txt">호우양꼬치</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">버거앤프라이즈</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">키즈챔피언</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>3</td>
+                                    <td>2017.05.17 13:23</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <span class="keyword_box kc4"><span class="txt">가족 소풍</span></span>
+                                    </td>
+                                    <td class="tl">
+                                        <ul class="list_str_box small">
+                                            <li>
+                                                <a href="#" class="txt">McDonald's</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">어메이징 브루잉</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">깐부치킨</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">투썸플레이스</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">장혁민의 부대찌개</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">경성 함바그</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">지아니스 나폴리</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>3</td>
+                                    <td>2017.05.17 13:23</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>
+                                        <span class="keyword_box kc5"><span class="txt">디저트 탐방</span></span>
+                                    </td>
+                                    <td class="tl">
+                                        <ul class="list_str_box small">
+                                            <li>
+                                                <a href="#" class="txt">ZARA</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">ADIDAS</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="txt">H&amp;M</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>3</td>
+                                    <td>2017.05.17 13:23</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- //tbody_wrap -->
+                </div>
+                <!-- //sheet_scroll -->
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>공간 별 계약내역 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">계약 이력</h1>
+					<div class="cellR btn_area">
+						<!-- search_box 영역이 닫히는 경우 open 클래스 삭제 -->
+						<a href="#search_box" class="btn_cm btn_view3 open"><span class="blind">다음보기</span></a>
+					</div>
+				</div><!-- //sub_tit -->
+
+				<!-- search_box_view -->
+				<div class="split search_box_view" id="search_box">
+					<div class="cell">
+						<table class="tbl"><!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+							<colgroup>
+								<col style="width:1%;" />
+                                <col style="width:24%;" />
+                                <col style="width:1%;" />
+                                <col style="width:24%;" />
+                                <col style="width:1%;" />
+                                <col style="width:24%;" />
+                                <col style="width:1%;" />
+                                <col style="width:24%;" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>공간 정보</th>
+                                    <td>A동 1층 201호 A실</td>
+                                    <th>전용 면적</th>
+                                    <td>123.22㎡(23평)</td>
+									<th>공용 면적</th>
+                                    <td>123.22㎡(23평)</td>
+									<th>계약 면적</th>
+                                    <td>123.22㎡(23평)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- //cell -->
+				</div>
+				<!--//search_box_view -->
+
+				<div class="split tbl_top">
+					<ul class="cellR legend_top">
+						<li class="legend_col1">계약만료 6개월전</li>
+						<li class="legend_col2">계약만료 4개월전</li>
+						<li class="legend_col3">계약만료 2개월전</li>
+						<li class="legend_col4">계약해지/만료</li>
+						<li class="legend_col5">1년 이상</li>
+					</ul>
+                </div><!-- //tbl_top -->
+
+				<!-- sheet_table -->
+				<div class="tbl_sheet">
+					<!-- table_col -->
+					<div class="tbl_col" style="width:2500px">
+					    <table class="tbl">
+					        <colgroup>
+					            <col style="width:2%;" />
+					            <col style="width:5%;" />
+					            <col style="width:4%;" />
+					            <col style="width:4%;" />
+					            <col style="width:4%;" />
+					            <col style="width:auto;" />
+					            <col style="width:5%;" />
+					            <col style="width:5%;" />
+					            <col style="width:5%;" />
+					            <col style="width:5%;" />
+					            <col style="width:5%;" />
+					            <col style="width:4%;" />
+					            <col style="width:6%;" />
+					            <col style="width:3%;" />
+					            <col style="width:7%;" />
+					            <col style="width:4%;" />
+					            <col style="width:4%;" />
+					            <col style="width:6%;" />
+					            <col style="width:7%;" />
+					            <col style="width:2%;" />
+					            <col style="width:2%;" />
+					            <col style="width:2%;" />
+					            <col style="width:6%;" />
+					        </colgroup>
+					        <thead>
+					            <tr>
+					                <th scope="col" rowspan="2">No</th>
+					                <th scope="col" rowspan="2">계약 번호</th>
+					                <th scope="col" rowspan="2">계약상태</th>
+					                <th scope="col" rowspan="2">계약 구분</th>
+					                <th scope="col" rowspan="2">거래처 코드</th>
+					                <th scope="col" rowspan="2">거래처명</th>
+					                <th scope="col" rowspan="2">매장명</th>
+					                <th scope="col" rowspan="2">매장 카테고리</th>
+					                <th scope="col" rowspan="2">하위 카테고리</th>
+					                <th scope="col" rowspan="2">임대 보증금</th>
+					                <th scope="col" rowspan="2">계약일</th>
+					                <th scope="col" colspan="2">계약기간</th>
+					                <th scope="col" colspan="5">임대료</th>
+					                <th scope="col" rowspan="2">터미널 ID</th>
+					                <th scope="col" rowspan="2">계약서</th>
+					                <th scope="col" rowspan="2">공문</th>
+					                <th scope="col" rowspan="2">특약서</th>
+					                <th scope="col" rowspan="2">비고</th>
+					            </tr>
+				            	<tr>
+					                <th scope="col">시작일</th>
+					                <th scope="col">만료일</th>
+					                <th scope="col">구분</th>
+					                <th scope="col">기간</th>
+					                <th scope="col">정액/수수료</th>
+					                <th scope="col">미니멈게런티</th>
+					                <th scope="col">특약</th>
+					            </tr>
+					        </thead>
+					        <tbody>
+					            <tr>
+					            	<td>1</td>
+					            	<td>1021324152</td>
+					            	<td>계약</td>
+					            	<td><a href="#" class="alink">임대 매장</a></td>
+					            	<td>513324</td>
+					            	<td class="tl">길동샵</td>
+					            	<td class="tl">길동샵</td>
+					            	<td>F&amp;B</td>
+					            	<td>중식</td>
+					            	<td>10,000,000원</td>
+					            	<td>2016-11-01</td>
+					            	<td>2016-11-01</td>
+					            	<td class="legend_col1">2016-11-01</td>
+					            	<td>갑</td>
+					            	<td>2016-11-30 ~ 2016-12-30</td>
+					            	<td class="tr">10,000,000 원</td>
+					            	<td>&nbsp;</td>
+					            	<td class="tl"><a href="#" class="alink txt_overflow">입력 내용 표기 입력 내용 표기</a></td>
+					            	<td>정상매장 230948293048</td>
+					            	<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td class="tl"><a href="#" class="alink txt_overflow">입력 내용 표기 입력 내용 표기</a></td>
+				            	</tr>
+					            <tr>
+					            	<td>1</td>
+					            	<td>1021324152</td>
+					            	<td>계약</td>
+					            	<td><a href="#" class="alink">임대 매장</a></td>
+					            	<td>513324</td>
+					            	<td class="tl">길동샵</td>
+					            	<td class="tl">길동샵</td>
+					            	<td>F&amp;B</td>
+					            	<td>중식</td>
+					            	<td>10,000,000원</td>
+					            	<td>2016-11-01</td>
+					            	<td>2016-11-01</td>
+					            	<td class="legend_col2">2016-11-01</td>
+					            	<td>갑</td>
+					            	<td>2016-11-30 ~ 2016-12-30</td>
+					            	<td class="tr">10,000,000 원</td>
+					            	<td>&nbsp;</td>
+					            	<td class="tl"><a href="#" class="alink txt_overflow">입력 내용 표기 입력 내용 표기</a></td>
+					            	<td>정상매장 230948293048</td>
+					            	<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td class="tl"><a href="#" class="alink txt_overflow">입력 내용 표기 입력 내용 표기</a></td>
+				            	</tr>
+					            <tr>
+					            	<td>1</td>
+					            	<td>1021324152</td>
+					            	<td>계약</td>
+					            	<td><a href="#" class="alink">임대 매장</a></td>
+					            	<td>513324</td>
+					            	<td class="tl">길동샵</td>
+					            	<td class="tl">길동샵</td>
+					            	<td>F&amp;B</td>
+					            	<td>중식</td>
+					            	<td>10,000,000원</td>
+					            	<td>2016-11-01</td>
+					            	<td>2016-11-01</td>
+					            	<td class="legend_col3">2016-11-01</td>
+					            	<td>갑</td>
+					            	<td>2016-11-30 ~ 2016-12-30</td>
+					            	<td class="tr">10,000,000 원</td>
+					            	<td>&nbsp;</td>
+					            	<td class="tl"><a href="#" class="alink txt_overflow">입력 내용 표기 입력 내용 표기</a></td>
+					            	<td>정상매장 230948293048</td>
+					            	<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td class="tl"><a href="#" class="alink txt_overflow">입력 내용 표기 입력 내용 표기</a></td>
+				            	</tr>
+					            <tr>
+					            	<td>1</td>
+					            	<td>1021324152</td>
+					            	<td>계약</td>
+					            	<td><a href="#" class="alink">임대 매장</a></td>
+					            	<td>513324</td>
+					            	<td class="tl">길동샵</td>
+					            	<td class="tl">길동샵</td>
+					            	<td>F&amp;B</td>
+					            	<td>중식</td>
+					            	<td>10,000,000원</td>
+					            	<td>2016-11-01</td>
+					            	<td>2016-11-01</td>
+					            	<td class="legend_col4">2016-11-01</td>
+					            	<td>갑</td>
+					            	<td>2016-11-30 ~ 2016-12-30</td>
+					            	<td class="tr">10,000,000 원</td>
+					            	<td>&nbsp;</td>
+					            	<td class="tl"><a href="#" class="alink txt_overflow">입력 내용 표기 입력 내용 표기</a></td>
+					            	<td>정상매장 230948293048</td>
+					            	<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td class="tl"><a href="#" class="alink txt_overflow">입력 내용 표기 입력 내용 표기</a></td>
+				            	</tr>
+					            <tr>
+					            	<td>1</td>
+					            	<td>1021324152</td>
+					            	<td>계약</td>
+					            	<td><a href="#" class="alink">임대 매장</a></td>
+					            	<td>513324</td>
+					            	<td class="tl">길동샵</td>
+					            	<td class="tl">길동샵</td>
+					            	<td>F&amp;B</td>
+					            	<td>중식</td>
+					            	<td>10,000,000원</td>
+					            	<td>2016-11-01</td>
+					            	<td>2016-11-01</td>
+					            	<td class="legend_col5">2016-11-01</td>
+					            	<td>갑</td>
+					            	<td>2016-11-30 ~ 2016-12-30</td>
+					            	<td class="tr">10,000,000 원</td>
+					            	<td>&nbsp;</td>
+					            	<td class="tl"><a href="#" class="alink txt_overflow">입력 내용 표기 입력 내용 표기</a></td>
+					            	<td>정상매장 230948293048</td>
+					            	<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td><a href="#" class="btn_cm btn_download2"><span class="blind">다운로드</span></a></td>
+									<td class="tl"><a href="#" class="alink txt_overflow">입력 내용 표기 입력 내용 표기</a></td>
+				            	</tr>
+					        </tbody>
+					    </table>
+					</div>
+					<!-- //table_col -->
+				</div>
+				<!-- //sheet_table -->
+
+				<div class="btn_area">
+					<a href="#" class="btnL styC">엑셀 다운로드</a>
+					<a href="#" class="btnL styA">목록</a>
+				</div>
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

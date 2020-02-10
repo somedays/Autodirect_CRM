@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>메인페이지 관리 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">메인페이지 관리</h1>
+					<div class="cellR btn_area">
+						<div class="box_pos ilb w50">
+							<a href="#" class="btnS styB">미리보기</a>
+                            <a href="#" class="btnS styA">저장</a>
+						</div>
+					</div>
+				</div><!-- //sub_tit -->
+				
+				<!-- tabs -->
+                <div class="tab tab_sty3">
+                    <ul class="tab_list">
+                        <li><a class="txt" href="#">Banner</a></li>
+                        <li><a class="txt" href="#">쿠폰 &amp; 이벤트</a></li>
+                        <li class="on"><a class="txt" href="#">쇼핑뉴스</a></li>
+                        <li><a class="txt" href="#">추천스토어</a></li>
+                        <li><a class="txt" href="#">SNS 해시테그</a></li>
+                        <li><a class="txt" href="#">추천 테마</a></li>
+                    </ul>
+                </div>
+                <!-- //tabs -->
+				
+				<div class="split tbl_top">
+                    <span class="cell txt_">※ 메인페이지 쇼핑뉴스는 종합 5개까지 등록 가능합니다.</span>
+                    <div class="cellR btn_area">
+                        <div class="box_pos ilb w50">
+                            <a href="#" class="btnS styC">쇼핑뉴스 등록</a>
+                        </div>
+                    </div>
+                </div><!-- //tbl_top -->
+
+				<!-- sheet_table -->
+				<div class="tbl_sheet">
+					<!-- table_col -->
+					<div class="tbl_col">
+					    <table class="tbl">
+					        <colgroup>
+					            <col style="width:4%;" />
+					            <col style="width:12%;" />
+                                <col style="width:auto;" />
+                                <col style="width:10%" />
+					            <col style="width:14%;" />
+					            <col style="width:24%;" />
+					            <col style="width:6%;" />
+					        </colgroup>
+					        <thead>
+					            <tr>
+					                <th scope="col">No.</th>
+					                <th scope="col">순서</th>
+                                    <th scope="col">제목</th>
+					                <th scope="col">기간</th>
+                                    <th scope="col">장소</th>
+					                <th scope="col">대표 썸네일</th>
+					                <th scope="col">관리</th>
+				            	</tr>
+					        </thead>
+					        <tbody>
+					            <tr>
+					            	<td>1</td>
+					            	<td>
+                                        <a class="btn_cm btn_top" href="#"><span class="blind">맨 위로</span></a>
+                                        <a class="btn_cm btn_up" href="#"><span class="blind">위로</span></a>
+                                        <a class="btn_cm btn_down" href="#"><span class="blind">아래로</span></a>
+                                        <a class="btn_cm btn_btm" href="#"><span class="blind">맨 아래로</span></a>
+                                    </td>
+                                    <td class="tl"><a href="#" class="alink">[송도점] 영화(동반3인) / 콤보 2,000원 현장 할인</a></td>
+                                    <td>2017.04.20 ~ 2017.05.28</td>
+                                    <td>이벤트홀 A동 4F</td>
+                                    <td class="tl">
+                                        <button type="button" class="btnXS styF unit_tmr">내용등록</button>
+                                        <a href="#" class="alink">2017_04_11_event.png</a>
+                                    </td>
+					                <td class="btn_state">
+					                	<a href="#" class="btnXS styF">삭제</a>
+					                </td>
+				            	</tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <a class="btn_cm btn_top" href="#"><span class="blind">맨 위로</span></a>
+                                        <a class="btn_cm btn_up" href="#"><span class="blind">위로</span></a>
+                                        <a class="btn_cm btn_down" href="#"><span class="blind">아래로</span></a>
+                                        <a class="btn_cm btn_btm" href="#"><span class="blind">맨 아래로</span></a>
+                                    </td>
+                                    <td class="tl"><a href="#" class="alink">[송도점] 영화(동반3인) / 콤보 2,000원 현장 할인</a></td>
+                                    <td>2017.04.20 ~ 2017.05.28</td>
+                                    <td>이벤트홀 A동 4F</td>
+                                    <td class="tl">
+                                        <button type="button" class="btnXS styF unit_tmr">내용등록</button>
+                                        <a href="#" class="alink">2017_04_11_event.png</a>
+                                    </td>
+                                    <td class="btn_state">
+                                        <a href="#" class="btnXS styF">삭제</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <a class="btn_cm btn_top" href="#"><span class="blind">맨 위로</span></a>
+                                        <a class="btn_cm btn_up" href="#"><span class="blind">위로</span></a>
+                                        <a class="btn_cm btn_down" href="#"><span class="blind">아래로</span></a>
+                                        <a class="btn_cm btn_btm" href="#"><span class="blind">맨 아래로</span></a>
+                                    </td>
+                                    <td class="tl"><a href="#" class="alink">모바일앱 데일리스탑 이벤트!</a></td>
+                                    <td>2017.04.20 ~ 2017.05.28</td>
+                                    <td>리틀밀라노 D동 B1F</td>
+                                    <td class="tl">
+                                        <button type="button" class="btnXS styF unit_tmr">내용등록</button>
+                                        <a href="#" class="alink">2017_04_08-event.png</a>
+                                    </td>
+                                    <td class="btn_state">
+                                        <a href="#" class="btnXS styF">삭제</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <a class="btn_cm btn_top" href="#"><span class="blind">맨 위로</span></a>
+                                        <a class="btn_cm btn_up" href="#"><span class="blind">위로</span></a>
+                                        <a class="btn_cm btn_down" href="#"><span class="blind">아래로</span></a>
+                                        <a class="btn_cm btn_btm" href="#"><span class="blind">맨 아래로</span></a>
+                                    </td>
+                                    <td class="tl"><a href="#" class="alink">송도점 오픈 기념 스시 2접시 무료 쿠폰</a></td>
+                                    <td>2017.04.20 ~ 2017.05.28</td>
+                                    <td>리틀밀라노 D동 B1F</td>
+                                    <td class="tl">
+                                        <button type="button" class="btnXS styF unit_tmr">내용등록</button>
+                                        <a href="#" class="alink">spring_festival-01.jpg</a>
+                                    </td>
+                                    <td class="btn_state">
+                                        <a href="#" class="btnXS styF">삭제</a>
+                                    </td>
+                                </tr>
+					        </tbody>
+					    </table>
+					</div>
+					<!-- //table_col -->
+				</div>
+				<!-- //sheet_table -->
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

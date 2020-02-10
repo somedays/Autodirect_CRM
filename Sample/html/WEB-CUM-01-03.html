@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>회원정보 수정 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">회원정보 수정</h1>
+				</div><!-- //sub_tit -->
+				
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+										<col style="width:32%;" />
+										<col style="width:21%;" />
+										<col style="width:32%;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>아이디(이메일)</th>
+											<td>Gildong111@mail.com</td>
+											<th><label for="lab_name">회원명</label></th>
+											<td><input type="text" class="inp w100" id="lab_name"/></td>
+										</tr>
+										<tr>
+											<th><label for="lab_hp">휴대폰</label></th>
+											<td><input type="text" class="inp w100" id="lab_hp"/></td>
+											<th>생년월일</th>
+											<td>
+												<select class="select w30" title="년도" id="lab_year">
+					                                <option>선택</option>
+					                                <option>010</option>
+					                            </select>
+					                            <label for="lab_year" class="unit_tmr2">년</label>
+					                            <input type="text" class="inp w20" id="lab_month"/>
+					                            <label for="lab_month" class="unit_tmr2">월</label>
+					                            <input type="text" class="inp w20" id="lab_day"/>
+					                            <label for="lab_day">일</label>
+											</td>
+										</tr>
+										<tr>
+											<th>성별</th>
+											<td>
+												<div class="fld">
+													<span class="chk_area"><input type="radio" class="rd" name="rd_sex" id="rd_sex1" /><label for="rd_sex1">남자</label></span>
+													<span class="chk_area"><input type="radio" class="rd" name="rd_sex" id="rd_sex2" /><label for="rd_sex2">여자</label></span>
+												</div>
+											</td>
+											<th><label for="lab_area">지역</label></th>
+							                <td>
+							                    <div class="split box_nowrap">
+							                        <div class="cell w55">
+							                        	<select class="select" title="시 선택" id="lab_area">
+							                                <option>서울특별시</option>
+							                            </select>
+							                        </div>
+							                        <div class="cell">
+							                        	<input type="text" class="inp" title="구 입력" />
+							                        </div>
+							                    </div>
+							                </td>
+										</tr>
+										<tr>
+											<th><label for="lab_car_info">내차정보</label></th>
+							                <td colspan="3">
+							                    <div class="split box_nowrap" style="width:37.9%;">
+							                        <div class="cell w35">
+							                        	<select class="select" title="내차정보 구분" id="lab_car_info">
+							                                <option>신번호</option>
+							                            </select>
+							                        </div>
+							                        <div class="cell">
+							                        	<input type="text" class="inp" title="차 번호 입력" />
+							                        </div>
+							                    </div>
+							                </td>
+										</tr>
+										<tr>
+											<th>가입일</th>
+											<td colspan="3">2016.12.14 15:00</td>
+										</tr>
+										<tr>
+											<th>가입경로</th>
+											<td colspan="3">오프라인 이벤트</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="btn_area">
+							<button type="button" class="btnL styA">저장</button>
+							<button type="button" class="btnL styB">취소</button>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

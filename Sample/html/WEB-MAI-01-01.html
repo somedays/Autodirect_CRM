@@ -1,0 +1,425 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>메인화면 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script>
+		$(document).ready(function () {
+		  	//scroll
+			$(".list_scroll").mCustomScrollbar({
+				theme: "inset"
+			});
+		});
+	</script>
+</head>
+<body> 
+<div id="wrap" class="wrap main"><!-- 메인인경우 main 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<h1 class="blind">TRIPLE STREET TS Portal 메인화면</h1>
+		<div class="calender_wrap">
+			<div class="split">
+				<h3 class="cell tit_cal">마케팅 일정</h3> 
+				<div class="cellR btn_ctrl_unit">
+					<a href="#" class="btn_cm btn_more"><span class="blind">옵션보기</span></a>
+				</div>
+			</div><!--//split -->
+			<div class="calender_tbl">
+				<div class="cal_top_ctrl">
+					<strong class="txt_year">2016<span class="blind">년</span></strong>
+					<strong class="txt_month">11<span class="blind">월</span></strong>
+					<a class="btn_cm btn_prev"><span class="blind">이전달</span></a>
+					<a class="btn_cm btn_next"><span class="blind">다음달</span></a>
+				</div><!--//cal_top_ctrl-->
+				<table class="tbl_calender">
+					<colgroup>
+						<col style="width:14.3%;" span="6"/>
+						<col style="width:auto;" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th><abbr title="MONDAY">MON</abbr></th>
+							<th><abbr title="TUESDAY">TUE</abbr></th>
+							<th><abbr title="WEDNESDAY">WED</abbr></th>
+							<th><abbr title="THURSDAY">THU</abbr></th>
+							<th><abbr title="FRIDAY">FRI</abbr></th>
+							<th><abbr title="SATURDAY">SAT</abbr></th>
+							<th><abbr title="SUNDAY">SUN</abbr></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>29</td>
+							<td>30</td>
+							<td>31</td>
+							<td><a href="#">1</a></td>
+							<td><a href="#" class="cal_add">2</a></td>
+							<td><a href="#">3</a></td>
+							<td><a href="#">4</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">5</a></td>
+							<td><a href="#" class="txt_red"><!-- 빨간날 txt_red 클래스-->6</a></td>
+							<td><a href="#">7</a></td>
+							<td><a href="#" class="cal_add">8</a></td>
+							<td><a href="#">9</a></td>
+							<td><a href="#">10</a></td>
+							<td><a href="#">11</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">12</a></td>
+							<td><a href="#">13</a></td>
+							<td><a href="#" class="cal_add"><!-- 추가된 일정처리 cal_add 클래스-->14</a></td>
+							<td><a href="#">15</a></td>
+							<td><a href="#" class="today cal_add"><!-- 오늘날짜 today 클래스 -->16</a></td>
+							<td><a href="#">17</a></td>
+							<td><a href="#">18</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">19</a></td>
+							<td><a href="#">20</a></td>
+							<td><a href="#" class="selected"><!-- 선택되었을때 selected 클래스-->21</a></td>
+							<td><a href="#">22</a></td>
+							<td><a href="#">23</a></td>
+							<td><a href="#">24</a></td>
+							<td><a href="#" class="cal_add">25</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">26</a></td>
+							<td><a href="#">27</a></td>
+							<td><a href="#">28</a></td>
+							<td><a href="#" class="cal_add">29</a></td>
+							<td><a href="#">30</a></td>
+							<td><a href="#">31</a></td>
+							<td>1</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!--//calender_tbl -->
+			<div class="calender_list">
+				<!-- 스크롤 적용 영역 -->
+				<ul class="list_scroll">
+					<li>
+						<div class="txt_date">
+                            <abbr title="OCTOBER">OCT<span class="blind">월</span></abbr>
+							<span class="day">2<span class="blind">일</span><small>(월)</small></span>
+						</div>
+						<div class="txt_cont">
+                            <span class="cont_date"><span class="category_r ctg_fs"><span class="blind">페스티벌</span></span>2016.06.01 ~ 2016.07.30</span><!-- 마케팅 일정의 카테고리는 색깔별로 카테고리가 나눠짐. 완료는 end를 같이 넣어줌 -->
+							<strong class="tit">스포츠필드 어린이 풋볼경기</strong>
+						</div>
+					</li>
+					<li>
+						<div class="txt_date">
+                            <abbr title="NOVEMBER">NOV<span class="blind">월</span></abbr>
+							<span class="day">4<span class="blind">일</span><small>(화)</small></span>
+						</div>
+						<div class="txt_cont">
+                            <span class="cont_date"><span class="category_r ctg_ev"><span class="blind">이벤트</span></span>2016.06.01 ~ 2016.07.30</span>
+							<strong class="tit">스포츠필드 어린이 풋볼경기</strong>
+						</div>
+					</li>
+					<li>
+						<div class="txt_date">
+                            <abbr title="NOVEMBER">NOV<span class="blind">월</span></abbr>
+							<span class="day">10<span class="blind">일</span><small>(수)</small></span>
+						</div>
+						<div class="txt_cont">
+                            <span class="cont_date"><span class="category_r ctg_cp"><span class="blind">쿠폰</span></span>2016.06.01 ~ 2016.07.30</span>
+							<strong class="tit">스포츠필드 어린이 풋볼경기</strong>
+						</div>
+					</li>
+					<li>
+						<div class="txt_date">
+                            <abbr title="NOVEMBER">NOV<span class="blind">월</span></abbr>
+							<span class="day">14<span class="blind">일</span><small>(목)</small></span>
+						</div>
+						<div class="txt_cont">
+                            <span class="cont_date"><span class="category_r ctg_fs"><span class="blind">페스티벌</span></span>2016.06.01 ~ 2016.07.30</span>
+							<strong class="tit">스포츠필드 어린이 풋볼경기</strong>
+						</div>
+					</li>
+					<li>
+						<div class="txt_date txt_red"><!-- 공휴일 색상 -->
+                            <abbr title="NOVEMBER">NOV<span class="blind">월</span></abbr>
+							<span class="day">17<span class="blind">일</span><small>(금)</small></span>
+						</div>
+						<div class="txt_cont">
+                            <span class="cont_date"><span class="category_r ctg_ev"><span class="blind">이벤트</span></span>2016.06.01 ~ 2016.07.30</span>
+							<strong class="tit">스포츠필드 어린이 풋볼경기</strong>
+						</div>
+					</li>
+					<li>
+						<div class="txt_date txt_blue"><!-- 토요일 색상 -->
+                            <abbr title="NOVEMBER">NOV<span class="blind">월</span></abbr>
+							<span class="day">23<span class="blind">일</span><small>(토)</small></span>
+						</div>
+						<div class="txt_cont">
+                            <span class="cont_date"><span class="category_r ctg_ev"><span class="blind">이벤트</span></span>2016.06.01 ~ 2016.07.30</span>
+							<strong class="tit">스포츠필드 어린이 풋볼경기</strong>
+						</div>
+					</li>
+					<li>
+						<div class="txt_date txt_red"><!-- 일요일 색상 -->
+                            <abbr title="NOVEMBER">NOV<span class="blind">월</span></abbr>
+							<span class="day">28<span class="blind">일</span><small>(일)</small></span>
+						</div>
+						<div class="txt_cont">
+                            <span class="cont_date"><span class="category_r ctg_cp"><span class="blind">쿠폰</span></span>2016.06.01 ~ 2016.07.30</span>
+							<strong class="tit">스포츠필드 어린이 풋볼경기</strong>
+						</div>
+					</li>
+					<li>
+						<div class="txt_date">
+                            <abbr title="NOVEMBER">NOV<span class="blind">월</span></abbr>
+							<span class="day">31<span class="blind">일</span><small>(월)</small></span>
+						</div>
+						<div class="txt_cont">
+                            <span class="cont_date"><span class="category_r ctg_fs"><span class="blind">페스티벌</span></span>2016.06.01 ~ 2016.07.30</span>
+							<strong class="tit">스포츠필드 어린이 풋볼경기</strong>
+						</div>
+					</li>
+				</ul>
+				<!-- //스크롤 적용 영역 -->
+			</div><!--//calender_list -->
+		</div><!-- //calender_wrap -->
+
+        <div class="weather_area">
+            <div class="w_today">
+                <span class="icon-w_rainy"><span class="blind">비</span></span>
+                <div class="txt_temp">29˚
+                    <!--<ul>
+                        <li class="high"><strong class="blind">최고기온</strong>29˚</li>
+                        <li class="low"><strong class="blind">최저기온</strong>11˚</li>
+                    </ul>-->
+                </div>
+                <strong class="txt_weather"><small class="txt_today">2017.6.6 (화)</small>오전 흐림/오후 비</strong>
+            </div>
+            <div class="w_week">
+                <ul>
+                    <li>
+                        <span class="icon-w_cloudy"></span><!-- 흐림 -->
+                        <span class="date">6.5 (월)</span>
+                    </li>
+                    <li class="today">
+                        <span class="icon-w_little_cloudy"></span><!-- 구름 조금 -->
+                        <span class="date">6.6 (화)</span>
+                    </li>
+                    <li>
+                        <span class="icon-w_cloudy_snow"></span><!-- 구름/눈 -->
+                        <span class="date">6.7 (수)</span>
+                    </li>
+                    <li>
+                        <span class="icon-w_slightly_covered"></span><!-- 구름 약간 -->
+                        <span class="date">6.8 (목)</span>
+                    </li>
+                    <li>
+                        <span class="icon-w_sunny"></span><!-- 맑음 -->
+                        <span class="date">6.9 (금)</span>
+                    </li>
+                    <li>
+                        <span class="icon-w_thunderstorm"></span><!-- 뇌우 -->
+                        <span class="date">6.10 (토)</span>
+                    </li>
+                    <li>
+                        <span class="icon-w_snow"></span><!-- 눈 -->
+                        <span class="date">6.11 (일)</span>
+                    </li>
+                    <li>
+                        <span class="icon-w_rainy"></span><!-- 비 -->
+                        <span class="date">6.11 (일)</span>
+                    </li>
+                    <li>
+                        <span class="icon-w_cloudy_rainy"></span><!-- 구름/비 -->
+                        <span class="date">6.11 (일)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- main content -->
+        <div class="main_cont_area">
+            <!-- content1 -->
+            <div class="main_box">
+                <div class="split tab_split">
+                    <ul class="cell tab_list">
+                        <li class=""><span>일 매출 추이</span></li>
+                        <li class="on"><span>월 매출 추이</span></li>
+                    </ul>
+                    <div class="cellR btn_ctrl_unit">
+                        <a href="#" class="btn_cm btn_more"><span class="blind">옵션보기</span></a>
+                    </div>
+                </div><!--//split -->
+                <div class="chart_info">
+                    <div class="all">
+                        <strong class="tit">6월 매출합계(원)</strong>
+                        <span class="cont">34,213,000</span>
+                    </div>
+                    <div class="info_list">
+                        <strong class="chart_date"><span>05-14 (일)</span></strong>
+                        <ul>
+                            <li>
+                                <strong class="tit">전월대비</strong>
+                                <span class="cont rank_arr arr_up">1.4</span><!-- 위아래 화살표 클래스 -->
+                            </li>
+                            <li>
+                                <strong class="tit">전주대비</strong>
+                                <span class="cont">0.0</span>
+                            </li>
+                            <li>
+                                <strong class="tit">전월대비</strong>
+                                <span class="cont rank_arr arr_down">11.4</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- //chart info -->
+                <div class="main_chart">
+                    <!-- chart 자리 -->
+                </div><!-- //main chart -->
+            </div>
+            <!-- //content1 -->
+
+            <!-- content2 -->
+            <div class="main_box">
+                <div class="split">
+                    <h3 class="cell tit_mb">쿠폰현황</h3>
+                    <div class="cellR btn_ctrl_unit">
+                        <a href="#" class="btn_cm btn_more"><span class="blind">옵션보기</span></a>
+                    </div>
+                </div><!--//split -->
+                <div class="chart_info">
+                    <div class="all">
+                        <strong class="tit">현재 발행개수 : <em>2</em>개</strong>
+                        <select title="선택" class="select select_mini">
+                            <option>오픈기념 할인 쿠폰</option>
+                            <option>선택</option>
+                            <option>선택</option>
+                        </select>
+
+                    </div>
+                    <ul class="info_list">
+                        <li>
+                            <strong class="tit">발행종료</strong>
+                            <span class="cont">D-11</span>
+                        </li>
+                        <li>
+                            <strong class="tit">사용률</strong>
+                            <span class="cont">24%</span>
+                        </li>
+                    </ul>
+                </div><!-- //chart info -->
+                <div class="main_chart">
+                    <!-- chart 자리 -->   
+                </div><!-- //main chart -->
+            </div>
+            <!-- //content2 -->
+
+            <!-- content3 -->
+            <div class="main_box">
+                <div class="split">
+                    <h3 class="cell tit_mb">공지사항</h3>
+                    <div class="cellR btn_ctrl_unit">
+                        <a href="#" class="btn_cm btn_more"><span class="blind">옵션보기</span></a>
+                    </div>
+                </div><!--//split -->
+                <div class="main_list_cont">
+                    <ul>
+                        <li><span class="date">08/31</span><a href="#" class="new">트리플데일리스탑, APP 출석체크, 응모권 경품이벤트 선물수령,트리플데일리스탑, APP 출석체크, 응모권 경품이벤트 선물수령트리플데일리스탑, APP 출석체크, 응모권 경품이벤트 선물수령</a></li><!-- 새로운 글은 new -->
+                        <li><span class="date">08/31</span><a href="#" class="new">트리플 데일리스탑 점수적립 시간 변경</a></li>
+                        <li><span class="date">08/31</span><a href="#" class="">카니발 피카츄 스탬프 목걸이 수량안내</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //content3 -->
+
+            <!-- content4 -->
+            <div class="main_box_btns">
+                <div class="main_box">
+                    <ul>
+                        <li class="btn_box half">
+                            <dl>
+                                <dt>일 매출 등록</dt>
+                                <dd class="date">6월 14일</dd>
+                            </dl>
+                        </li>
+                        <li class="btn_box half">
+                            <dl>
+                                <dt>월 매출 등록</dt>
+                                <dd class="date">17년 5월</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main_box btn_box">
+                    <dl>
+                        <dt>쿠폰<br />등록</dt>
+                        <dd class="cont"><small class="tit">PIN 번호</small>917</dd>
+                    </dl>
+                </div>
+                <div class="main_box btn_box">
+                    <dl>
+                        <dt>쿠폰<br />등록</dt>
+                        <dd class="cont"><small class="tit">진행중</small>2<small class="txt">건</small></dd>
+                    </dl>
+                </div>
+                <div class="main_box btn_box">
+                    <dl>
+                        <dt>홈페이지<br />관리</dt>
+                        <dd class="cont">
+                            <span class="img_logo"><img src="../images/index/temp/temp_img_logo.jpg" alt="home logo" /></span><small class="home_name">ADIDAS</small></dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- //content4 -->
+        </div>
+        <!-- //main content -->
+
+        <div class="article_main marT2">
+            <div class="main_image"><img src="../images/index/logo_main.png" /></div>
+        </div><!-- //article -->
+	</div>
+	<!-- //container -->
+
+	<hr />
+
+	<!-- footer -->
+	<div id="footer" class="footer">
+		<span class="txt_copy">COPYRIGHT(C) TRIPLE STREET. ALL RIGHTS RESERVED.</span>
+		<select class="select" title="패밀리사이트">
+			<option>FAMILY SITE</option>
+			<option>패밀리사이트1</option>
+		</select>
+	</div>
+	<!-- footer -->
+
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

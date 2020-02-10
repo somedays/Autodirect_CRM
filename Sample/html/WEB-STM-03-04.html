@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>거래처 정보 조회 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">매장 운영정보 수정</h1>
+				</div><!-- //sub_tit -->
+				
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+										<col style="width:32%;" />
+										<col style="width:21%;" />
+										<col style="width:32%;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>매장 로고<strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<div class="split img_modify tbl_group">
+													<div class="cell w10">
+														<div class="img"><img src="../images/index/temp/temp_img_logo.jpg" /></div>
+													</div>
+													<div class="cell btn_area vb">
+														<div class="file_info">
+															<span class="file_name">desert_coupon.jpg</span>
+															<a href="#" class="btn_cm btn_close3"><span class="blind">닫기</span></a>
+														</div>
+														<ul class="list_img_info">
+															<li>등록 된 로고는 Microsite 및 마케팅 활동 시 제공 될 로고 입니다.</li>
+															<li>이미지 크기 제한 : 512px * 512px</li>
+														</ul>
+													</div>
+												</div>
+												<div class="tbl_group">
+													<div w3-include-html="../include/cm_filebox.html"></div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_operating_time">운영 시간</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<div class="ilb" style="width:37.7%">
+													<div class="split date_area">
+					                                    <div class="cell inp_area">
+					                                        <input type="text" class="inp" title="시작시간입력">
+    														<a href="#" class="btn_cm btn_time"><span class="blind">시간 선택</span></a>
+					                                    </div>
+					                                    <span class="cell txt_c">~</span>
+					                                    <div class="cell inp_area">
+					                                        <input type="text" class="inp" title="종료시간입력">
+    														<a href="#" class="btn_cm btn_time"><span class="blind">시간 선택</span></a>
+					                                    </div>
+					                                </div>
+				                                </div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_name_kor">상호명 (한글)</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td><input type="text" class="inp w100" id="lab_name_kor" /></td>
+											<th><label for="lab_name_eng">상호명 (영문)</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td><input type="text" class="inp w100" id="lab_name_eng" /></td>
+										</tr>
+										<tr>
+											<th><label for="lab_director">책임자명</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td><input type="text" class="inp w100" id="lab_director" /></td>
+											<th><label for="lab_director_tel">책임자 전화번호</label><strong class="txt_ess">* 필수입력</strong></th>
+							                <td>
+							                    <div class="split tel_area">
+							                        <div class="cell w30">
+							                            <select class="select" title="책임자 전화번호 첫번째자리" id="lab_director_tel">
+							                                <option>선택</option>
+							                                <option>010</option>
+							                            </select>
+							                        </div>
+							                        <span class="cell txt_c">-</span>
+							                        <div class="cell w35"><input type="text" class="inp" title="책임자 전화번호 중간자리"></div>
+							                        <span class="cell txt_c">-</span>
+							                        <div class="cell w35"><input type="text" class="inp" title="책임자 전화번호 끝자리"></div>
+							                    </div>
+							                </td>
+										</tr>
+										<tr>
+											<th><label for="lab_email">책임자 이메일</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<input type="text" class="inp w25" title="이메일 계정 ID" placeholder="이메일 ID" id="lab_email" /> @
+												<input type="text" class="inp w25 unit_mr" title="이메일 주소 입력" />
+												<select class="select w30" title="이메일 주소">
+													<option>직접입력</option>
+													<option>naver.com</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+										<th><label for="lab_store_keyword">매장 키워드</label></th>
+										<td colspan="3">
+											<div class="tbl_group">
+												<input type="text" class="inp w50" id="lab_store_keyword" />
+												<span class="txt_unit unit_tml2 list_dot_caution">입력시 콤마(,)/스페이스바/탭을 사용하여 복수 키워드의 입력이 가능합니다. </span>
+											</div>
+											<div class="tbl_group">
+												<ul class="list_str_box">
+			                                        <li>
+			                                            <span class="txt">퓨전요리</span>
+			                                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+			                                        </li>
+			                                        <li>
+			                                            <span class="txt">송도맛집</span>
+			                                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+			                                        </li>
+			                                        <li>
+			                                            <span class="txt">송도</span>
+			                                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+			                                        </li>
+			                                    </ul>
+											</div>
+										</td>
+									</tr>
+										<tr>
+											<th><label for="lab_persons_num">직원 수</label></th>
+											<td colspan="3">
+												<input type="text" class="inp w25" id="lab_persons_num" />
+												<label for="lab_persons_num">명</label>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="btn_area">
+							<button type="button" class="btnL styA">저장</button>
+							<button type="button" class="btnL styB">취소</button>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>사내게시판 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">게시글 상세</h1>
+				</div><!-- //sub_tit -->
+
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+			                            <col style="width:auto;" />
+			                            <col style="width:20%;" />
+			                            <col style="width:18%;" />
+			                            <col style="width:20%;" />
+			                            <col style="width:18%;" />
+			                            <col style="width:10%;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>제목</th>
+											<td colspan="5">제목 내용 제목 내용 제목 내용</td>
+										</tr>
+										<tr>
+											<th>작성자</th>
+											<td>홍길동</td>
+											<th>작성일</th>
+											<td>2016.12.15 14:12</td>
+											<th>조회수</th>
+											<td>200</td>
+										</tr>
+										<tr>
+											<th class="vt">내용</th>
+											<td colspan="5">
+												<!-- temp -->
+												<div w3-include-html="../guide/temp_content_view.html"></div>
+												<!-- //temp -->
+											</td>
+										</tr>
+										<tr>
+											<th class="vt">첨부파일</th>
+											<td colspan="5">
+												<div w3-include-html="../include/cm_filebox_view.html"></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="btn_area">
+							<button type="submit" class="btnL styA">수정</button>
+							<button type="button" class="btnL styA">삭제</button>
+							<button type="button" class="btnL styB">목록</button>
+						</div>
+
+						<div class="comment_box">
+							<div class="split tbl_top">
+							    <span class="cell txt_total">총 댓글 2개</span>
+							</div><!-- //tbl_top -->
+							<div class="bbs bbs_write">
+								<div class="split">
+									<div class="cell w100">
+										<textarea rows="3" cols="10" placeholder="내용을 입력해 주세요" class="textarea" title="내용"></textarea>
+									</div>	
+									<div class="cellR pl vt">
+										<button type="button" class="btnL styC">등록</button>
+									</div>
+								</div><!-- //split -->
+								<ul class="comment_list">
+									<li class="split">
+										<strong class="cell txt_name"><span class="ico_cm ico_message">홍길동</span></strong>
+										<p class="cell comment_cont">
+											등록한 댓글의 내용이 나옵니다.
+											<span class="txt_date">2017.01.01 13:00</span>
+										</p>
+										<ul class="cellR btn_area">
+											<li><a href="#">수정</a></li>
+											<li><a href="#">삭제</a></li>
+										</ul>
+									</li>
+									<li class="split frm_box"><!-- textarea가 있는경우 frm_box 추가 -->
+										<strong class="cell txt_name"><span class="ico_cm ico_message">홍길동</span></strong>
+										<p class="cell comment_cont">
+											<textarea rows="2" cols="10" class="textarea" title="댓글 내용"></textarea>
+											<span class="txt_date">2017.01.01 13:00</span>
+										</p>
+										<ul class="cellR btn_area">
+											<li><a href="#">수정</a></li>
+											<li><a href="#">삭제</a></li>
+										</ul>
+									</li>
+									<li class="split">
+										<strong class="cell txt_name"><span class="ico_cm ico_message">홍길동</span></strong>
+										<p class="cell comment_cont">
+											버튼없는경우 정보 댓글 입력 버튼없는경우 정보 댓글 입력 버튼없는경우 정보 댓글 입력 버튼없는경우 정보 댓글 입력 버튼없는경우 정보 댓글 입력 버튼없는경우 정보 댓글 입력  버튼없는경우 정보 댓글 입력  버튼없는경우 정보 댓글 입력 
+											<span class="txt_date">2017.01.01 13:00</span>
+										</p>
+									</li>
+								</ul>
+							</div><!-- //bbs -->
+						</div><!-- //comment_box -->
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>거래처 정보 조회 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">계약서 상세보기</h1>
+				</div><!-- //sub_tit -->
+
+				<dl class="bbs_deteil_top">
+					<dt>거래처 코드</dt>
+					<dd>512435</dd>
+					<dt>거래처 명</dt>
+					<dd>㈜ 길동 네트웍스</dd>
+					<dt>매장명</dt>
+					<dd>길동 샵</dd>
+				</dl>
+
+				<div class="bbs bbs_write">
+					<!-- tbl_row -->
+					<div class="tbl_row">
+						<table class="tbl">
+							<colgroup>
+								<col style="width:auto;"/>
+								<col style="width:87%;" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>계약 번호</th>
+									<td>1021324152</td>
+								</tr>
+								<tr>
+									<th>계약 상태</th>
+									<td>해지 [ 해지 날짜 : 2016-01-01 / 해지 사유 : 사유 입력 내용 표기 ]</td>
+								</tr>
+								<tr>
+									<th>계약 구분</th>
+									<td>임대 매장</td>
+								</tr>
+								<tr>
+									<th>계약 공간</th>
+									<td>C동 2층 209호</td>
+								</tr>
+								<tr>
+									<th>임대 보증금</th>
+									<td>10,000,000원</td>
+								</tr>
+								<tr>
+									<th>계약일</th>
+									<td>2017-11-30</td>
+								</tr>
+								<tr>
+									<th>계약기간</th>
+									<td>2017-11-30 ~ 2017-11-29 (5년 6개월)</td>
+								</tr>
+								<tr>
+									<th>임대료</th>
+									<td>
+										<!-- tbl_inner -->
+										<div class="tbl_col tbl_inner">
+										    <table class="tbl">
+										        <colgroup>
+										            <col style="width:4%;">
+										            <col style="width:8%;">
+										            <col style="width:24%;">
+										            <col style="width:15%;">
+										            <col style="width:15%;">
+										            <col style="width:auto;">
+										        </colgroup>
+										        <thead>
+										            <tr>
+										                <th scope="col">No.</th>
+										                <th scope="col">구분</th>
+										                <th scope="col">기간</th>
+										                <th scope="col">정액/수수료</th>
+										                <th scope="col">미니멈게런티</th>
+										                <th scope="col">특약</th>
+										            </tr>
+										        </thead>
+										        <tbody>
+										            <tr>
+										                <td>1</td>
+										                <td>갑</td>
+										                <td>2016-11-30 ~ 2016-12-30</td>
+										                <td class="tr">10,000,000원</td>
+										                <td class="tr">10,000,000원</td>
+										                <td>&nbsp;</td>
+										            </tr>
+										            <tr>
+										                <td>2</td>
+										                <td>갑</td>
+										                <td>2016-11-30 ~ 2016-12-30</td>
+										                <td class="tr">10,000,000%</td>
+										                <td class="tr">10,000,000원</td>
+										                <td>&nbsp;</td>
+										            </tr>
+										        </tbody>
+										    </table>
+										</div>
+										<!-- //tbl_inner -->
+									</td>
+								</tr>
+								<tr>
+									<th>터미널 ID</th>
+									<td>정상매장 230948293048</td>
+								</tr>
+								<tr>
+									<th>계약서</th>
+									<td>
+										<div w3-include-html="../include/cm_filebox_view.html"></div>
+									</td>
+								</tr>
+								<tr>
+									<th>공문</th>
+									<td>
+										<div w3-include-html="../include/cm_filebox_view.html"></div>
+									</td>
+								</tr>
+								<tr>
+									<th>특약서</th>
+									<td>
+										<div w3-include-html="../include/cm_filebox_view.html"></div>
+									</td>
+								</tr>
+								<tr>
+									<th><label for="lab_etc">비고</label></th>
+									<td>
+										<textarea rows="4" cols="10" placeholder="내용을 입력해 주세요" class="textarea" id="lab_etc" readonly="readonly"></textarea>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tbl_row -->
+				</div><!-- //bbs -->
+				<div class="btn_area">
+					<button type="button" class="btnL styA">계약해지</button>
+					<button type="button" class="btnL styA">수정</button>
+					<button type="button" class="btnL styA">삭제</button>
+					<button type="button" class="btnL styC">엑셀다운로드</button>
+					<button type="button" class="btnL styB">목록</button>
+				</div>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

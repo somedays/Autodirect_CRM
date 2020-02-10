@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>기안서 작성 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">기안서 작성</h1>
+					<div class="cellR btn_area">
+                        <a href="#" class="btnS styA pd1">결재선 지정</a>
+                    </div>
+				</div><!-- //sub_tit -->
+
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<div class="clx approval_tbl">
+								<h2 class="tit_deps2">협조문</h2>
+								<!-- 결재선지정을 하지 않은 경우 -->
+								<!-- table_col2 -->
+								<div class="tbl_col2 fr">
+									<table class="tbl">
+										<colgroup>
+											<col style="width:auto;" />
+											<col style="width:88px;" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th rowspan="2" class="tit">결<br />재<br /><strong class="txt_ess">* 필수입력</strong></th>
+												<th class="tit">직급</th>
+											</tr>
+											<tr>
+												<td>결재자</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //table_col2 -->
+								<!-- //결재선지정을 하지 않은 경우 -->
+
+								<!-- table_col2 -->
+								<div class="tbl_col2 fr">
+									<table class="tbl">
+										<colgroup>
+											<col style="width:auto;" />
+											<col style="width:88px;" />
+											<col style="width:88px;" />
+											<col style="width:88px;" />
+											<col style="width:88px;" />
+											<col style="width:88px;" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th rowspan="2" class="tit">결<br />재<br /><strong class="txt_ess">* 필수입력</strong></th>
+												<th class="tit">대리</th>
+												<th class="tit">차장</th>
+												<th class="tit">부장</th>
+												<th class="tit">이사</th>
+												<th class="tit">대표</th>
+											</tr>
+											<tr>
+												<td>
+													<strong class="txt_name">고길동</strong>
+													<div class="btn_area">
+														<a href="#" class="btnXS styA">결재</a>
+													</div>
+												</td>
+												<td>
+													<strong class="txt_name">고길동</strong>
+													<div class="btn_area">
+														<a href="#" class="btnXS styB">합의</a>
+													</div>
+												</td>
+												<td>
+													<strong class="txt_name">고길동</strong>
+													<div class="btn_area">
+														<a href="#" class="btnXS styA">결재</a>
+													</div>
+												</td>
+												<td>
+													<strong class="txt_name">고길동</strong>
+													<div class="btn_area">
+														<a href="#" class="btnXS styA">결재</a>
+													</div>
+												</td>
+												<td>
+													<strong class="txt_name">고길동</strong>
+													<div class="btn_area">
+														<a href="#" class="btnXS styA">결재</a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //table_col2 -->
+							</div>
+							
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+										<col style="width:89%;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label for="lab_reception">수신 참조</label></th>
+											<td>
+												<!-- popup_layer -->
+												<div class="popup pl_small w30">
+													<div class="inp_area w100">
+														<input type="text" class="inp" id="lab_reception" placeholder="Search" />
+														<a href="#" class="btn_cm btn_search"><span class="blind">검색</span></a>
+													</div>
+													<div class="inner">
+														<strong class="tit_deps1">수신 설정</strong>
+														<div w3-include-html="../popup/popup_tree_chk.html"></div>
+													</div><!-- //inner -->
+												</div>
+												<!-- //popup_layer -->
+												<ul class="list_str_box">
+													<li>
+														<span class="txt">홍길동</span>
+														<a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+													</li>
+													<li>
+														<span class="txt">재무팀</span>
+														<a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+													</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_drafter">기안자</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<input type="text" class="inp w30" id="lab_drafter" value="운영팀 홍길동" readonly="readonly" />
+												<!-- popup_layer -->
+												<div class="popup pl_small w30">
+													<div class="inp_area w100 unit_ml">
+														<input type="text" class="inp" placeholder="Search" title="기안자 검색" />
+														<a href="#" class="btn_cm btn_search"><span class="blind">검색</span></a>
+													</div>
+													<div class="inner">
+														<strong class="tit_deps1">기안자 지정</strong>
+														<div w3-include-html="../popup/popup_tree_chk.html"></div>
+													</div><!-- //inner -->
+												</div>
+												<!-- //popup_layer -->
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_date">시행일자</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="ilb" style="width:60.4%">
+													<div class="split date_area">
+					                                    <div class="cell inp_area">
+					                                        <input type="text" class="inp" id="lab_date" title="시작 기간" />
+					                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+					                                    </div>
+					                                    <span class="cell txt_c">~</span>
+					                                    <div class="cell inp_area">
+					                                        <input type="text" class="inp" title="종료 기간" />
+					                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+					                                    </div>
+					                                </div>
+				                                </div>
+				                                <div class="unit_tml vm">총 1일</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_title">제목</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<input type="text" class="inp w100" id="lab_title" />
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<dl class="bbs_cont">
+													<dt class="th blind">내용<strong class="txt_ess">* 필수입력</strong></dt>
+													<dd class="edit_wrap"><img src="../images/index/temp/@temp_edit.jpg" alt="" /></dd>
+												</dl>
+											</td>
+										</tr>
+										<tr>
+											<th class="vt"><label for="lab_file_add">첨부파일</label></th>
+											<td>
+												<div w3-include-html="../include/cm_filebox.html"></div>
+											</td>
+										</tr>
+										<tr>
+											<th>기결재 첨부</th>
+											<td><a href="#" class="btnM styC pd1">기결재검색</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="btn_area">
+							<button type="submit" class="btnL styA">상신</button>
+							<button type="button" class="btnL styA">임시저장</button>
+							<button type="button" class="btnL styB">취소</button>
+							<button type="button" class="btnL styB">삭제</button>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML(function(){
+		folderTree('.tree_list', '.btn_line');
+	});
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

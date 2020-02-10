@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>거래처 등록 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">계약 정보 등록</h1>
+				</div><!-- //sub_tit -->
+				
+				<div class="tab step_sty1">
+					<!--활성화시 on처리 -->
+				    <ol class="tab_list">
+				        <li><span class="txt">거래처정보</span></li>
+				        <li><span class="txt">매장 정보</span></li>
+				        <li class="on"><span class="txt">계약 정보</span></li>
+				    </ol>
+				</div><!-- //step_sty1 -->
+
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+										<col style="width:85%;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>계약 구분<strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="fld">
+													<span class="chk_area"><input type="radio" class="rd" name="rd_ct_class" id="rd_ct_class1" /><label for="rd_ct_class1">임대매장</label></span>
+													<span class="chk_area"><input type="radio" class="rd" name="rd_ct_class" id="rd_ct_class2" /><label for="rd_ct_class2">키오스크</label></span>
+													<span class="chk_area"><input type="radio" class="rd" name="rd_ct_class" id="rd_ct_class3" /><label for="rd_ct_class3">팝업 스토어</label></span>
+													<span class="chk_area"><input type="radio" class="rd" name="rd_ct_class" id="rd_ct_class4" /><label for="rd_ct_class4">공용공간</label></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>계약형태<strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="fld">
+													<span class="chk_area"><input type="radio" class="rd" name="rd_ct_type" id="rd_ct_type1" /><label for="rd_ct_type1">임대갑</label></span>
+													<span class="chk_area"><input type="radio" class="rd" name="rd_ct_type" id="rd_ct_type2" /><label for="rd_ct_type2">임대을</label></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_attr_form">유치형태</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<select class="select w20" id="lab_attr_form">
+					                                <option>선택</option>
+					                                <option>F&amp;B</option>
+					                                <option>패션</option>
+					                                <option>Life</option>
+					                            </select>
+											</td>
+										</tr>
+										<tr>
+											<th>매장 위치<strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="tbl_group">
+													<label for="lab_attr_form1" class="unit_tmr">동 :</label>
+													<select class="select w15" id="lab_attr_form1">
+						                                <option>선택하세요</option>
+						                            </select>
+													<label for="lab_attr_form2" class="unit_tmr unit_tml2">층 :</label>
+													<select class="select w15" id="lab_attr_form2">
+						                                <option>선택하세요</option>
+						                            </select>
+													<label for="lab_attr_form3" class="unit_tmr unit_tml2">호 :</label>
+													<select class="select w15" id="lab_attr_form3">
+						                                <option>선택하세요</option>
+						                            </select>
+													<label for="lab_attr_form4" class="unit_tmr unit_tml2">실 :</label>
+													<select class="select w15" id="lab_attr_form4">
+						                                <option>선택하세요</option>
+						                            </select>
+						                            <a href="#" class="btn_cm btn_plus unit_tml2"><span class="blind">추가</span></a>
+						                            <!-- 2줄부터는 삭제버튼 <a href="#" class="btn_cm btn_minus"><span class="blind">삭제</span></a> -->
+						                        </div>
+											</td>
+										</tr>
+										<tr>
+											<th>매장 면적</th>
+											<td>
+												<span class="unit_tmr2">전용 면적 : 223.1 m2 (22평)</span>
+												<span class="unit_tmr2">공용 면적 : 223.1 m2 (22평)</span>
+												<span class="unit_tmr2">계약 면적 : 223.1 m2 (22평)</span>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_rental_dep">임대 보증금</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<input type="text" class="inp w20 tr" id="lab_rental_dep" />
+												<label for="lab_rental_dep">원</label>
+											</td>
+										</tr>
+										<tr>
+											<th>보증금 납부정보<strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="tbl_group">
+													<label for="lab_dep_pay1" class="unit_tmr">계약금 :</label>
+													<input type="text" class="inp w15 tr" id="lab_dep_pay1" /> 
+													<label for="lab_dep_pay1" class="unit_tmr2">%</label>
+													<input type="text" class="inp w25 tr" id="lab_dep_won1" readonly="readonly" />
+													<label for="lab_dep_won1" class="unit_tmr2">원</label>
+												</div>
+												<div class="tbl_group">
+													<label for="lab_dep_pay2" class="unit_tmr">중도금 :</label>
+													<input type="text" class="inp w15 tr" id="lab_dep_pay2" /> 
+													<label for="lab_dep_pay2" class="unit_tmr2">%</label>
+													<input type="text" class="inp w25 tr" id="lab_dep_won2" readonly="readonly" />
+													<label for="lab_dep_won2" class="unit_tmr2">원</label>
+												</div>
+												<div class="tbl_group">
+													<label for="lab_dep_pay3" class="unit_tmr"><span style="padding-right:11px;">잔 금 :</span></label>
+													<input type="text" class="inp w15 tr" id="lab_dep_pay3" /> 
+													<label for="lab_dep_pay3" class="unit_tmr2">%</label>
+													<input type="text" class="inp w25 tr" id="lab_dep_won3" readonly="readonly" />
+													<label for="lab_dep_won3" class="unit_tmr2">원</label>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_date">임대차 계약기간</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="ilb" style="width:42%">
+													<div class="split date_area">
+					                                    <div class="cell inp_area">
+					                                        <input type="text" class="inp" id="lab_date" title="시작 기간" />
+					                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+					                                    </div>
+					                                    <span class="cell txt_c">~</span>
+					                                    <div class="cell inp_area">
+					                                        <input type="text" class="inp" title="종료 기간" />
+					                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+					                                    </div>
+					                                </div>
+				                                </div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_rental_mon">월 임대료</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<input type="text" class="inp w20 tr" id="lab_rental_mon" />
+												<label for="lab_rental_mon">원</label>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_date2">임대료 옵션</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="tbl_group">
+													<div class="ilb unit_tmr2" style="width:42%">
+														<div class="split date_area">
+						                                    <div class="cell inp_area">
+						                                        <input type="text" class="inp" id="lab_date2" title="시작 기간" />
+						                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+						                                    </div>
+						                                    <span class="cell txt_c">~</span>
+						                                    <div class="cell inp_area">
+						                                        <input type="text" class="inp" title="종료 기간" />
+						                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+						                                    </div>
+						                                </div>
+					                                </div>
+					                                <input type="text" class="inp w20 tr" title="임대료 금액" id="lab_rental_mon2" />
+													<label for="lab_rental_mon2" class="unit_tmr2">원</label>
+					                                <input type="text" class="inp w20 unit_tmr2" title="사유" placeholder="사유" />
+					                                <a href="#" class="btn_cm btn_plus"><span class="blind">추가</span></a>
+					                                <!-- 2줄부터는 삭제버튼 <a href="#" class="btn_cm btn_minus"><span class="blind">삭제</span></a> -->
+					                            </div>
+											</td>
+										</tr>
+										<tr>
+											<th>수수료(VAT별도)<strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="tbl_group">
+													<label for="lab_gross_tur" class="unit_tmr">총 매출액 (월) :</label>
+													<input type="text" class="inp w25 tr" id="lab_gross_tur" /> 
+													<label for="lab_gross_tur" class="unit_tmr2">원</label>
+
+													<label for="lab_commis_rate" class="unit_tmr">수수료율 :</label>
+													<input type="text" class="inp w15 tr" id="lab_commis_rate" /> 
+													<label for="lab_commis_rate" class="unit_tmr2">%</label>
+													<a href="#" class="btn_cm btn_plus"><span class="blind">추가</span></a>
+													<!-- 2줄부터는 삭제버튼 <a href="#" class="btn_cm btn_minus"><span class="blind">삭제</span></a> -->
+												</div>
+											</td>
+										</tr>
+
+										<tr>
+											<th><label for="lab_fees_date">수수료 옵션</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="tbl_group">
+													<div class="ilb unit_tmr2" style="width:42%">
+														<div class="split date_area">
+						                                    <div class="cell inp_area">
+						                                        <input type="text" class="inp" id="lab_fees_date" title="시작 기간" />
+						                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+						                                    </div>
+						                                    <span class="cell txt_c">~</span>
+						                                    <div class="cell inp_area">
+						                                        <input type="text" class="inp" title="종료 기간" />
+						                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+						                                    </div>
+						                                </div>
+					                                </div>
+					                                <label for="lab_fees_rate" class="unit_tmr">수수료율 :</label>
+													<input type="text" class="inp w10 tr" id="lab_fees_rate" /> 
+													<label for="lab_fees_rate" class="unit_tmr2">%</label>
+					                                <input type="text" class="inp w20 unit_tmr2" title="사유" placeholder="사유" />
+					                                <a href="#" class="btn_cm btn_plus"><span class="blind">추가</span></a>
+					                                <!-- 2줄부터는 삭제버튼 <a href="#" class="btn_cm btn_minus"><span class="blind">삭제</span></a> -->
+					                            </div>
+											</td>
+										</tr>
+										<tr>
+											<th>POS 운영형태</th>
+											<td>
+												<div class="fld">
+													<span class="chk_area"><input type="radio" class="rd" name="rd_pos" id="rd_pos1" /><label for="rd_pos1">단독</label></span>
+													<span class="chk_area"><input type="radio" class="rd" name="rd_pos" id="rd_pos2" /><label for="rd_pos2">임대</label></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>VAN사 정보<strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="fld">
+													<span class="chk_area"><input type="radio" class="rd" name="rd_van_info" id="rd_van_info1" /><label for="rd_van_info1">다우데이터</label></span>
+													<span class="chk_area"><input type="radio" class="rd" name="rd_van_info" id="rd_van_info2" /><label for="rd_van_info2">기타</label></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>VAN사 정보동의</th>
+											<td>
+												<div class="fld">
+													<span class="chk_area"><input type="radio" class="rd" name="rd_van_agree" id="rd_van_agree1" /><label for="rd_van_agree1">동의</label></span>
+													<span class="chk_area"><input type="radio" class="rd" name="rd_van_agree" id="rd_van_agree2" /><label for="rd_van_agree2">미동의</label></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>매출정보 입력 동의</th>
+											<td>
+												<div class="fld">
+													<span class="chk_area">
+														<input type="radio" class="rd" name="rd_sales_agree" id="rd_sales_agree1" /><label for="rd_sales_agree1">동의</label>
+														<select class="select unit_tml" title="일/월">
+							                                <option>월</option>
+							                                <option>일</option>
+							                            </select>
+													</span>
+													<span class="chk_area"><input type="radio" class="rd" name="rd_sales_agree" id="rd_sales_agree2" /><label for="rd_sales_agree2">미동의</label></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>계약서</th>
+											<td>
+												<div w3-include-html="../include/cm_filebox.html"></div>
+											</td>
+										</tr>
+										<tr>
+											<th>공문</th>
+											<td>
+												<div w3-include-html="../include/cm_filebox.html"></div>
+											</td>
+										</tr>
+										<tr>
+											<th>특약서</th>
+											<td>
+												<div w3-include-html="../include/cm_filebox.html"></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="btn_area">
+							<button type="button" class="btnL styB">이전</button>
+							<button type="button" class="btnL styA">저장</button>
+							<button type="button" class="btnL styB">임시저장</button>
+							<button type="button" class="btnL styB">취소</button>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>이벤트 상세 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">이벤트 상세보기
+                        <button type="button" class="btnXS btn_guide_view"><span class="btn_cm btn_search_s">가이드 보기</span></button>
+                    </h1>
+				</div><!-- //sub_tit -->
+				
+				<div class="bbs bbs_write">
+					<!-- tbl_row -->
+					<div class="tbl_row">
+						<table class="tbl">
+							<colgroup>
+								<col style="width:auto;"/>
+								<col style="width:36%;" />
+								<col style="width:17%;" />
+								<col style="width:36%;" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>작성자</th>
+									<td>유니클로</td>
+                                    <th>발행주체</th>
+                                    <td>유니클로</td>
+								</tr>
+								<tr>
+                                    <th>등록일</th>
+                                    <td>2017-10-11 13:21</td>
+									<th>승인일</th>
+									<td>2017-10-11 13:21</td>
+								</tr>
+                                <tr>
+                                    <th>상태</th>
+                                    <td>진행중</td>
+                                    <th>노출상태</th>
+                                    <td>노출</td>
+                                </tr>
+								<tr>
+									<th>구분</th>
+									<td colspan="3">참여형 이벤트(QR코드)</td>
+								</tr>
+								<tr>
+									<th>제목</th>
+									<td colspan="3">빕스(VIPS) 송도점 입점 기념 이벤트 - 스테이크 10,000원 할인</td>
+								</tr>
+								<tr>
+									<th>기간(시작/종료일)</th>
+									<td>2017-01-30 ~ 2017-02-30</td>
+									<th>노출시작일</th>
+									<td>2017-01-30</td>
+								</tr>
+								<tr>
+									<th>대표이미지</th>
+									<td colspan="3">
+										<div class="split img_modify tbl_group">
+											<div class="cell w10">
+												<div class="img"><img src="../images/index/temp/temp_img_logo.jpg" /></div>
+											</div>
+											<div class="cell btn_area vb">
+												<div class="file_info">
+													<span class="file_name">desert_coupon.jpg</span>
+												</div>
+												<ul class="list_img_info">
+													<li>이벤트 목록에서 노출될 썸네일입니다.</li>
+													<li>이미지 크기 : 410px * 250px / 이미지 종류 : jpg, png, gif</li>
+												</ul>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>내용</th>
+									<td colspan="3">
+										<!-- temp -->
+										<div w3-include-html="../guide/temp_content_view.html"></div>
+										<!-- //temp -->
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tbl_row -->
+				</div><!-- //bbs -->
+				
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write gray marT3">
+							<h2 class="ico_cm ico_reply"><span class="txt">당첨자</span></h2>
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+									</colgroup>
+									<tbody>
+										<tr>
+											<td>
+												<dl class="bbs_cont">
+													<dt class="th blind">내용<strong class="txt_ess">* 필수입력</strong></dt>
+													<dd class="edit_wrap"><img src="../images/index/temp/@temp_edit.jpg" alt=""></dd>
+												</dl>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="split blue_box marT3">
+							<p class="cell txt_re">이벤트 당첨 등록 (이벤트 종료버튼을 클릭시에 나타납니다.)</p>
+							<div class="cellR btn_area">
+								<a href="#" class="btnS styC">당첨자등록</a>
+							</div>						
+						</div>
+						<div class="btn_area">
+							<button type="button" class="btnL styA">승인</button>
+							<button type="button" class="btnL styA">반려</button>
+							<button type="button" class="btnL styA">이벤트 종료</button>
+							<button type="button" class="btnL styB">수정</button>
+						    <button type="button" class="btnL styB">삭제</button>
+						    <button type="button" class="btnL styC">목록</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

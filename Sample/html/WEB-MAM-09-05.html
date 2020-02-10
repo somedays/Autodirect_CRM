@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>광고물제작 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">광고물 신청 상세보기</h1>
+				</div><!-- //sub_tit -->
+
+				<div class="bbs bbs_write">
+					<!-- tbl_row -->
+					<div class="tbl_row">
+						<table class="tbl">
+							<colgroup>
+					            <col style="width:auto;" />
+					            <col style="width:34%;" />
+					            <col style="width:20%;" />
+					            <col style="width:34%;" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>발송 방법</th>
+									<td>예약 발송 (예약날짜 : 2017-01-01 14:00)</td>
+									<th>등록일</th>
+									<td>2017-01-01 14:00</td>
+								</tr>
+								<tr>
+									<th>발송 상태</th>
+									<td>발송 오류 (실패 : 231명)</td>
+									<th>발송일</th>
+									<td>2017-01-01 14:00</td>
+								</tr>
+								<tr>
+									<th>구분</th>
+									<td colspan="3">이메일 발송</td>
+								</tr>
+								<tr>
+									<th>수신자</th>
+									<td colspan="3">
+										<span class="unit_tmr">총 3,2009 명</span>
+										<a href="#" class="btnM styC pd1">상세보기</a>
+									</td>
+								</tr>
+								<tr>
+									<th>선택 그룹</th>
+									<td colspan="3">
+										<ul class="list_str_box">
+					                        <li>
+					                            <span class="txt">성별 : 남성</span>
+					                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+					                        </li>
+					                        <li>
+					                            <span class="txt">성별 : 여성</span>
+					                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+					                        </li>
+					                        <li>
+					                            <span class="txt">나이 : 10대</span>
+					                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+					                        </li>
+					                        <li>
+					                            <span class="txt">나이 : 20대</span>
+					                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+					                        </li>
+					                        <li>
+					                            <span class="txt">나이 : 30대</span>
+					                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+					                        </li>
+					                        <li>
+					                            <span class="txt">지역 : 인천광역시 연수구 송도동</span>
+					                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+					                        </li>
+					                        <li>
+					                            <span class="txt">지역 : 인천광역시 연수구 송도동</span>
+					                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+					                        </li>
+					                        <li>
+					                            <span class="txt">차량등록 여부 : 무</span>
+					                            <a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+					                        </li>
+					                    </ul>
+									</td>
+								</tr>
+								<tr>
+									<th>제목</th>
+									<td colspan="3">제목 표시</td>
+								</tr>
+								<tr>
+									<th>내용</th>
+									<td colspan="3">
+										<!-- temp -->
+										<div w3-include-html="../guide/temp_content_view.html"></div>
+										<!-- //temp -->
+									</td>
+								</tr>
+								<tr>
+									<th>첨부파일</th>
+									<td colspan="3">
+										<div w3-include-html="../include/cm_filebox_view.html"></div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //tbl_row -->
+				</div><!-- //bbs -->
+				<div class="btn_area">
+				    <button type="button" class="btnL styA">수정</button>
+				    <button type="button" class="btnL styA">삭제</button>
+				    <button type="button" class="btnL styB">목록</button>
+				</div>
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

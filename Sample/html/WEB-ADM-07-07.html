@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>전자결재 양식 등록 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">전자결재 양식 상세보기</h1>
+				</div><!-- //sub_tit -->
+
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+                                        <col style="width:auto">
+                                        <col style="width:32%;">
+                                        <col style="width:15%;">
+                                        <col style="width:32%;">
+									</colgroup>
+									<tbody>
+                                        <tr>
+                                            <th>회사 구분</th>
+                                            <td>에스디프런티어</td>
+                                            <th>분류</th>
+                                            <td>청구서</td>
+                                        </tr>
+                                        <tr>
+                                            <th>사용 여부</th>
+                                            <td>사용</td>
+                                            <th>등록일</th>
+                                            <td>2016.12.11 13:41</td>
+                                        </tr>
+										<tr>
+											<th>양식명</th>
+											<td colspan="3">제증명서 신청서</td>
+										</tr>
+										<tr>
+											<td colspan="4">
+												<dl class="bbs_cont">
+													<dt class="th blind">내용</dt>
+													<dd class="edit_wrap">
+														<!-- 제증명서 신청서 -->
+														<div class="info_appct_box view_box"><!-- 신청서 보기 화면 -->
+                                                            <strong  class="tit">제증명서 신청서</strong>
+															<!-- tbl_row2 -->
+															<div class="tbl_row2">
+																<table class="tbl">
+																	<colgroup>
+																		<col style="width:5%;"/>
+																		<col style="width:7%;"/>
+																		<col style="width:auto;" />
+																	</colgroup>
+																	<tbody>
+																		<tr>
+																			<th rowspan="3">인적<br />사항</th>
+																			<th>소속</th>
+																			<td>&nbsp;</td>
+																		</tr>
+																		<tr>
+																			<th>직위</th>
+																			<td>&nbsp;</td>
+																		</tr>
+																		<tr>
+																			<th>성명</th>
+																			<td>&nbsp;</td>
+																		</tr>
+																		<tr>
+																			<th rowspan="4">세부<br />내용</th>
+																			<th rowspan="2">신청</th>
+																			<td>
+																				<span class="chk_area"><input type="checkbox" class="chk" name="chk_b" id="chk_b1" /><label for="chk_b1">재직증명서</label></span>
+																				<span class="txt_chk_r">(<span class="num_copy">통) - ( 원본 / Fax  택1)</span></span>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<span class="chk_area"><input type="checkbox" class="chk" name="chk_b2" id="chk_b2" /><label for="chk_b2">근로소득원천징수영수증</label></span>
+																				<span class="txt_chk_r">(<span class="num_copy">통) - ( 원본 / Fax  택1)</span></span>
+																			</td>
+																		</tr>
+																		<tr>
+																			<th>제출처</th>
+																			<td>&nbsp;</td>
+																		</tr>
+																		<tr>
+																			<th>용도</th>
+																			<td>&nbsp;</td>
+																		</tr>
+																		<tr>
+																			<th colspan="2">비고</th>
+																			<td>&nbsp;</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+															<!-- //tbl_row2 -->
+															<div class="bot_appct">
+																<p class="txt_center">상기 본인은 위와 같은 사유로 인하여 이를 제출합니다.</p>
+																<div class="txt_date">
+																	<span class="year">년</span><span class="month">월</span><span class="day">일</span>
+																</div>
+																<div class="txt_name">
+																	신청인 : <span class="sign">(인)</span>
+																</div>
+															</div><!-- //bot_appct -->
+														</div><!-- //info_appct_box -->
+														<!-- //제증명서 신청서 -->
+													</dd>
+												</dl>
+											</td>
+										</tr>
+                                        <tr>
+                                            <th>첨부파일</th>
+                                            <td colspan="4">
+                                                <div class="tbl_group">
+                                                    <div w3-include-html="../include/cm_filebox.html"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="btn_area">
+							<button type="button" class="btnL styA">수정</button>
+							<button type="button" class="btnL styA">삭제</button>
+							<button type="button" class="btnL styB">목록</button>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

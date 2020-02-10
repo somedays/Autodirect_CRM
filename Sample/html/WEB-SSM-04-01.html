@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>일 매출 등록 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">일 매출 등록</h1>
+					<div class="cellR btn_area">
+						<a href="#" class="btnS styC">엑셀 다운로드</a>
+						<!-- search_box 영역이 닫히는 경우 open 클래스 삭제 -->
+						<a href="#search_box" class="btn_cm btn_view3 open"><span class="blind">다음보기</span></a>
+					</div>
+				</div><!-- //sub_tit -->
+
+				<form action="" method="post">
+					<fieldset>
+						<!-- search_box -->
+						<div class="split search_box" id="search_box">
+							<div class="cell">
+								<table class="tbl col2"><!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+									<colgroup>
+										<col style="width:1%;" />
+                                        <col style="width:48%;" />
+                                        <col style="width:1%;" />
+                                        <col style="width:auto;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label class="tit_fld" for="lab_date">날짜</label></th>
+                                            <td>
+                                                <div class="split date_area">
+                                                    <div class="cell inp_area">
+                                                        <input type="text" class="inp" id="lab_date" title="시작 기간" />
+                                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+                                                    </div>
+                                                    <span class="cell txt_c">~</span>
+                                                    <div class="cell inp_area">
+                                                        <input type="text" class="inp" title="종료 기간" />
+                                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+											<th>상태</th>
+											<td>
+												<div class="fld">
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_condition" id="chk_condition1" /><label for="chk_condition1">확정</label></span>
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_condition" id="chk_condition2" /><label for="chk_condition2">미등록</label></span>
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_condition" id="chk_condition3" /><label for="chk_condition3">보정 요청</label></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_store_name">매장명</label></th>
+											<td>
+												<!-- popup_layer -->
+												<div class="popup pl_small w100">
+													<div class="inp_area w100">
+														<input type="text" class="inp" id="lab_store_name" placeholder="Search" title="매장명" readonly="readonly" />
+														<a href="#" class="btn_cm btn_search"><span class="blind">검색</span></a>
+													</div>
+													<div class="inner">
+														<h1 class="tit_deps1">매장 검색</h1>
+														<div w3-include-html="../popup/popup_store_search.html"></div>
+													</div><!-- //inner -->
+												</div>
+												<!-- //popup_layer -->
+											</td>
+											<th>사진</th>
+											<td>
+												<div class="fld">
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_resist" id="chk_resist1" /><label for="chk_resist1">등록</label></span>
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_resist" id="chk_resist2" /><label for="chk_resist2">미등록</label></span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- //cell -->
+							<div class="cellR">
+								<button type="button" class="btnS styE pd1">조회</button>
+							</div><!-- //cellR -->
+						</div>
+						<!--//search_box -->
+					</fieldset>
+				</form>
+				
+				<!-- sheet_table -->
+				<div class="tbl_sheet">
+					<!-- table_col -->
+					<div class="tbl_col tbody_loop">
+					    <table class="tbl">
+					        <colgroup>
+					            <col style="width:4%;" />
+					            <col style="width:10%;" />
+					            <col style="width:auto;" />
+					            <col style="width:11%;" />
+					            <col style="width:11%;" />
+					            <col style="width:11%;" />
+					            <col style="width:11%;" />
+					            <col style="width:11%;" />
+					            <col style="width:7%;" />
+					        </colgroup>
+					        <thead>
+					            <tr>
+					                <th scope="col">No</th>
+					                <th scope="col">날짜</th>
+					                <th scope="col">구분</th>
+					                <th scope="col">카드</th>
+					                <th scope="col">현금</th>
+					                <th scope="col">기타</th>
+					                <th scope="col">합계</th>
+					                <th scope="col">사진</th>
+					                <th scope="col">상태</th>
+					            </tr>
+				        	</thead>
+					        <tbody class="check_red"><!-- 한줄 셀렉트 되었을때 -->
+					            <tr>
+					            	<td>1</td>
+					            	<td><a href="#" class="alink">2016-12-31</a></td>
+					            	<td>VAN사 입력</td>
+					            	<td class="tr">23,000,000</td>
+					            	<td class="tr">23,000,000</td>
+					            	<td class="tr">-</td>
+					            	<td class="tr">23,000,000</td>
+					            	<td>&nbsp;</td>
+					            	<td class="btn_state">
+					            		<!-- 보정 요청중 --><a href="#" class="btnXS styF">보정</a>            		
+					            	</td>
+				            	</tr>
+				            	<tr>
+				            		<td>&nbsp;</td>
+				            		<td>&nbsp;</td>
+				            		<td>매장 입력</td>
+				            		<td class="tr pointCol1">19,000,000</td>
+				            		<td class="tr">23,000,000</td>
+				            		<td class="tr">23,000,000</td>
+				            		<td class="tr">23,000,000</td>
+				            		<td class="tl"><a href="#" class="alink txt_overflow">201621201621201621201621</a></td>
+				            		<td class="btn_state">&nbsp;</td>
+				            	</tr>
+				            </tbody>
+				            <tbody>
+					            <tr>
+					            	<td>1</td>
+					            	<td>2016-12-31</td>
+					            	<td>VAN사 입력</td>
+					            	<td class="tr">-</td>
+					            	<td class="tr">-</td>
+					            	<td class="tr">-</td>
+					            	<td class="tr">-</td>
+					            	<td>&nbsp;</td>
+					            	<td class="btn_state">
+										<a href="#" class="btnXS styF">등록</a>            		
+					            	</td>
+				            	</tr>
+				            	<tr>
+				            		<td>&nbsp;</td>
+				            		<td>&nbsp;</td>
+				            		<td>매장 입력</td>
+				            		<td class="tr">-</td>
+				            		<td class="tr">-</td>
+				            		<td class="tr">-</td>
+				            		<td class="tr">-</td>
+				            		<td class="tl"><a href="#" class="alink txt_overflow">201621201621201621201621</a></td>
+				            		<td class="btn_state">&nbsp;</td>
+				            	</tr>
+				            </tbody>
+				            <tbody>
+					            <tr>
+					            	<td>1</td>
+					            	<td>2016-12-31</td>
+					            	<td>VAN사 입력</td>
+					            	<td class="tr">-</td>
+					            	<td class="tr">-</td>
+					            	<td class="tr">-</td>
+					            	<td class="tr">-</td>
+					            	<td>&nbsp;</td>
+					            	<td class="btn_state">
+										<span class="category cate_bd2">확정</span>       		
+					            	</td>
+				            	</tr>
+				            	<tr>
+				            		<td>&nbsp;</td>
+				            		<td>&nbsp;</td>
+				            		<td>매장 입력</td>
+				            		<td class="tr">19,000,000</td>
+				            		<td class="tr">23,000,000</td>
+				            		<td class="tr">23,000,000</td>
+				            		<td class="tr">23,000,000</td>
+				            		<td class="tl"><a href="#" class="alink txt_overflow">201621201621201621201621</a></td>
+				            		<td class="btn_state">&nbsp;</td>
+				            	</tr>
+				            </tbody>
+					    </table>
+					</div>
+					<!-- //table_col -->
+				</div>
+				<!-- //sheet_table -->
+				
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

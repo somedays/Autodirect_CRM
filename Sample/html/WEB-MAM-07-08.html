@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>메인페이지 관리 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">메인페이지 관리</h1>
+					<div class="cellR btn_area">
+						<div class="box_pos ilb w50">
+							<a href="#" class="btnS styB">미리보기</a>
+                            <a href="#" class="btnS styA">저장</a>
+						</div>
+					</div>
+				</div><!-- //sub_tit -->
+				
+				<!-- tabs -->
+                <div class="tab tab_sty3">
+                    <ul class="tab_list">
+                        <li><a class="txt" href="#">Banner</a></li>
+                        <li><a class="txt" href="#">쿠폰 &amp; 이벤트</a></li>
+                        <li><a class="txt" href="#">쇼핑뉴스</a></li>
+                        <li class="on"><a class="txt" href="#">추천스토어</a></li>
+                        <li><a class="txt" href="#">SNS 해시테그</a></li>
+                        <li><a class="txt" href="#">추천 테마</a></li>
+                    </ul>
+                </div>
+                <!-- //tabs -->
+				
+				<div class="split tbl_top">
+                    <span class="cell txt_">※ 각 항목별 추천 스토어는 최대 8개까지 등록 가능합니다.</span>
+                </div><!-- //tbl_top -->
+
+				<!-- sheet_table -->
+				<div class="tbl_sheet">
+					<!-- table_col -->
+					<div class="tbl_col">
+					    <table class="tbl">
+					        <colgroup>
+					            <col style="width:4%;" />
+					            <col style="width:12%;" />
+                                <col style="width:auto;" />
+                                <col style="width:10%" />
+					            <col style="width:6%;" />
+					        </colgroup>
+					        <thead>
+					            <tr>
+					                <th scope="col">No.</th>
+					                <th scope="col">항목</th>
+                                    <th scope="col">매장</th>
+					                <th scope="col">추천스토어수</th>
+					                <th scope="col">관리</th>
+				            	</tr>
+					        </thead>
+					        <tbody>
+					            <tr>
+					            	<td>1</td>
+					            	<td>FASHION</td>
+                                    <td class="tl">
+                                        <button type="button" class="btnXS styF unit_tmr">매장추가</button>
+                                        <ul class="list_str_box small">
+                                            <li>
+                                                <span class="txt">ZARA</span>
+                                                <a class="btn_cm btn_del" href="#"><span class="blind">삭제</span></a>
+                                            </li>
+                                            <li>
+                                                <span class="txt">ADIDAS</span>
+                                                <a class="btn_cm btn_del" href="#"><span class="blind">삭제</span></a>
+                                            </li>
+                                            <li>
+                                                <span class="txt">H&amp;M</span>
+                                                <a class="btn_cm btn_del" href="#"><span class="blind">삭제</span></a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>3</td>
+					                <td class="btn_state">
+					                	<a href="#" class="btnXS styF">삭제</a>
+					                </td>
+				            	</tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>FOOD</td>
+                                    <td class="tl">
+                                        <button type="button" class="btnXS styF unit_tmr">매장추가</button>
+                                        <ul class="list_str_box small">
+                                            <li>
+                                                <span class="txt">McDonald's</span>
+                                                <a class="btn_cm btn_del" href="#"><span class="blind">삭제</span></a>
+                                            </li>
+                                            <li>
+                                                <span class="txt">어메이징 브루잉</span>
+                                                <a class="btn_cm btn_del" href="#"><span class="blind">삭제</span></a>
+                                            </li>
+                                            <li>
+                                                <span class="txt">깐부치킨</span>
+                                                <a class="btn_cm btn_del" href="#"><span class="blind">삭제</span></a>
+                                            </li>
+                                            <li>
+                                                <span class="txt">투썸플레이스</span>
+                                                <a class="btn_cm btn_del" href="#"><span class="blind">삭제</span></a>
+                                            </li>
+                                            <li>
+                                                <span class="txt">장혁민의 부대찌개</span>
+                                                <a class="btn_cm btn_del" href="#"><span class="blind">삭제</span></a>
+                                            </li>
+                                            <li>
+                                                <span class="txt">경성 함바그</span>
+                                                <a class="btn_cm btn_del" href="#"><span class="blind">삭제</span></a>
+                                            </li>
+                                            <li>
+                                                <span class="txt">지아니스 나폴리</span>
+                                                <a class="btn_cm btn_del" href="#"><span class="blind">삭제</span></a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>7</td>
+                                    <td class="btn_state">
+                                        <a href="#" class="btnXS styF">삭제</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>LIFESTYLE</td>
+                                    <td class="tl">
+                                        <div class="popup pl_small">
+                                            <button type="button" class="btnXS styF unit_tmr">매장추가</button>
+                                            <div class="inner w450">
+                                                <h1 class="tit_deps1">매장검색</h1>
+                                                <div class="pop_content">
+                                                    <div class="split search_box_no search_box_notit" id="search_box">
+                                                        <div class="cell">
+                                                            <table class="tbl">
+                                                                <colgroup>
+                                                                    <col style="width:35%;">
+                                                                    <col style="width:65%;">
+                                                                </colgroup>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <select title="항목" class="select select_mini">
+                                                                                <option>선택</option>
+                                                                                <option>FASHION</option>
+                                                                                <option>FOOD</option>
+                                                                                <option>LIFESTYLE</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="inp_area">
+                                                                                <input class="inp" title="매장명 검색" type="text" placeholder="매장명을 입력하세요." />
+                                                                                <a class="btn_cm btn_search" href="#"><span class="blind">매장검색</span></a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div><!-- //cell -->
+                                                    </div>
+                                                    <div class="tbl_col sheet_scroll">
+                                                        <div class="thead_wrap">
+                                                            <table class="tbl">
+                                                                <colgroup>
+                                                                    <col style="width:40px;">
+                                                                    <col style="width:180px;">
+                                                                    <col style="width:100px;">
+                                                                    <col style="width:auto;">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">선택</th>
+                                                                        <th scope="col">매장명</th>
+                                                                        <th scope="col">항목</th>
+                                                                        <th scope="col">위치</th>
+                                                                    </tr>
+                                                                </thead>
+                                                            </table>
+                                                        </div><!-- //tbl_thead -->
+                                                        <div class="tbody_wrap lineH3">
+                                                            <!-- 라인에 따른 갯수지정 lineH2~lineHOO -->
+                                                            <table class="tbl">
+                                                                <colgroup>
+                                                                    <col style="width:40px;">
+                                                                    <col style="width:180px;">
+                                                                    <col style="width:100px;">
+                                                                    <col style="width:auto;">
+                                                                </colgroup>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><input name="chk_store" title="체크" class="chk" id="chk_a1" type="checkbox"><label for="chk_a1">체크</label></td>
+                                                                        <td>H커넥트</td>
+                                                                        <td>LIFESTYLE</td>
+                                                                        <td>B동, 1F</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div><!-- //tbody_wrap -->
+                                                    </div>
+                                                    <!-- //sheet_scroll -->
+                                                </div>
+                                                <div class="btn_area">
+                                                    <button class="btnS styA" type="submit">추가</button>
+                                                    <button class="btnS styB" type="button">취소</button>
+                                                </div>
+                                                <a class="btn_cm btn_close2" href="#"><span class="blind">닫기</span></a>
+                                            </div><!-- //inner -->
+                                        </div>
+                                    </td>
+                                    <td>0</td>
+                                    <td class="btn_state">
+                                        <a href="#" class="btnXS styF">삭제</a>
+                                    </td>
+                                </tr>
+					        </tbody>
+					    </table>
+					</div>
+					<!-- //table_col -->
+				</div>
+				<!-- //sheet_table -->
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

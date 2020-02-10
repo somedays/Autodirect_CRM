@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>공통 코드 관리 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">공통 코드 관리</h1>
+				</div><!-- //sub_tit -->
+
+				<div class="cols_wrap">
+					<div class="cols_row">
+						<div class="cols col_1_2">
+							<form action="" method="post">
+								<fieldset>
+									<!-- search_box -->
+									<div class="split search_box">
+										<div class="cell">
+											<table class="tbl col3"><!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+												<colgroup>
+													<col style="width:1%;"/>
+													<col style="width:auto;" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<th><label class="tit_fld" for="lab_code_group">코드 그룹</label></th>
+														<td>
+															<div class="inp_area">
+																<input type="text" class="inp" id="lab_code_group" placeholder="그룹 코드 입력" />
+																<a href="#" class="btn_cm btn_search"><span class="blind">검색</span></a>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div><!-- //cell -->
+										<div class="cellR">
+			                                <button type="button" class="btnS styE pd1">조회</button>
+			                            </div><!-- //cellR -->
+									</div>
+									<!--//search_box -->
+								</fieldset>
+							</form>
+
+							<div class="split tit_area">
+								<h2 class="cell tit_deps2">코드그룹</h2>
+							</div><!-- //tbl_top -->
+
+							<!-- sheet_table -->
+							<div class="tbl_sheet">
+								sheet 영역
+							</div>
+							<!-- //sheet_table -->
+
+						</div><!-- //cols -->
+						<div class="cols col_1_2">
+							<form action="" method="post">
+								<fieldset>
+									<!-- search_box -->
+									<div class="split search_box">
+										<div class="cell">
+											<table class="tbl col3"><!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+												<colgroup>
+													<col style="width:1%;"/>
+													<col style="width:auto;" />
+												</colgroup>
+												<tbody>
+													<tr>
+														<th><label class="tit_fld" for="lab_item_group">세부 항목</label></th>
+														<td>
+															<div class="inp_area">
+																<input type="text" class="inp" id="lab_item_group" placeholder="항목 코드 입력" />
+																<a href="#" class="btn_cm btn_search"><span class="blind">검색</span></a>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div><!-- //cell -->
+										<div class="cellR">
+			                                <button type="button" class="btnS styE pd1">조회</button>
+			                            </div><!-- //cellR -->
+									</div>
+									<!--//search_box -->
+								</fieldset>
+							</form>
+
+							<div class="split tit_area">
+								<h2 class="cell tit_deps2">세부항목</h2>
+								<div class="cellR btn_area">
+									<a href="#" class="btnS styB">추가</a>
+									<a href="#" class="btnS styB">삭제</a>
+									<a href="#" class="btnS styA">저장</a>
+									<a href="#" class="btnS styA">취소</a>
+								</div>
+							</div><!-- //tbl_top -->
+
+							<!-- sheet_table -->
+							<div class="tbl_sheet">
+								<!-- table_col -->
+								<div class="tbl_col">
+								    <table class="tbl">
+								        <colgroup>
+								            <col style="width:10%;">
+								            <col style="width:10%;">
+								            <col style="width:20%;"> 
+								            <col style="width:auto;">
+								            <col style="width:20%;">
+								        </colgroup>
+								        <thead>
+								            <tr>
+								                <th scope="col">선택</th>
+								                <th scope="col">순서</th>
+								                <th scope="col">항목 코드</th>
+								                <th scope="col">항목 명</th>
+								                <th scope="col">순서 변경</th>
+							            	</tr>
+								        </thead>
+								        <tbody>
+								            <tr>
+								                <td>&nbsp;</td>
+								                <td>&nbsp;</td>
+								                <td>&nbsp;</td>
+								                <td>&nbsp;</td>
+								                <td>
+								                	<a href="#" class="btn_cm btn_up"><span class="blind">위로</span></a>
+								                	<a href="#" class="btn_cm btn_down unit_ml"><span class="blind">아래로</span></a>
+								                </td>
+								            </tr>
+								        </tbody>
+								    </table>
+								</div>
+								<!-- //table_col -->
+							</div>
+							<!-- //sheet_table -->
+
+						</div><!-- //cols -->
+					</div><!-- //cols_row -->
+				</div><!-- //cols_wrap -->
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

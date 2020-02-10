@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>기안서 상세 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">기안서 상세</h1>
+				</div><!-- //sub_tit -->
+
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<div class="clx approval_tbl">
+								<h2 class="tit_deps2">협조문</h2>
+								<!-- table_col2 -->
+								<div class="tbl_col2 fr">
+									<table class="tbl">
+										<colgroup>
+											<col style="width:auto;" />
+											<col style="width:88px;" />
+											<col style="width:88px;" />
+											<col style="width:88px;" />
+											<col style="width:88px;" />
+											<col style="width:88px;" />
+											<col style="width:88px;" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th rowspan="2" class="tit">결<br />재<br /><strong class="txt_ess">* 필수입력</strong></th>
+												<th class="tit">대리</th>
+												<th class="tit">차장</th>
+												<th class="tit">부장</th>
+												<th class="tit">이사</th>
+												<th class="tit">대표</th>
+												<th class="tit">대표</th>
+											</tr>
+											<tr>
+												<td>
+													<span class="ico_cm ico_apprv1"><span class="blind">완료</span></span>
+													<div class="txt_info">
+														<strong class="txt_name">김고은</strong>
+														<span class="txt_date">16-02-01 14:50</span>
+													</div>
+												</td>
+												<td>
+													<span class="ico_cm ico_apprv2"><span class="blind">승인</span></span>
+													<div class="txt_info">
+														<strong class="txt_name">홍길동</strong>
+														<span class="txt_date">16-02-01 14:50</span>
+													</div>
+												</td>
+												<td>
+													<span class="ico_cm ico_apprv3"><span class="blind">반려</span></span>
+													<div class="txt_info">
+														<strong class="txt_name">김길동</strong>
+														<span class="txt_date">16-02-01 14:50</span>
+													</div>
+												</td>
+												<td class="on"><!-- on 클래스 : 진행중 활성화 / on인경우 on_ing 추가 -->
+													<strong class="txt_name">홍길동</strong>
+													<span class="on_ing">결재대기</span>
+												</td>
+												<td>
+													<strong class="txt_name">고길동</strong>
+													<div class="btn_area">
+														<a href="#" class="btnXS styA">결재</a>
+													</div>
+												</td>
+												<td>
+													<strong class="txt_name">고길동</strong>
+													<div class="btn_area">
+														<a href="#" class="btnXS styB">합의</a>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //table_col2 -->
+							</div>
+
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+										<col style="width:33%;" />
+										<col style="width:20%;" />
+										<col style="width:33%;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>수신 참조</th>
+											<td colspan="3">SD 프런티어 영업부 홍길동, SD 프런티어 영업부 홍길동, SD 프런티어 관리부</td>
+										</tr>
+										<tr>
+											<th>문서 번호</th>
+											<td>SD 프런티어 2016- 호</td>
+											<th>보존기간</th>
+											<td>3년</td>
+										</tr>
+										<tr>
+											<th>기안일자</th>
+											<td>2016-11-12</td>
+											<th>기안자</th>
+											<td>운영팀 홍길동</td>
+										</tr>
+										<tr>
+											<th>시행일자</th>
+											<td colspan="3">2016-11-30 ~ 2016-11-30 총 1일</td>
+										</tr>
+										<tr>
+											<th>제목</th>
+											<td colspan="3">제목 내용 표시</td>
+										</tr>
+										<tr>
+											<th>내용</th>
+											<td colspan="3">
+												<!-- temp -->
+												<div w3-include-html="../guide/temp_content_view.html"></div>
+												<!-- //temp -->
+											</td>
+										</tr>
+										<tr>
+											<th>첨부파일</th>
+											<td colspan="3">
+												<div w3-include-html="../include/cm_filebox_view.html"></div>
+											</td>
+										</tr>
+
+										<tr>
+											<th>기결재 첨부</th>
+											<td colspan="3">2016  봄정기 세일 협조문</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="btn_area">
+							<button type="submit" class="btnL styA">결재</button>
+							<button type="button" class="btnL styB">결재이력</button>
+							<button type="button" class="btnL styB">인쇄</button>
+							<button type="button" class="btnL styB">목록</button>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

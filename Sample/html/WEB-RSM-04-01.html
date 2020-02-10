@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>수익정산 | Triple Street</title>
+    <link rel="stylesheet" href="../css/index/common.css" />
+    <link rel="stylesheet" href="../css/index/icomoon.css" />
+
+    <script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+    <script src="../libs/1.11.4/jquery-ui.min.js"></script>
+    <!-- custom scrollbar plugin -->
+    <script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body>
+    <div id="wrap" class="wrap sub">
+        <!-- 서브인경우 sub 클래스 추가 -->
+        <!-- header -->
+        <div w3-include-html="../include/layout_header.html"></div>
+        <!-- //header -->
+
+        <hr />
+
+        <!-- nav_wrap -->
+        <div w3-include-html="../include/layout_nav.html"></div>
+        <!-- //nav_wrap -->
+
+        <hr />
+
+        <!-- container -->
+        <div id="container" class="container">
+            <div class="article">
+                <!-- tab_win -->
+                <div w3-include-html="../include/layout_tab_win.html"></div>
+                <!-- //tab_win -->
+                <!-- lnb -->
+                <div w3-include-html="../include/layout_lnb.html"></div>
+                <!-- //lnb -->
+                <!-- contents 컨텐츠 영역 -->
+                <div class="contents">
+                    <div class="split sub_tit">
+                        <h1 class="cell tit_deps1">임대료 수익 조회</h1>
+                        <div class="cellR btn_area">
+                            <a href="#" class="btnS styA">임대료 수익 전송</a>
+                        </div>
+                    </div><!-- //sub_tit -->
+
+                    <form action="" method="post">
+                        <fieldset>
+                            <!-- search_box -->
+                            <div class="split search_box" id="search_box">
+                                <div class="cell">
+                                    <table class="tbl col3">
+                                        <!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+                                        <colgroup>
+                                            <col style="width:1%;" />
+                                            <col style="width:25%;" />
+                                            <col style="width:1%;" />
+                                            <col style="width:25%;" />
+                                            <col style="width:1%;" />
+                                            <col style="width:25%;" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th><label class="tit_fld" for="lab_date">기간</label></th>
+                                                <td>
+                                                    <div class="inp_area">
+                                                        <input type="text" class="inp" id="lab_date" />
+                                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+                                                    </div>
+                                                </td>
+                                                <th><label class="tit_fld" for="lab_com_name">거래처명</label></th>
+                                                <td><input type="text" class="inp" id="lab_com_name" /></td>
+                                                <th><label class="tit_fld" for="lab_store_name">매장명</label></th>
+                                                <td><input type="text" class="inp" id="lab_store_name" /></td>
+                                            </tr>
+                                            <tr>
+                                                <th>계약구분</th>
+                                                <td>
+                                                    <span class="fld">
+                                                        <span class="chk_area"><input name="chk_d" class="chk" id="chk_d1" type="checkbox"><label for="chk_d1">임대갑</label></span>
+                                                        <span class="chk_area"><input name="chk_d" class="chk" id="chk_d2" type="checkbox"><label for="chk_d2">임대을</label></span>
+                                                    </span>
+                                                </td>
+                                                <th>매장 위치</th>
+                                                <td colspan="3">
+                                                    <div style="width:62%;">
+                                                        <select class="select w24" title="동">
+                                                            <option>동 선택</option>
+                                                        </select>
+
+                                                        <select class="select w24" title="층">
+                                                            <option>층 선택</option>
+                                                        </select>
+
+                                                        <select class="select w24" title="호">
+                                                            <option>호 선택</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><!-- //cell -->
+                                <div class="cellR">
+                                    <button type="button" class="btnS styE pd1">조회</button>
+                                </div><!-- //cellR -->
+                            </div>
+                            <!--//search_box -->
+                        </fieldset>
+                    </form>
+
+                    <div class="split tbl_top">
+                        <span class="cell txt_total">전체(212) : <span class="txt_small">임대갑 (200) / 임대을 (12)</span></span>
+                        <ul class="cellR legend_top">
+                            <li class="legend_col1"><span class="pointCol1">미납</span> : <small>관리비 미납(4) / 임대료 미납(12)</small></li>
+                        </ul>
+                    </div><!-- //tbl_top -->
+
+                    <!-- sheet_table -->
+                    <div class="tbl_sheet">
+                        <!-- table_col -->
+                        <div class="tbl_col" style="width:2500px">
+                            <table class="tbl">
+                                <colgroup>
+                                    <col style="width:2%;" />
+                                    <col style="width:2%;" />
+                                    <col style="width:4%;" />
+                                    <col style="width:5%;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:2%;" span="2" />
+                                    <col style="width:3.2%;" span="24" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2">선택</th>
+                                        <th scope="col" rowspan="2">No</th>
+                                        <th scope="col" rowspan="2">거래처코드</th>
+                                        <th scope="col" rowspan="2">
+                                            <div class="th_wp">
+                                                거래처명
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" rowspan="2">
+                                            <div class="th_wp">
+                                                매장명
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col" colspan="2">계약구분</th>
+                                        <th scope="col" colspan="2">1월</th>
+                                        <th scope="col" colspan="2">2월</th>
+                                        <th scope="col" colspan="2">3월</th>
+                                        <th scope="col" colspan="2">4월</th>
+                                        <th scope="col" colspan="2">5월</th>
+                                        <th scope="col" colspan="2">6월</th>
+                                        <th scope="col" colspan="2">7월</th>
+                                        <th scope="col" colspan="2">8월</th>
+                                        <th scope="col" colspan="2">9월</th>
+                                        <th scope="col" colspan="2">10월</th>
+                                        <th scope="col" colspan="2">11월</th>
+                                        <th scope="col" colspan="2">12월</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">동</th>
+                                        <th scope="col">층</th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                관리비
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                임대료
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                관리비
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                임대료
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                관리비
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                임대료
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                관리비
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                임대료
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                관리비
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                임대료
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                관리비
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                임대료
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                관리비
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                임대료
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                관리비
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                임대료
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                관리비
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                임대료
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                관리비
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                임대료
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                관리비
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                임대료
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                관리비
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="th_wp">
+                                                임대료
+                                                <span class="th_sort">
+                                                    <a class="btn_cm btn_tbl_up" href="#"><span class="blind">오름차순</span></a>
+                                                    <a class="btn_cm btn_tbl_down" href="#"><span class="blind">내림차순</span></a>
+                                                </span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input name="rd_a" title="관리체크" class="rd" id="rd_a1" type="radio"><label for="rd_a1">체크</label></td>
+                                        <td>1</td>
+                                        <td>SD1234567</td>
+                                        <td>SD프런티어</td>
+                                        <td>르꼬끄 골프</td>
+                                        <td>A</td>
+                                        <td>1</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input name="rd_a" title="관리체크" class="rd" id="rd_a2" type="radio"><label for="rd_a2">체크</label></td>
+                                        <td>2</td>
+                                        <td>SD1234567</td>
+                                        <td>SD네트웍스</td>
+                                        <td>비지트인뉴욕</td>
+                                        <td>D</td>
+                                        <td>BF</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                        <td>
+                                            <span class="cellR legend_top">
+                                                <span class="legend_col1"><span class="pointCol1">미납</span></span>
+                                            </span>
+                                        </td>
+                                        <td>완납</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table_col -->
+                    </div>
+                    <!-- //sheet_table -->
+
+                </div>
+                <!-- //contents 컨텐츠 영역 -->
+
+            </div><!-- //article -->
+        </div>
+        <!-- //container -->
+    </div><!--// wrap -->
+    <!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="../libs/ui.js"></script>
+    <script>
+	w3IncludeHTML();
+    </script>
+    <!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

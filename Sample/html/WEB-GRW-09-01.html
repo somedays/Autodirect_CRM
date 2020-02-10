@@ -1,0 +1,650 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>월간업무일지 공유 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">월간업무일지 공유</h1>
+					<div class="cellR btn_area">
+                        <a href="#" class="btnS styC">엑셀 다운로드</a>
+                        <!-- popup_layer -->
+                        <div class="popup pl_small">
+                            <a href="#" class="btnS styA pd1">휴무일지 등록</a>
+                            <div class="inner right pl_cal w350">
+                                <h1 class="tit_deps1">휴무일지 등록</h1>
+                                <div w3-include-html="../popup/popup_cal_regi.html"></div>
+                            </div><!-- //inner -->
+                        </div>
+                        <!-- //popup_layer -->
+					</div>
+				</div><!-- //sub_tit -->
+
+				<form action="" method="post">
+					<fieldset>
+						<!-- search_box -->
+						<div class="split search_box" id="search_box">
+							<div class="cell">
+								<table class="tbl"><!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+									<colgroup>
+                                        <col style="width:1%;" />
+                                        <col style="width:auto;" />
+                                        <col style="width:1%;" />
+                                        <col style="width:24%;" />
+                                        <col style="width:1%;" />
+                                        <col style="width:20%;" />
+                                        <col style="width:1%;" />
+                                        <col style="width:20%;" />
+									</colgroup>
+									<tbody>
+										<tr>
+                                            <th><label class="tit_fld" for="lab_date">날짜</label></th>
+                                            <td>
+                                                <div class="split date_area w40 fl">
+                                                    <div class="cell inp_area">
+                                                        <input type="text" class="inp" id="lab_date" title="시작 기간" />
+                                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+                                                    </div>
+                                                    <span class="cell txt_c">~</span>
+                                                    <div class="cell inp_area">
+                                                        <input type="text" class="inp" title="종료 기간" />
+                                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th>상태</th>
+                                            <td>
+                                                <div class="fld">
+                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_state" id="chk_state1" /><label for="chk_state1">휴무</label></span>
+                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_state" id="chk_state2" /><label for="chk_state2">연차</label></span>
+                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_state" id="chk_state3" /><label for="chk_state3">당직</label></span>
+                                                </div>
+                                            </td>
+                                            <th><label class="tit_fld" for="lab_company">회사</label></th>
+                                            <td>
+                                                <select class="select" id="lab_team">
+                                                    <option>전체</option>
+                                                </select>
+                                            </td>
+                                            <th><label class="tit_fld" for="lab_team">팀/부서</label></th>
+                                            <td>
+                                                <select class="select" id="lab_team">
+                                                    <option>전체</option>
+                                                </select>
+                                            </td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- //cell -->
+							<div class="cellR">
+								<button type="button" class="btnS styE pd1">조회</button>
+							</div><!-- //cellR -->
+						</div>
+						<!--//search_box -->
+					</fieldset>
+				</form>
+
+                <div class="split tbl_top">
+                    <span class="cell txt_total">전체 : 21명</span>
+                </div><!-- //tbl_top -->
+
+                <!-- sheet_scroll -->
+                <div class="tbl_col sheet_scroll tbl_row4">
+                    <div class="thead_wrap pr17">
+                        <table class="tbl">
+                            <colgroup>
+                                <col style="width:58px;">
+                                <col style="width:78px;">
+                                <col style="width:74px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" rowspan="2">회사</th>
+                                    <th scope="col" rowspan="2">부서</th>
+                                    <th scope="col" rowspan="2">이름</th>
+                                    <th class="sat" scope="col">토</th>
+                                    <th class="sun" scope="col">일</th>
+                                    <th scope="col">월</th>
+                                    <th scope="col">화</th>
+                                    <th scope="col">수</th>
+                                    <th scope="col">목</th>
+                                    <th scope="col">금</th>
+                                    <th class="sat" scope="col">토</th>
+                                    <th class="sun" scope="col">일</th>
+                                    <th scope="col">월</th>
+                                    <th scope="col">화</th>
+                                    <th scope="col">수</th>
+                                    <th scope="col">목</th>
+                                    <th scope="col">금</th>
+                                    <th class="sat" scope="col">토</th>
+                                    <th class="sun" scope="col">일</th>
+                                    <th scope="col">월</th>
+                                    <th scope="col">화</th>
+                                    <th scope="col">수</th>
+                                    <th scope="col">목</th>
+                                    <th scope="col">금</th>
+                                    <th class="sat" scope="col">토</th>
+                                    <th class="sun" scope="col">일</th>
+                                    <th scope="col">월</th>
+                                    <th scope="col">화</th>
+                                    <th scope="col">수</th>
+                                    <th scope="col">목</th>
+                                    <th scope="col">금</th>
+                                    <th class="sat" scope="col">토</th>
+                                    <th class="sun" scope="col">일</th>
+                                    <th scope="col">월</th>
+                                </tr>
+                                <tr>
+                                    <th class="sat" scope="col">1</th>
+                                    <th class="sun" scope="col">2</th>
+                                    <th scope="col">3</th>
+                                    <th scope="col">4</th>
+                                    <th scope="col">5</th>
+                                    <th scope="col">6</th>
+                                    <th scope="col">7</th>
+                                    <th class="sat" scope="col">8</th>
+                                    <th class="sun" scope="col">9</th>
+                                    <th scope="col">10</th>
+                                    <th scope="col">11</th>
+                                    <th scope="col">12</th>
+                                    <th scope="col">13</th>
+                                    <th scope="col">14</th>
+                                    <th class="sat" scope="col">15</th>
+                                    <th class="sun" scope="col">16</th>
+                                    <th scope="col">17</th>
+                                    <th scope="col">18</th>
+                                    <th scope="col">19</th>
+                                    <th scope="col">20</th>
+                                    <th scope="col">21</th>
+                                    <th class="sat" scope="col">22</th>
+                                    <th class="sun" scope="col">23</th>
+                                    <th scope="col">24</th>
+                                    <th scope="col">25</th>
+                                    <th scope="col">26</th>
+                                    <th scope="col">27</th>
+                                    <th scope="col">28</th>
+                                    <th class="sat" scope="col">29</th>
+                                    <th class="sun" scope="col">30</th>
+                                    <th scope="col">31</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div><!-- //tbl_thead -->
+                    <div class="tbody_wrap lineH10">
+                        <!-- 라인에 따른 갯수지정 lineH2~lineHOO -->
+                        <table class="tbl tbl_state">
+                            <colgroup>
+                                <col style="width:58px;">
+                                <col style="width:78px;">
+                                <col style="width:74px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th rowspan="6">BTMC</th>
+                                    <td rowspan="3">총괄본부장</td>
+                                    <td>홍길동</td>
+                                    <td class="sat"><span class="state st1">휴무</span></td>
+                                    <td class="sun"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="sat"></td>
+                                    <td class="sun"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="sat"></td>
+                                    <td class="sun"></td>
+                                    <td><span class="state st2">연차</span></td>
+                                    <td><span class="state st2">연차</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="sat"></td>
+                                    <td class="sun"></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="sat"><span class="state st3">당직</span></td>
+                                    <td class="sun"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td></td>
+                                    <td><span class="state st2">연차</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="state st1">휴무</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="state st3">당직</span></td>
+                                    <td><span class="state st2">연차</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="state st3">당직</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="state st2">연차</span></td>
+                                    <td><span class="state st1">휴무</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">영업</td>
+                                    <td>홍길동</td>
+                                    <td><span class="state st1">휴무</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="state st2">연차</span></td>
+                                    <td><span class="state st2">연차</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="state st3">당직</span></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td></td>
+                                    <td><span class="state st2">연차</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="state st1">휴무</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="state st3">당직</span></td>
+                                    <td><span class="state st2">연차</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>홍길동</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="state st3">당직</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><span class="state st2">연차</span></td>
+                                    <td><span class="state st1">휴무</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- //tbody_wrap -->
+                    <div class="tfoot_wrap pr17">
+                        <table class="tbl tbl_state">
+                            <colgroup>
+                                <col style="width:136px;">
+                                <col style="width:74px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                                <col style="width:30px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th rowspan="3"></th>
+                                    <td>정상출근</td>
+                                    <td>2</td>
+                                    <td>4</td>
+                                    <td>6</td>
+                                    <td>6</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>2</td>
+                                    <td>4</td>
+                                    <td>1</td>
+                                    <td>5</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>4</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>4</td>
+                                    <td>6</td>
+                                    <td>4</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>2</td>
+                                    <td>10</td>
+                                    <td>7</td>
+                                    <td>7</td>
+                                    <td>5</td>
+                                    <td>9</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>당직인원</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>4</td>
+                                    <td>8</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>6</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>6</td>
+                                    <td>8</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>총 출근인원</td>
+                                    <td>1</td>
+                                    <td>4</td>
+                                    <td>7</td>
+                                    <td>2</td>
+                                    <td>8</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>6</td>
+                                    <td>3</td>
+                                    <td>7</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>6</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>4</td>
+                                    <td>4</td>
+                                    <td>6</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>7</td>
+                                    <td>5</td>
+                                    <td>0</td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //sheet_scroll -->
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

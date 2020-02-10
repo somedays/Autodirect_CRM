@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>대량발송 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">대량발송 내역</h1>
+					<div class="cellR btn_area">
+						<a href="#" class="btnS styA pd1">대량발송 등록</a>
+						<!-- search_box 영역이 닫히는 경우 open 클래스 삭제 -->
+						<a href="#search_box" class="btn_cm btn_view3 open"><span class="blind">다음보기</span></a>
+					</div>
+				</div><!-- //sub_tit -->
+				
+				<form action="" method="post">
+					<fieldset>
+						<!-- search_box -->
+						<div class="split search_box" id="search_box">
+							<div class="cell">
+								<table class="tbl"><!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+									<colgroup>
+                                        <col style="width:1%;" />
+                                        <col style="width:28%;" />
+                                        <col style="width:1%;" />
+                                        <col style="width:30%;" />
+                                        <col style="width:1%;" />
+                                        <col style="width:auto;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label class="tit_fld" for="lab_date">발송일</label></th>
+                                            <td>
+                                                <div class="split date_area">
+                                                    <div class="cell inp_area">
+                                                        <input type="text" class="inp" id="lab_date" title="시작 기간" />
+                                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+                                                    </div>
+                                                    <span class="cell txt_c">~</span>
+                                                    <div class="cell inp_area">
+                                                        <input type="text" class="inp" title="종료 기간" />
+                                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th>구분</th>
+											<td>
+												<div class="fld">
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_division" id="chk_division1" /><label for="chk_division1">이메일 발송</label></span>
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_division" id="chk_division2" /><label for="chk_division2">App Push</label></span>
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_division" id="chk_division3" /><label for="chk_division3">문자 발송</label></span>
+												</div>
+											</td>
+											<th>발송 방법</th>
+											<td>
+												<div class="fld">
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_ship_meth" id="chk_ship_meth1" /><label for="chk_ship_meth1">즉시 발송</label></span>
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_ship_meth" id="chk_ship_meth2" /><label for="chk_ship_meth2">예약 발송</label></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>상태</th>
+											<td>
+												<div class="fld">
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_cdit" id="chk_cdit1" /><label for="chk_cdit1">발송 대기</label></span>
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_cdit" id="chk_cdit2" /><label for="chk_cdit2">발송 오류</label></span>
+												    <span class="chk_area"><input type="checkbox" class="chk" name="chk_cdit" id="chk_cdit3" /><label for="chk_cdit3">발송 완료</label></span>
+												</div>
+											</td>
+                                            <th><label for="lab_content">내용</label></th>
+											<td><input type="text" class="inp" id="lab_content" /></td>
+											<td colspan="2">&nbsp;</td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- //cell -->
+							<div class="cellR">
+								<button type="button" class="btnS styE pd1">조회</button>
+							</div><!-- //cellR -->
+						</div>
+						<!--//search_box -->
+					</fieldset>
+				</form>
+				
+				<div class="split tbl_top">
+                    <span class="cell txt_total">전체 : 30건<span class="txt_small unit_tml">( 발송 대기 : 22건 / 발송 오류 : 2건 / 발송 완료 : 157건 )</span></span>
+                </div><!-- //tbl_top -->
+
+				<!-- sheet_table -->
+				<div class="tbl_sheet">
+					<!-- table_col -->
+					<div class="tbl_col">
+					    <table class="tbl">
+					        <colgroup>
+					            <col style="width:4%;">
+					            <col style="width:10%;">
+					            <col style="width:9%;">
+					            <col style="width:9%;">
+					            <col style="width:8%;">
+					            <col style="width:8%;">
+					            <col style="width:auto;">
+					            <col style="width:12%;">
+					            <col style="width:12%;">
+					        </colgroup>
+					        <thead>
+					            <tr>
+					                <th scope="col">No.</th>
+					                <th scope="col">구분</th>
+					                <th scope="col">발송 방법</th>
+					                <th scope="col">상태</th>
+					                <th scope="col">수신자</th>
+					                <th scope="col">발송 실패</th>
+					                <th scope="col">내용</th>
+					                <th scope="col">등록일</th>
+					                <th scope="col">발송일</th>
+					            </tr>
+					        </thead>
+					        <tbody>
+					            <tr>
+					                <td>1</td>
+					                <td>이메일 발송</td>
+					                <td>예약 발송</td>
+					                <td class="pointCol1">발송 오류</td>
+					                <td>3,209</td>
+					                <td class="pointCol1">231</td>
+					                <td class="tl"><a href="#" class="alink txt_overflow">내용 일부 표기 내용 일부내용 일부 표기 내용 일부내용 일부 표기 내용 일부내용 일부 표기 내용 일부</a></td>
+					                <td>2016.12.11 13:41</td>
+					                <td>&nbsp;</td>
+					            </tr>
+					            <tr>
+					                <td>2</td>
+					                <td>이메일 발송</td>
+					                <td>예약 발송</td>
+					                <td>발송 대기</td>
+					                <td>3,209</td>
+					                <td>&nbsp;</td>
+					                <td class="tl"><a href="#" class="alink txt_overflow">내용 일부 표기 내용 일부 내용 일부 표기 내용 일부내용 일부 표기 내용 일부내용 일부 표기 내용 일부</a></td>
+					                <td>2016.12.11 13:41</td>
+					                <td>&nbsp;</td>
+					            </tr>
+					            <tr>
+					                <td>3</td>
+					                <td>App Push</td>
+					                <td>즉시 발송</td>
+					                <td>발송 완료</td>
+					                <td>3,209</td>
+					                <td>0</td>
+					                <td class="tl"><a href="#" class="alink txt_overflow">내용 일부 표기 내용 일부 내용 일부 표기 내용 일부내용 일부 표기 내용 일부내용 일부 표기 내용 일부</a></td>
+					                <td>2016.12.11 13:41</td>
+					                <td>2016.12.11 13:41</td>
+					            </tr>
+					        </tbody>
+					    </table>
+					</div>
+					<!-- //table_col -->
+				</div>
+				<!-- //sheet_table -->
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

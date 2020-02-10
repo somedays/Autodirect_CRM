@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>전자결재 양식 등록 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">전자결재 양식 등록</h1>
+				</div><!-- //sub_tit -->
+
+                <form action="none" method="post">
+                    <fieldset>
+                        <div class="bbs bbs_write">
+                            <!-- tbl_row -->
+                            <div class="tbl_row">
+                                <table class="tbl">
+                                    <colgroup>
+                                        <col style="width:auto">
+                                        <col style="width:32%;">
+                                        <col style="width:15%;">
+                                        <col style="width:32%;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><label class="tit_fld" for="lab_com_type">회사 구분</label><strong class="txt_ess">* 필수입력</strong></th>
+                                            <td>
+                                                <select class="select w100" id="lab_com_type">
+                                                    <option>공통</option>
+                                                    <option>에스디프런티어</option>
+                                                    <option>타사</option>
+                                                </select>
+                                            </td>
+                                            <th><label class="tit_fld" for="lab_class">분류</label><strong class="txt_ess">* 필수입력</strong></th>
+                                            <td>
+                                                <select class="select w100" id="lab_class">
+                                                    <option>전체</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label class="tit_fld" for="lab_name">양식명</label><strong class="txt_ess">* 필수입력</strong></th>
+                                            <td colspan="3"><input type="text" class="inp w100" id="lab_name" /></td>
+                                        </tr>
+                                        <tr>
+                                            <th>사용 여부<strong class="txt_ess">* 필수입력</strong></th>
+                                            <td colspan="3">
+                                                <div class="fld">
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_use" id="rd_use1" /><label for="rd_use1">사용</label></span>
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_use" id="rd_use2" /><label for="rd_use2">미사용</label></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <dl class="bbs_cont">
+                                                    <dt class="th blind">내용<strong class="txt_ess">* 필수입력</strong></dt>
+                                                    <dd class="edit_wrap">
+                                                        <!-- 휴가 신청서 -->
+                                                        <div class="info_appct_box">
+                                                            <strong class="tit">휴가 신청서</strong>
+                                                            <!-- tbl_row2 -->
+                                                            <div class="tbl_row2">
+                                                                <table class="tbl">
+                                                                    <colgroup>
+                                                                        <col style="width:5%;" />
+                                                                        <col style="width:7%;" />
+                                                                        <col style="width:auto;" />
+                                                                    </colgroup>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th rowspan="3">인적<br />사항</th>
+                                                                            <th>소속</th>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>직위</th>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>성명</th>
+                                                                            <td class="tr">(긴급연락처 :<span class="eme_contact">)</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th rowspan="3">세부<br />내용</th>
+                                                                            <th rowspan="2">사유</th>
+                                                                            <td class="tc">
+                                                                                <div class="fld">
+                                                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_reason" id="chk_reason1" /><label for="chk_reason1">연차</label></span>
+                                                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_reason" id="chk_reason2" /><label for="chk_reason2">대휴</label></span>
+                                                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_reason" id="chk_reason3" /><label for="chk_reason3">경조</label></span>
+                                                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_reason" id="chk_reason4" /><label for="chk_reason4">훈련</label></span>
+                                                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_reason" id="chk_reason5" /><label for="chk_reason5">기타</label></span>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="vt height1">상세내용 : </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>일시</th>
+                                                                            <td class="tc">
+                                                                                <div class="txt_date">
+                                                                                    <span class="year">년</span><span class="month">월</span><span class="day">일 ~</span>
+                                                                                    <span class="year">년</span><span class="month">월</span><span class="day">일 (총</span><span class="day">일간)</span>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th colspan="2">비고</th>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <!-- //tbl_row2 -->
+                                                            <div class="bot_appct">
+                                                                <p class="txt_center">상기 본인은 위와 같은 사유로 인하여 이를 제출합니다.</p>
+                                                                <div class="txt_date">
+                                                                    <span class="year">년</span><span class="month">월</span><span class="day">일</span>
+                                                                </div>
+                                                                <div class="txt_name">
+                                                                    신청인 : <span class="sign">(인)</span>
+                                                                </div>
+                                                            </div><!-- //bot_appct -->
+                                                        </div><!-- //info_appct_box -->
+                                                        <!-- //휴가 신청서 -->
+                                                    </dd>
+                                                </dl>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>첨부파일</th>
+                                            <td colspan="4">
+                                                <div class="tbl_group">
+                                                    <div w3-include-html="../include/cm_filebox.html"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //tbl_row -->
+                        </div><!-- //bbs -->
+                        <div class="btn_area">
+                            <button type="button" class="btnL styA">저장</button>
+                            <button type="button" class="btnL styB">취소</button>
+                        </div>
+                    </fieldset>
+                </form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

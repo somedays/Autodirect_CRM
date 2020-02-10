@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>부서 권한 관리 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">부서 권한 관리</h1>
+				</div><!-- //sub_tit -->
+
+				<div class="cols_wrap">
+					<div class="cols_row">
+						<div class="cols col_2_5">
+							<div class="split tit_area">
+								<h2 class="cell tit_deps2">부서 목록</h2>
+							</div><!-- //tit_area -->
+
+							<!-- sheet_table -->
+							<div class="tbl_sheet">
+								<div class="tree_box">
+									<!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 -->
+									<ul class="tree_list">
+										<li><!-- li : 2depth가 있는경우 in_deps2 클래스 추가 / 현재 활성화 on 클래스처리-->
+											<a href="#" class="btn_line"><!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 --><span class="ico"></span><span class="btn_cm btn_folder2">뎁스4 있는 경우</span></a>
+											<ul class="deps2">
+												<li><!-- li : 3depth가 있는경우 in_deps3 클래스 추가  / 현재 활성화 on 클래스처리 -->
+													<a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_folder2">뎁스3 </span></a>
+													<ul class="deps3">
+														<li><!-- li : 4depth가 있는경우 in_deps4 클래스 추가  / 현재 활성화 on 클래스처리 -->
+															<a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_folder2">뎁스2</span></a>
+															<ul class="deps4">
+																<li><a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스1</span></a></li>
+																<li><a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스1</span></a></li>
+															</ul>
+														</li>
+														<li><a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스2</span></a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>	
+										<li>
+											<a href="#" class="btn_line"><!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 --><span class="ico"></span><span class="btn_cm btn_folder2">뎁스3 있는 경우</span></a>
+											<ul class="deps2">
+												<li>
+													<a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스2 </span></a>
+													<ul class="deps3">
+														<li><a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스3</span></a></li>
+														<li><a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스3</span></a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#" class="btn_line"><!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 --><span class="ico"></span><span class="btn_cm btn_folder2">뎁스2 있는 경우</span></a>
+											<ul class="deps2">
+												<li>
+													<a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스2 </span></a>
+												</li>
+											</ul>
+										</li>
+										<li><!-- li : 2depth가 있는경우 in_deps2 클래스 추가 / 현재 활성화 on 클래스처리-->
+											<a href="#" class="btn_line"><!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 --><span class="ico"></span><span class="btn_cm btn_person">뎁스1 있는 경우</span></a>
+										</li>
+									</ul>
+								</div><!--//tree_box -->
+							</div>
+							<!-- //sheet_table -->
+
+						</div><!-- //cols -->
+						<div class="cols col_3_5">
+							<div class="split tit_area">
+								<h2 class="cell tit_deps2">메뉴 목록</h2>
+								<div class="cellR btn_area">
+									<a href="#" class="btnS styA">저장</a>
+									<a href="#" class="btnS styB">취소</a>
+								</div>
+							</div><!-- //tit_area -->
+
+							<!-- sheet_table -->
+							<div class="tbl_sheet">
+								<div class="tree_box">
+									<ul class="tree_list">
+										<li class="in_deps2"><!-- li : 2depth가 있는경우 in_deps2 클래스 추가  / 현재 활성화 on 클래스처리 -->
+											<div class="btn_line"><!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 -->
+												<a href="#" class="ico"></a>
+												<span class="chk_area"><input type="checkbox" class="chk" name="chkc_tree_b1" id="chkc_tree_b1"><label for="chkc_tree_b1">묶음형태 4뎁스</label></span>
+											</div>
+											<ul class="deps2">
+												<li class="in_deps3"><!-- li : 3depth가 있는경우 in_deps3 클래스 추가  / 현재 활성화 on 클래스처리 -->
+													<div class="btn_line">
+														<a href="#" class="ico"></a>
+														<span class="chk_area"><input type="checkbox" class="chk" name="chkc_tree_b1_2" id="chkc_tree_b1_2_1"><label for="chkc_tree_b1_2_1">묶음형태 3뎁스</label></span>
+													</div>
+													<ul class="deps3">
+														<li>
+															<div class="btn_line">
+																<a href="#" class="ico"></a>
+																<span class="chk_area"><input type="checkbox" class="chk" name="chkc_tree_b1_3" id="chkc_tree_b1_3_1"><label for="chkc_tree_b1_3_1">묶음형태 2뎁스</label></span>
+															</div>
+															<ul class="deps4">
+																<li><!-- li : 4depth가 있는경우 in_deps4 클래스 추가  / 현재 활성화 on 클래스처리 -->
+																	<div class="btn_line">
+																		<a href="#" class="ico"></a>
+																		<span class="chk_area"><input type="checkbox" class="chk" name="chkc_tree_b4_1" id="chkc_tree_b4_4_1"><label for="chkc_tree_b4_4_1">묶음형태 1뎁스</label></span>
+																	</div>
+																</li>
+																<li>
+																	<div class="btn_line">
+																		<a href="#" class="ico"></a>
+																		<span class="chk_area"><input type="checkbox" class="chk" name="chkc_tree_b4_1" id="chkc_tree_b4_4_2"><label for="chkc_tree_b4_4_2">묶음형태 1뎁스</label></span>
+																	</div>
+																</li>
+															</ul>
+														</li>
+														<li>
+															<div class="btn_line">
+																<a href="#" class="ico"></a>
+																<span class="chk_area"><input type="checkbox" class="chk" name="chkc_tree1_3" id="chkc_tree1_3_2"><label for="chkc_tree1_3_2">별도형태 2뎁스</label></span>
+															</div>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="in_deps2"><!-- li : 2depth가 있는경우 in_deps2 클래스 추가  / 현재 활성화 on 클래스처리 -->
+											<div class="btn_line"><!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 -->
+												<a href="#" class="ico"></a>
+												<span class="chk_area"><input type="checkbox" class="chk" name="chkc_tree1" id="chkc_tree1"><label for="chkc_tree1">묶음형태 3뎁스</label></span>
+											</div>
+											<ul class="deps2">
+												<li class="in_deps3"><!-- li : 3depth가 있는경우 in_deps3 클래스 추가  / 현재 활성화 on 클래스처리 -->
+													<div class="btn_line">
+														<a href="#" class="ico"></a>
+														<span class="chk_area"><input type="checkbox" class="chk" name="chkc_tree1_2" id="chkc_tree1_2_1"><label for="chkc_tree1_2_1">묶음형태 2뎁스</label></span>
+													</div>
+													<ul class="deps3">
+														<li>
+															<div class="btn_line">
+																<a href="#" class="ico"></a>
+																<span class="chk_area"><input type="checkbox" class="chk" name="chkc_tree1_3" id="chkc_tree1_3_1"><label for="chkc_tree1_3_1">묶음형태 3뎁스</label></span>
+															</div>
+														</li>
+														<li>
+															<div class="btn_line">
+																<a href="#" class="ico"></a>
+																<span class="chk_area"><input type="checkbox" class="chk" name="chkc_tree1_3" id="chkc_tree1_3_2"><label for="chkc_tree1_3_2">묶음형태 3뎁스</label></span>
+															</div>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="in_deps2"><!-- li : 2depth가 있는경우 in_deps2 클래스 추가  / 현재 활성화 on 클래스처리 -->
+											<div class="btn_line"><!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 -->
+												<a href="#" class="ico"></a>
+												<span class="chk_area"><input type="checkbox" class="chk" name="chkc2_tree1" id="chkc2_tree1"><label for="chkc2_tree1">묶음형태 2뎁스</label></span>
+											</div>
+											<ul class="deps2">
+												<li><!-- li : 3depth가 있는경우 in_deps3 클래스 추가  / 현재 활성화 on 클래스처리 -->
+													<div class="btn_line">
+														<a href="#" class="ico"></a>
+														<span class="chk_area"><input type="checkbox" class="chk" name="chkc2_tree1_2" id="chkc2_tree1_2_1"><label for="chkc2_tree1_2_1">묶음형태 1뎁스</label></span>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<li><!--현재 활성화 on 클래스처리 -->
+											<div class="btn_line"><!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 -->
+												<a href="#" class="ico"></a>
+												<span class="chk_area"><input type="checkbox" class="chk" name="chkc3_tree1" id="chkc3_tree1"><label for="chkc3_tree1">묶음형태 1뎁스</label></span>
+											</div>
+										</li>
+									</ul>
+								</div><!--//tree_box -->
+							</div>
+							<!-- //sheet_table -->
+
+						</div><!-- //cols -->
+					</div><!-- //cols_row -->
+				</div><!-- //cols_wrap -->
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+	folderTree('.tree_list', '.btn_line');
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

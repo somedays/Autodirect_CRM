@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>탈퇴회원 조회 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+	<link rel="stylesheet" href="../css/index/jquery-ui.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">탈퇴회원 조회</h1>
+					<div class="cellR btn_area">
+						<!-- search_box 영역이 닫히는 경우 open 클래스 삭제 -->
+						<a href="#search_box" class="btn_cm btn_view3 open"><span class="blind">다음보기</span></a>
+					</div>
+				</div><!-- //sub_tit -->
+
+				
+				<form action="" method="post">
+					<fieldset>
+						<!-- search_box -->
+						<div class="split search_box" id="search_box">
+							<div class="cell">
+								<table class="tbl col1"><!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+									<colgroup>
+                                        <col style="width:1%;" />
+                                        <col style="width:auto;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label for="lab_keyword">키워드</label></th>
+											<td>
+												<input type="text" class="inp" id="lab_keyword" placeholder="아이디 검색" />
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- //cell -->
+							<div class="cellR">
+								<button type="button" class="btnS styE pd1">조회</button>
+							</div><!-- //cellR -->
+						</div>
+						<!--//search_box -->
+					</fieldset>
+				</form>
+				
+				<div class="split tbl_top">
+                    <span class="cell txt_total">탈퇴회원 : 10명</span>
+                </div><!-- //tbl_top -->
+
+				<!-- sheet_table -->
+				<div class="tbl_sheet">
+					sheet 영역
+				</div>
+				<!-- //sheet_table -->
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+	$(".datepicker").datepicker({
+		showOn: "both",
+		buttonImage: "../images/index/btn_calendar.gif",
+		buttonImageOnly: true,
+		buttonText: "날짜선택"
+    });
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

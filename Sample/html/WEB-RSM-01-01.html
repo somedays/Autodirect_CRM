@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>수익정산 | Triple Street</title>
+    <link rel="stylesheet" href="../css/index/common.css" />
+    <link rel="stylesheet" href="../css/index/icomoon.css" />
+
+    <script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+    <script src="../libs/1.11.4/jquery-ui.min.js"></script>
+    <!-- custom scrollbar plugin -->
+    <script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body>
+    <div id="wrap" class="wrap sub">
+        <!-- 서브인경우 sub 클래스 추가 -->
+        <!-- header -->
+        <div w3-include-html="../include/layout_header.html"></div>
+        <!-- //header -->
+
+        <hr />
+
+        <!-- nav_wrap -->
+        <div w3-include-html="../include/layout_nav.html"></div>
+        <!-- //nav_wrap -->
+
+        <hr />
+
+        <!-- container -->
+        <div id="container" class="container">
+            <div class="article">
+                <!-- tab_win -->
+                <div w3-include-html="../include/layout_tab_win.html"></div>
+                <!-- //tab_win -->
+                <!-- lnb -->
+                <div w3-include-html="../include/layout_lnb.html"></div>
+                <!-- //lnb -->
+                <!-- contents 컨텐츠 영역 -->
+                <div class="contents">
+                    <div class="split sub_tit">
+                        <h1 class="cell tit_deps1">임대료 수익 조회</h1>
+                        <div class="cellR btn_area">
+                            <a href="#" class="btnS styA">납부 설정</a>
+                        </div>
+                    </div><!-- //sub_tit -->
+
+                    <form action="" method="post">
+                        <fieldset>
+                            <!-- search_box -->
+                            <div class="split search_box" id="search_box">
+                                <div class="cell">
+                                    <table class="tbl col3">
+                                        <!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+                                        <colgroup>
+                                            <col style="width:1%;" />
+                                            <col style="width:25%;" />
+                                            <col style="width:1%;" />
+                                            <col style="width:25%;" />
+                                            <col style="width:1%;" />
+                                            <col style="width:25%;" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th><label class="tit_fld" for="lab_year">년도선택</label></th>
+                                                <td>
+                                                    <select id="lab_year" class="select">
+                                                        <option>선택</option>
+                                                        <option>2016</option>
+                                                        <option>2015</option>
+                                                    </select>
+                                                </td>
+                                                <th><label class="tit_fld" for="lab_com_name">거래처명</label></th>
+                                                <td><input type="text" class="inp" id="lab_com_name" /></td>
+                                                <th><label class="tit_fld" for="lab_store_name">매장명</label></th>
+                                                <td><input type="text" class="inp" id="lab_store_name" /></td>
+                                            </tr>
+                                            <tr>
+                                                <th>계약구분</th>
+                                                <td>
+                                                    <span class="fld">
+                                                        <span class="chk_area"><input name="chk_d" class="chk" id="chk_d1" type="checkbox"><label for="chk_d1">임대갑</label></span>
+                                                        <span class="chk_area"><input name="chk_d" class="chk" id="chk_d2" type="checkbox"><label for="chk_d2">임대을</label></span>
+                                                    </span>
+                                                </td>
+                                                <th>계약 공간</th>
+                                                <td>
+                                                    <select class="select" title="동" style="width:49.5%">
+                                                        <option>동 선택</option>
+                                                    </select>
+
+                                                    <select class="select" title="층" style="width:49.5%">
+                                                        <option>층 선택</option>
+                                                    </select>
+                                                </td>
+                                                <th>미납여부</th>
+                                                <td>
+                                                    <span class="fld">
+                                                        <span class="chk_area"><input name="chk_d" class="chk" id="chk_d3" type="checkbox"><label for="chk_d3">관리비</label></span>
+                                                        <span class="chk_area"><input name="chk_d" class="chk" id="chk_d4" type="checkbox"><label for="chk_d4">임대료</label></span>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><!-- //cell -->
+                                <div class="cellR">
+                                    <button type="button" class="btnS styE pd1">조회</button>
+                                </div><!-- //cellR -->
+                            </div>
+                            <!--//search_box -->
+                        </fieldset>
+                    </form>
+
+                    <!-- sheet_table -->
+                    <div class="tbl_sheet">
+                        <!-- table_col -->
+                        <div class="tbl_col">
+                            <table class="tbl">
+                                <colgroup>
+                                    <col style="width:2%;" />
+                                    <col style="width:2%;" />
+                                    <col style="width:4%;" />
+                                    <col style="width:4%;" />
+                                    <col style="width:10%;" />
+                                    <col style="width:4%;" />
+                                    <col style="width:auto;" />
+                                    <col style="width:8%;" />
+                                    <col style="width:4%;" span="4" />
+                                    <col style="width:6%;" span="5" />
+                                    <col style="width:8%;" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" rowspan="2"><input class="chk" id="chk_tb1" type="checkbox"><label for="chk_tb1">전체선택</label></th>
+                                        <th scope="col" rowspan="2">No</th>
+                                        <th scope="col" rowspan="2">계약구분</th>
+                                        <th scope="col" rowspan="2">청구년월</th>
+                                        <th scope="col" rowspan="2">청구기간(시작일~종료일)</th>
+                                        <th scope="col" rowspan="2">거래처코드</th>
+                                        <th scope="col" rowspan="2">거래처명</th>
+                                        <th scope="col" rowspan="2">매장명</th>
+                                        <th scope="col" colspan="4">매장 위치</th>
+                                        <th scope="col" rowspan="2">확정 매출금액</th>
+                                        <th scope="col" rowspan="2">월 수수료</th>
+                                        <th scope="col" rowspan="2">최저보증금액</th>
+                                        <th scope="col" rowspan="2">산정 임대료</th>
+                                        <th scope="col" rowspan="2">확정 임대료</th>
+                                        <th scope="col" rowspan="2">보정</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">동</th>
+                                        <th scope="col">층</th>
+                                        <th scope="col">호</th>
+                                        <th scope="col">실</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="check_yellow">
+                                        <!-- 합계 -->
+                                        <td></td>
+                                        <td colspan="2">합계</td>
+                                        <td>2016-11</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="tr">2,300,000</td>
+                                        <td class="tr">12%</td>
+                                        <td class="tr">2,300,000</td>
+                                        <td class="tr">2,300,000</td>
+                                        <td class="tr">2,300,000</td>
+                                        <td>
+                                            <button type="button" class="btnXS styF">보정</button>
+                                            <button type="button" class="btnXS styF unit_ml">확정</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="chk" id="chk_tb1" type="checkbox"><label for="chk_tb1">전체선택</label></td>
+                                        <td>1</td>
+                                        <td>임대갑</td>
+                                        <td>2016-11</td>
+                                        <td>2016-11-01 ~ 2016-11-30</td>
+                                        <td>216335</td>
+                                        <td>길동샵 송도점</td>
+                                        <td>길동샵</td>
+                                        <td>A</td>
+                                        <td>2</td>
+                                        <td>110</td>
+                                        <td>b</td>
+                                        <td class="tr">2,300,000</td>
+                                        <td class="tr">12%</td>
+                                        <td class="tr">2,300,000</td>
+                                        <td class="tr">2,300,000</td>
+                                        <td class="tr">2,300,000</td>
+                                        <td>
+                                            <button type="button" class="btnXS styF">보정</button>
+                                            <button type="button" class="btnXS styF unit_ml">확정</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table_col -->
+                    </div>
+                    <!-- //sheet_table -->
+
+                </div>
+                <!-- //contents 컨텐츠 영역 -->
+
+            </div><!-- //article -->
+        </div>
+        <!-- //container -->
+    </div><!--// wrap -->
+    <!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="../libs/ui.js"></script>
+    <script>
+	w3IncludeHTML();
+    </script>
+    <!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

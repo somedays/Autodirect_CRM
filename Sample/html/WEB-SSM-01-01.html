@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>기간별 매출 조회 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">기간별 매출 조회</h1>
+					<div class="cellR btn_area">
+						<a href="#" class="btnS styC">엑셀 다운로드</a>
+						<!-- search_box 영역이 닫히는 경우 open 클래스 삭제 -->
+						<a href="#search_box" class="btn_cm btn_view3 open"><span class="blind">다음보기</span></a>
+					</div>
+				</div><!-- //sub_tit -->
+
+				<form action="" method="post">
+					<fieldset>
+						<!-- search_box -->
+						<div class="split search_box" id="search_box">
+							<div class="cell">
+								<table class="tbl col3"><!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+									<colgroup>
+										<col style="width:1%;" />
+                                        <col style="width:36%;" />
+                                        <col style="width:1%;" />
+                                        <col style="width:auto;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label class="tit_fld" for="lab_date">날짜</label></th>
+                                            <td>
+                                                <div class="split date_area">
+                                                    <div class="cell inp_area">
+                                                        <input type="text" class="inp" id="lab_date" title="시작 기간" />
+                                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+                                                    </div>
+                                                    <span class="cell txt_c">~</span>
+                                                    <div class="cell inp_area">
+                                                        <input type="text" class="inp" title="종료 기간" />
+                                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+											<th>매장 카테고리</th>
+											<td>
+												<select class="select w45" title="매장 상위카테고리">
+													<option>전체</option>
+													<option>전체</option>
+												</select>
+												<select class="select w45 unit_ml" title="매장 하위카테고리">
+													<option>전체</option>
+													<option>전체</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th>매장 위치</th>
+											<td>
+												<select class="select w24" title="동">
+													<option>동 선택</option>
+												</select>
+
+												<select class="select w24" title="층">
+													<option>층 선택</option>
+												</select>
+
+												<select class="select w24" title="호">
+													<option>호 선택</option>
+												</select>
+											
+												<select class="select w24" title="실">
+													<option>실 선택</option>
+												</select>
+											</td>
+											<th>매장구분</th>
+											<td colspan="3">
+												<span class="fld">
+												    <span class="chk_area"><input type="radio" class="rd" name="rd_store_type" id="rd_store_type1" /><label for="rd_store_type1">전체</label></span>
+												    <span class="chk_area"><input type="radio" class="rd" name="rd_store_type" id="rd_store_type2" /><label for="rd_store_type2">매장명</label></span>
+												</span>
+												<!-- popup_layer -->
+												<div class="popup pl_small unit_tml w60">
+													<div class="inp_area w100">
+														<input type="text" class="inp" placeholder="Search" title="매장명" />
+														<a href="#" class="btn_cm btn_search"><span class="blind">검색</span></a>
+													</div>
+													<div class="inner right w400">
+														<h1 class="tit_deps1">매장 검색</h1>
+														<div w3-include-html="../popup/popup_store_search.html"></div>
+													</div><!-- //inner -->
+												</div>
+												<!-- //popup_layer -->
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- //cell -->
+							<div class="cellR">
+								<button type="button" class="btnS styE pd1">조회</button>
+							</div><!-- //cellR -->
+						</div>
+						<!--//search_box -->
+					</fieldset>
+				</form>
+				
+				<!-- sheet_table -->
+				<div class="tbl_sheet">
+					<!-- table_col -->
+					<div class="tbl_col">
+					    <table class="tbl">
+					        <colgroup>
+					            <col style="width:7%;" />
+					            <col style="width:7%;" />
+					            <col style="width:7%;" />
+					            <col style="width:7%;" />
+					            <col style="width:4%;" />
+					            <col style="width:4%;" />
+					            <col style="width:4%;" />
+					            <col style="width:4%;" />
+					            <col style="width:9%;" />
+					            <col style="width:7%;" />
+					            <col style="width:7%;" />
+					            <col style="width:7%;" />
+					            <col style="width:8%;" />
+					            <col style="width:4%;" />
+					            <col style="width:7%;" />
+					            <col style="width:auto;" />
+					        </colgroup>
+					        <thead>
+					            <tr>
+					                <th scope="col" rowspan="2" colspan="3">카테고리</th>
+					                <th scope="col" rowspan="2">매장명</th>
+					                <th scope="col" colspan="4">매장 위치</th>
+					                <th scope="col" rowspan="2">
+										<div class="th_wp">계약 구분
+											<!-- popup_layer -->
+											<div class="popup pl_small pl_contract_cate">
+							                	<span class="th_sort">
+													<a href="#" class="btn_cm btn_tbl_filter"><span class="blind">필터</span></a>
+												</span>
+												<div class="inner right w210">
+													<strong class="tit_deps1">계약 구분</strong>
+													<div class="pop_content">
+														<ul class="list_chk scroll_y">
+															<li><span class="chk_area"><input type="checkbox" class="chk" name="chk_bck" id="chk_bck1" checked="checked" /><label for="chk_bck1">전체</label></span>
+																<ul class="deps2">
+																	<li><span class="chk_area"><span class="btn_cm btn_dot_view"></span><input type="checkbox" class="chk" name="chk_bck2" id="chk_bck2_1" checked="checked" /><label for="chk_bck2_1">임대 갑</label></li>
+																	<li><span class="chk_area"><span class="btn_cm btn_dot_view"></span><input type="checkbox" class="chk" name="chk_bck2" id="chk_bck2_2" checked="checked" /><label for="chk_bck2_2">임대 을</label></li>
+																	<li><span class="chk_area"><span class="btn_cm btn_dot_view"></span><input type="checkbox" class="chk" name="chk_bck2" id="chk_bck2_3" checked="checked" /><label for="chk_bck2_3">키오스크</label></li>
+																	<li><span class="chk_area"><span class="btn_cm btn_dot_view"></span><input type="checkbox" class="chk" name="chk_bck2" id="chk_bck2_4" checked="checked" /><label for="chk_bck2_4">팝업 스토어</label></li>
+																	<li><span class="chk_area"><span class="btn_cm btn_dot_view"></span><input type="checkbox" class="chk" name="chk_bck2" id="chk_bck2_5" checked="checked" /><label for="chk_bck2_5">공용공간</label></li>
+																</ul>
+															</li>
+														</ul>
+													</div>
+													<div class="btn_area">
+														<button type="submit" class="btnS styA">적용</button>
+														<button type="button" class="btnS styB">취소</button>
+													</div>
+													<a href="#" class="btn_cm btn_close2"><span class="blind">닫기</span></a>
+												</div><!-- //inner -->
+											</div>
+											<!-- //popup_layer -->	
+					                    </div>
+					                </th>
+					                <th scope="col" rowspan="2">카드</th>
+					                <th scope="col" rowspan="2">현금</th>
+					                <th scope="col" rowspan="2">기타</th>
+					                <th scope="col" rowspan="2">합계</th>
+					                <th scope="col" rowspan="2">객수</th>
+					                <th scope="col" rowspan="2">객 단가</th>
+					                <th scope="col" rowspan="2">상태</th>
+					            </tr>
+					            <tr>
+					                <th scope="col">동</th>
+					                <th scope="col">층</th>
+					                <th scope="col">호</th>
+					                <th scope="col">실</th>
+					            </tr>
+					        </thead>
+					        <tbody>
+					            <tr>
+					            	<td class="tl"><a href="#" class="btn_cm btn_minus2"><span class="blind">닫기</span></a> 전체</td>
+					            	<td class="tl">&nbsp;</td>
+					            	<td class="tl">&nbsp;</td>
+					            	<td class="tl">&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td class="tr">300,000</td>
+					            	<td class="tr">300,000</td>
+					            	<td class="tr">300,000</td>
+					            	<td class="tr">23,000,000</td>
+					            	<td>30</td>
+					            	<td class="tr">500,000</td>
+					            	<td><span class="category cate_bd1">미확정</span></td>
+				            	</tr>
+					            <tr>
+					            	<td class="tl">&nbsp;</td>
+					            	<td class="tl"><a href="#" class="btn_cm btn_minus2"><span class="blind">닫기</span></a> F&amp;B</td>
+					            	<td class="tl">&nbsp;</td>
+					            	<td class="tl">&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td class="tr">300,000</td>
+					            	<td class="tr">300,000</td>
+					            	<td class="tr">300,000</td>
+					            	<td class="tr">23,000,000</td>
+					            	<td>30</td>
+					            	<td class="tr">500,000</td>
+					            	<td><span class="category cate_bd1">미확정</span></td>
+				            	</tr>
+					            <tr>
+					            	<td class="tl">&nbsp;</td>
+					            	<td class="tl">&nbsp;</td>
+					            	<td class="tl"><a href="#" class="btn_cm btn_minus2"><span class="blind">닫기</span></a> 중식</td>
+					            	<td class="tl"><span class="btn_cm btn_dot_view"></span> 길동 샵</td>
+					            	<td>A</td>
+					            	<td>B1</td>
+					            	<td>2010</td>
+					            	<td>B</td>
+					            	<td>임대을</td>
+					            	<td class="tr">300,000</td>
+					            	<td class="tr">300,000</td>
+					            	<td class="tr">300,000</td>
+					            	<td class="tr">23,000,000</td>
+					            	<td>30</td>
+					            	<td class="tr">500,000</td>
+					            	<td><span class="category cate_bd2">확정</span></td>
+				            	</tr>
+					            <tr>
+					            	<td class="tl">&nbsp;</td>
+					            	<td class="tl"><a href="#" class="btn_cm btn_plus2"><span class="blind">보기</span></a> Life</td>
+					            	<td class="tl">&nbsp;</td>
+					            	<td class="tl">&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td>&nbsp;</td>
+					            	<td class="tr">300,000</td>
+					            	<td class="tr">300,000</td>
+					            	<td class="tr">300,000</td>
+					            	<td class="tr">23,000,000</td>
+					            	<td>30</td>
+					            	<td class="tr">500,000</td>
+					            	<td><span class="category cate_bd1">미확정</span></td>
+				            	</tr>
+					        </tbody>
+					    </table>
+					</div>
+					<!-- //table_col -->
+				</div>
+				<!-- //sheet_table -->
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

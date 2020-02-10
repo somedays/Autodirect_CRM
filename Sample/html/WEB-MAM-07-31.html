@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>공지사항 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">공지사항 상세보기</h1>
+				</div><!-- //sub_tit -->
+
+                <form action="none" method="post">
+                    <fieldset>
+                        <div class="bbs bbs_write">
+                            <!-- tbl_row -->
+                            <div class="tbl_row">
+                                <table class="tbl">
+                                    <colgroup>
+                                        <col style="width:auto;" />
+                                        <col style="width:34%;" />
+                                        <col style="width:20%;" />
+                                        <col style="width:34%;" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>작성자</th>
+                                            <td>홍길동</td>
+                                            <th>작성일</th>
+                                            <td>2017-01-01 14:22</td>
+                                        </tr>
+                                        <tr>
+                                            <th>제목</th>
+                                            <td colspan="3">홍석천의 타이 레시피</td>
+                                        </tr>
+                                        <tr>
+                                            <th>내용</th>
+                                            <td colspan="3">
+                                                <textarea class="textarea w100" readonly="readonly" rows="8" cols="10"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>첨부파일</th>
+                                            <td colspan="3">
+                                                <div class="box_file">
+                                                    <ul class="upload_list">
+                                                        <li class="split">
+                                                            <span class="cell file_name">첨부파일이 없는경우 upload_list 영역은 노출이 안되게 처리해 주세요.ppt</span>
+                                                            <span class="cellR file_cap">213.3KB</span>
+                                                            <a href="#" class="cellR btn_cm btn_close4"><span class="blind">삭제</span></a>
+                                                        </li>
+                                                        <li class="split">
+                                                            <span class="cell file_name">첨부파일이 1개 이상이 되는 경우 upload_list의 리스트가 추가됩니다.ppt</span>
+                                                            <span class="cellR file_cap">213.3KB</span>
+                                                            <a href="#" class="cellR btn_cm btn_close4"><span class="blind">삭제</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- //첨부파일이 없는경우 upload_list 안보이게 처리 -->
+                                                </div><!--// box_file -->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //tbl_row -->
+                        </div><!-- //bbs -->
+                        <div class="btn_area">
+                            <button type="submit" class="btnL styA">수정</button>
+                            <button type="submit" class="btnL styA">삭제</button>
+                            <button type="button" class="btnL styB">목록</button>
+                        </div>
+                    </fieldset>
+                </form>
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

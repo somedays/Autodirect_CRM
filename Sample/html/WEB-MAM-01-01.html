@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>마케팅 일정 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">마케팅 일정</h1>
+				</div><!-- //sub_tit -->
+				
+				<div class="split marketing_cal">
+					<dl class="cell date">
+						<dt class="tit_cate">Today</span>
+						<dd class="txt">2017-04-04 (수)</dd>
+					</dl>
+					<dl class="cell color1">
+						<dt>페스티벌 (Festival)</dt>
+						<dd class="list_dot_gray">트리플스트리트 오픈(OPEN) 기념  스프링 페스티벌과 기념  스프링 페스티벌과</dd>
+					</dl>
+					<dl class="cell color2">
+						<dt>쿠폰 (Coupon)</dt>
+						<dd class="list_dot_gray">봄맞이 아우터 1+1 쿠폰</dd>
+						<dd class="list_dot_gray">트리플스트리트 오픈 기념 10% 할인 쿠폰</dd>
+						<dd class="list_dot_gray">입점기념 10,000만원 할인 쿠폰</dd>
+					</dl>
+					<dl class="cell color3">
+						<dt>페스티벌 (Festival)</dt>
+						<dd class="nodata">이벤트 일정이 없습니다. </dd>
+					</dl>
+				</div>
+
+				<form action="none" method="post">
+					<fieldset>
+						<!-- search_box -->
+						<div class="split search_box calender">
+							<div class="cell w35">
+								<span class="btn_area">
+									<a href="#" class="btnS styC"><span class="btn_cm btn_arrS_prev">이전</span></a>
+									<a href="#" class="btnS styC"><span class="btn_cm btn_arrS_next_r">다음</span></a>
+									<span class="unit_tml"><a href="#" class="btnS styC disabled">오늘</a></span>
+								</span>
+							</div><!-- //cell -->
+							<strong class="cell txt_year">2016-12</strong>
+							<div class="cellR w35">
+								<div class="tab tab_toggle">
+				                    <ul class="tab_list">
+				                        <li><input type="radio" name="btn_tg_cal" id="btn_tg_cal1" checked="checked" /><label for="btn_tg_cal1" class="txt">월간</label></li>
+				                        <li><input type="radio" name="btn_tg_cal" id="btn_tg_cal2" /><label for="btn_tg_cal2" class="txt">주간</label></li>
+				                        <li><input type="radio" name="btn_tg_cal" id="btn_tg_cal3" /><label for="btn_tg_cal3" class="txt">일간</label></li>
+				                        <li><input type="radio" name="btn_tg_cal" id="btn_tg_cal4" /><label for="btn_tg_cal4" class="txt">목록보기</label></li>
+				                    </ul> 
+				                </div> 
+							</div><!-- //cellR -->
+						</div>
+						<!--//search_box -->
+					</fieldset>
+				</form>
+				
+				<!-- sheet_table -->
+				<div class="tbl_sheet">
+					sheet 영역
+				</div>
+				<!-- //sheet_table -->
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

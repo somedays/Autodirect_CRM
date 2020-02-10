@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>조직도 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">조직도</h1>
+				</div><!-- //sub_tit -->
+
+				<div class="cols_wrap organizat_chart">
+					<div class="cols_row">
+						<div class="cols col_1_4">
+							<div class="split tit_area">
+								<h2 class="cell tit_deps2">사용자 목록</h2>
+							</div><!-- //tit_area -->
+
+							<!-- sheet_table -->
+							<div class="tbl_sheet">
+								<div class="tree_box">
+									<!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 -->
+									<ul class="tree_list">
+										<li><!-- li : 2depth가 있는경우 in_deps2 클래스 추가 / 현재 활성화 on 클래스처리-->
+											<a href="#" class="btn_line"><!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 --><span class="ico"></span><span class="btn_cm btn_folder2">뎁스4 있는 경우</span></a>
+											<ul class="deps2">
+												<li><!-- li : 3depth가 있는경우 in_deps3 클래스 추가  / 현재 활성화 on 클래스처리 -->
+													<a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_folder2">뎁스3 </span></a>
+													<ul class="deps3">
+														<li><!-- li : 4depth가 있는경우 in_deps4 클래스 추가  / 현재 활성화 on 클래스처리 -->
+															<a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_folder2">뎁스2</span></a>
+															<ul class="deps4">
+																<li><a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스1</span></a></li>
+																<li><a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스1</span></a></li>
+															</ul>
+														</li>
+														<li><a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스2</span></a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>	
+										<li>
+											<a href="#" class="btn_line"><!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 --><span class="ico"></span><span class="btn_cm btn_folder2">뎁스3 있는 경우</span></a>
+											<ul class="deps2">
+												<li>
+													<a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스2 </span></a>
+													<ul class="deps3">
+														<li><a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스3</span></a></li>
+														<li><a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스3</span></a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#" class="btn_line"><!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 --><span class="ico"></span><span class="btn_cm btn_folder2">뎁스2 있는 경우</span></a>
+											<ul class="deps2">
+												<li>
+													<a href="#" class="btn_line"><span class="ico"></span><span class="btn_cm btn_person">뎁스2 </span></a>
+												</li>
+											</ul>
+										</li>
+										<li><!-- li : 2depth가 있는경우 in_deps2 클래스 추가 / 현재 활성화 on 클래스처리-->
+											<a href="#" class="btn_line"><!-- .btn_line : btn_line태그 클릭시 selected 클래스 추가 --><span class="ico"></span><span class="btn_cm btn_person">뎁스1 있는 경우</span></a>
+										</li>
+									</ul>
+								</div><!--//tree_box -->
+							</div>
+							<!-- //sheet_table -->
+
+						</div><!-- //cols -->
+						<div class="cols col_3_4">
+							<div class="split tit_area">
+								<h2 class="cell tit_deps2">사용자 정보</h2>
+							</div><!-- //tit_area -->
+
+							<div class="bbs bbs_write">
+								<!-- tbl_row -->
+								<div class="tbl_row">
+									<table class="tbl">
+										<colgroup>
+											<col style="width:auto;"/>
+											<col style="width:24%;" />
+											<col style="width:30%;" />
+											<col style="width:24%;" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>소속 구분</th>
+												<td colspan="3">SD 프런티어</td>
+											</tr>
+											<tr>
+												<th>사용자ID</th>
+												<td colspan="3">Admin</td>
+											</tr>
+											<tr>
+												<th>이름</th>
+												<td colspan="3">김길동</td>
+											</tr>
+											<tr>
+												<th>팀/부서</th>
+												<td colspan="3">운영팀</td>
+											</tr>
+											<tr>
+												<th>직위</th>
+												<td>과장</td>
+												<th>직책</th>
+												<td>팀장</td>
+											</tr>
+											<tr>
+												<th>성별</th>
+												<td>남</td>
+												<th>생년월일</th>
+												<td>1977-12-10</td>
+											</tr>
+											<tr>
+												<th>연락처</th>
+												<td>010-0000-0000</td>
+												<th>휴대전화</th>
+												<td>010-0000-0000</td>
+											</tr>
+											<tr>
+												<th>이메일</th>
+												<td colspan="3"><a href="mailto:sample@mail.com" class="alink">sample@mail.com</a></td>
+											</tr>
+											<tr>
+												<th class="vt">주소</th>
+												<td colspan="3">21996  인천 연수구 송도동 갯벌타워 1102호 </td>
+											</tr>
+											<tr>
+												<th>상태</th>
+												<td colspan="3">재직</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //tbl_row -->
+							</div><!-- //bbs -->
+
+						</div><!-- //cols -->
+					</div><!-- //cols_row -->
+				</div><!-- //cols_wrap -->
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+	folderTree('.tree_list', '.btn_line');
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

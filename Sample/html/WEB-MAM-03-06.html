@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>쿠폰 상세 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">쿠폰 상세보기</h1>
+				</div><!-- //sub_tit -->
+				
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+										<col style="width:34%;" />
+										<col style="width:20%;" />
+										<col style="width:34%;" />
+									</colgroup>
+									<tbody>
+                                        <tr>
+                                            <th>상태</th>
+                                            <td colspan="3">발행중<span class="txt_small unit_tml">(쿠폰중단 일 경우 괄호안에 중지일 표기 : 2017.03.10)</span></td>
+                                        </tr>
+										<tr>
+											<th>작성자</th>
+											<td>트리플스트리트</td>
+                                            <th>발행주체</th>
+                                            <td>트리플스트리트</td>
+											
+										</tr>
+										<tr>
+                                            <th>등록일</th>
+                                            <td>2017.11.11</td>
+											<th>승인일</th>
+											<td>2017.11.11</td>
+										</tr>
+										<tr>
+											<th>카테고리</th>
+											<td colspan="3">먹을거, 입을거</td>
+										</tr>
+										<tr>
+											<th>발급 방식/상황</th>
+											<td colspan="3">[자동] 관심스토어 등록</td>
+										</tr>
+										<tr>
+											<th>쿠폰종류</th>
+											<td>정액권 10,000원</td>
+                                            <th>인증방식</th>
+                                            <td>바코드</td>
+										</tr>
+										<tr>
+											<th>쿠폰명</th>
+											<td colspan="3">트리플스트리트 빕스(VIPS) 송도점 입점 기념 이벤트 - 스테이크 10,000원 할인</td>
+										</tr>
+										<tr>
+											<th>사용조건</th>
+											<td colspan="3">주문금액 30,000원 이상 사용가능</td>
+										</tr>
+                                        <tr>
+                                            <th>쿠폰 관리</th>
+                                            <td colspan="3">
+                                                <a href="#" class="btnM styC pd1">발행대상 등록</a>
+                                                <a href="#" class="btnM styC pd1">발행내역 보기</a>
+                                            </td>
+                                        </tr>
+										<tr>
+											<th>사용기간</th>
+											<td>발급일로부터 30일 동안 사용가능</td>
+											<th>쿠폰제한</th>
+											<td>다운로드수(200건)</td>
+										</tr>
+										<tr>
+											<th>사용매장</th>
+											<td colspan="3">빕스</td>
+										</tr>
+										<tr>
+											<th><label for="lab_guide">이용안내</label></th>
+											<td colspan="3">
+												<textarea rows="4" cols="10" class="textarea" id="lab_guide" readonly="readonly"></textarea>
+											</td>
+										</tr>
+                                        <tr>
+                                            <th>오늘의 쿠폰</th>
+                                            <td colspan="3">
+                                                <div class="split img_modify tbl_group">
+                                                    <div class="cell w10">
+                                                        <div class="img"><img src="../images/index/temp/temp_img_logo.jpg" /></div>
+                                                    </div>
+                                                    <div class="cell btn_area vb">
+                                                        <ul class="list_img_info">
+                                                            <li>메인페이지 오늘의 쿠폰에서 노출될 썸네일입니다.</li>
+                                                            <li>이미지 크기 : 500px * 400px / 이미지 종류 : jpg, png, gif</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+						<div class="btn_area">
+							<button type="button" class="btnL styA">승인</button>
+							<button type="button" class="btnL styA">반려</button>
+                            <button type="button" class="btnL styA">쿠폰중단</button>
+                            <button type="button" class="btnL styB">미리보기</button>
+							<button type="button" class="btnL styB">수정</button>
+							<button type="button" class="btnL styB">삭제</button>
+							<button type="button" class="btnL styC">목록</button>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

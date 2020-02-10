@@ -1,0 +1,592 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>거래처 등록 | Triple Street</title>
+	<link rel="stylesheet" href="../css/index/common.css" />
+	<link rel="stylesheet" href="../css/index/icomoon.css" />
+
+	<script src="../libs/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../libs/1.11.4/jquery-ui.min.js"></script>
+	<!-- custom scrollbar plugin -->
+	<script src="../libs/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+			<!-- tab_win -->
+			<div w3-include-html="../include/layout_tab_win.html"></div>
+			<!-- //tab_win -->
+			
+			<!-- lnb -->
+			<div w3-include-html="../include/layout_lnb.html"></div>
+			<!-- //lnb -->
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">거래처 등록</h1>
+				</div><!-- //sub_tit -->
+				
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+										<col style="width:32%;" />
+										<col style="width:21%;" />
+										<col style="width:32%;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label for="lab_acc_code">거래처 코드</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<input type="text" class="inp w20" id="lab_acc_code" />
+												<div class="box_error w20">
+													<p class="ico_cm ico_imp"><span class="txt">중복된 코드입니다.</span></p>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_ctmr_name">거래처명</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<!-- popup_layer -->
+												<div class="popup pl_small" style="width:37.6%">
+													<div class="inp_area w100">
+														<input type="text" class="inp" id="lab_ctmr_name" placeholder="Search" />
+														<a href="#" class="btn_cm btn_search"><span class="blind">검색</span></a>
+													</div>
+													<div class="inner">
+														<h1 class="tit_deps1">거래처 검색</h1>
+														<div w3-include-html="../popup/popup_name_search.html"></div>
+													</div><!-- //inner -->
+												</div>
+												<!-- //popup_layer -->
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_repres_name">대표자명</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<input type="text" class="inp" id="lab_repres_name" style="width:37.6%" />
+											</td>
+										</tr>
+										<tr>
+											<th>사업자 구분<strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<div class="fld">
+													<span class="chk_area"><input type="radio" class="rd" name="rd_bsin_div" id="rd_bsin_div1" /><label for="rd_bsin_div1">법인</label></span>
+													<span class="chk_area"><input type="radio" class="rd" name="rd_bsin_div" id="rd_bsin_div2" /><label for="rd_bsin_div2">개인</label></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>법인 번호<strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="split tel_area">
+													<div class="cell w50"><input type="text" class="inp" title="법인번호 첫번째자리" /></div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w50"><input type="text" class="inp" title="법인번호 끝자리" /></div>
+												</div>
+											</td>
+											<th><label for="lab_corp_regist">법인 등록증</label></th>
+											<td><input type="file" class="inp w100" id="lab_corp_regist" placeholder="File Name" /></td>
+										</tr>
+										<tr>
+											<th>사업자 등록번호<strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="split tel_area">
+													<div class="cell w30"><input type="text" class="inp" title="사업자 등록번호 첫번째자리" /></div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w30"><input type="text" class="inp" title="사업자 등록번호 중간자리" /></div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w40"><input type="text" class="inp" title="사업자 등록번호 끝자리" /></div>
+												</div>
+											</td>
+											<th><label for="lab_busin_regist">사업자 등록증</label></th>
+											<td><input type="file" class="inp w100" id="lab_busin_regist" placeholder="File Name" /></td>
+										</tr>
+										<tr>
+											<th><label for="lab_business">업태</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td><input type="text" class="inp w100" id="lab_business" /></td>
+											<th><label for="lab_sectors">업종</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td><input type="text" class="inp w100" id="lab_sectors" /></td>
+										</tr>
+										<tr>
+											<th class="vt"><label for="lab_addr">주소</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<div class="tbl_group">
+													<!-- popup_layer -->
+													<div class="popup pl_small w25">
+														<div class="inp_area w100">
+															<input type="text" class="inp" title="우편번호입력" placeholder="우편번호" id="lab_addr" />
+															<a href="#" class="btn_cm btn_search"><span class="blind">검색</span></a>
+														</div>
+														<div class="inner w400">
+															<div w3-include-html="../popup/popup_search_addr.html"></div>
+														</div><!-- //inner -->
+													</div>
+													<!-- //popup_layer -->
+													
+													<div class="unit_ml">
+														<ul class="list_str_box">
+															<li>
+																<span class="txt">21996  인천 연수구 송도동</span>
+																<a href="#" class="btn_cm btn_del"><span class="blind">삭제</span></a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="tbl_group">
+													<input type="text" class="inp w100" title="상세주소 입력" placeholder="상세주소 입력" />
+												</div>
+											</td>
+										</tr>
+										<tr>
+							                <th><label for="lab_tel">전화번호</label><strong class="txt_ess">* 필수입력</strong></th>
+							                <td>
+							                    <div class="split tel_area">
+							                        <div class="cell w30">
+							                            <select class="select" title="연락처 첫번째자리" id="lab_tel">
+							                                <option>선택</option>
+							                                <option>010</option>
+							                            </select>
+							                        </div>
+							                        <span class="cell txt_c">-</span>
+							                        <div class="cell w35"><input type="text" class="inp" title="연락처 중간자리"></div>
+							                        <span class="cell txt_c">-</span>
+							                        <div class="cell w35"><input type="text" class="inp" title="연락처 끝자리"></div>
+							                    </div>
+							                </td>
+							                <th><label for="lab_fax">팩스</label></th>
+							                <td>
+							                    <div class="split tel_area">
+							                        <div class="cell w30">
+							                            <select class="select" title="팩스 첫번째자리" id="lab_fax">
+							                                <option>선택</option>
+							                            </select>
+							                        </div>
+							                        <span class="cell txt_c">-</span>
+							                        <div class="cell w35"><input type="text" class="inp" title="팩스 중간자리"></div>
+							                        <span class="cell txt_c">-</span>
+							                        <div class="cell w35"><input type="text" class="inp" title="팩스 끝자리"></div>
+							                    </div>
+							                </td>
+							            </tr>
+							            <tr>
+											<th><label for="lab_store_name">매장명</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3"><input type="text" class="inp" id="lab_store_name" style="width:37.6%" /></td>
+										</tr>
+										<tr>
+											<th><label for="lab_store_cate">매장 카테고리</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<select class="select w15" id="lab_store_cate" title="매장카테고리">
+					                                <option>선택</option>
+					                                <option>F&amp;B</option>
+					                                <option>패션</option>
+					                                <option>Life</option>
+					                            </select>
+												<select class="select w20 unit_ml" title="매장 하위 카테고리">
+					                                <option>선택</option>
+					                                <option>F&amp;B</option>
+					                                <option>패션</option>
+					                                <option>Life</option>
+					                            </select>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_director">책임자명</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<input type="text" class="inp" id="lab_director" style="width:37.6%" />
+											</td>
+										</tr>
+										<tr>
+							                <th><label for="lab_director_tel">책임자 전화번호</label><strong class="txt_ess">* 필수입력</strong></th>
+							                <td colspan="3">
+							                    <div class="split tel_area" style="width:37.7%">
+							                        <div class="cell w30">
+							                            <select class="select" title="책임자 전화번호 첫번째자리" id="lab_director_tel">
+							                                <option>선택</option>
+							                                <option>010</option>
+							                            </select>
+							                        </div>
+							                        <span class="cell txt_c">-</span>
+							                        <div class="cell w35"><input type="text" class="inp" title="책임자 전화번호 중간자리"></div>
+							                        <span class="cell txt_c">-</span>
+							                        <div class="cell w35"><input type="text" class="inp" title="책임자 전화번호 끝자리"></div>
+							                    </div>
+							                </td>
+										</tr>
+										<tr>
+											<th><label for="lab_email">책임자 이메일</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td colspan="3">
+												<input type="text" class="inp w25" title="이메일 계정 ID" placeholder="이메일 ID" id="lab_email" /> @
+												<input type="text" class="inp w25 unit_mr" title="이메일 주소 입력" />
+												<select class="select w30" title="이메일 주소">
+													<option>직접입력</option>
+													<option>naver.com</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th>VAN사 정보</th>
+											<td colspan="3">
+												<div class="fld">
+													<span class="chk_area"><input type="radio" class="rd" name="rd_van" id="rd_van1" /><label for="rd_van1">지정 VAN</label></span>
+													<span class="chk_area"><input type="radio" class="rd" name="rd_van" id="rd_van2" /><label for="rd_van2">타사</label></span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+
+						<div class="blue_box acc_regist_box">
+							<span class="chk_area"><input type="checkbox" class="chk" name="chk_b" id="chk_b1"><label for="chk_b1">계약서 정보 등록</label></span>
+						</div>
+
+						<div class="bbs bbs_write gray">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:auto;"/>
+										<col style="width:85%;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label for="lab_contr_cate">계약 구분</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<select class="select w25" id="lab_contr_cate">
+					                                <option>선택</option>
+					                            </select>
+											</td>
+										</tr>
+										<tr>
+											<th>계약 공간<strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<!-- tbl_inner -->
+												<div class="tbl_col tbl_inner">
+												    <table class="tbl">
+												        <colgroup>
+												            <col style="width:5%;">
+												            <col style="width:21%;">
+												            <col style="width:21%;">
+												            <col style="width:auto;">
+												            <col style="width:8%;">
+												        </colgroup>
+												        <thead>
+												            <tr>
+												                <th scope="col">No.</th>
+												                <th scope="col">동</th>
+												                <th scope="col">층</th>
+												                <th scope="col">위치</th>
+												                <th scope="col">항목추가</th>
+												            </tr>
+												        </thead>
+												        <tbody>
+												            <tr>
+												                <td>1</td>
+												                <td>
+																	<select class="select w65" id="lab_attr2_form1">
+										                                <option>선택</option>
+										                            </select>
+										                            <label for="lab_attr2_form1" class="unit_ml">동</label>
+												                </td>
+												                <td>
+												                	<select class="select w65" id="lab_attr2_form2">
+										                                <option>선택</option>
+										                            </select>
+												                	<label for="lab_attr2_form2" class="unit_ml">층</label>
+												                </td>
+												                <td>
+												                	<input type="text" class="inp w95" title="위치" placeholder="위치등록" />
+												                </td>
+												                <td><a href="#" class="btn_cm btn_minus"><span class="blind">삭제</span></a></td>
+												            </tr>
+												            <tr>
+												                <td>2</td>
+												                <td>
+																	<select class="select w65" id="lab_attr_form1">
+										                                <option>선택</option>
+										                            </select>
+										                            <label for="lab_attr_form1" class="unit_ml">동</label>
+												                </td>
+												                <td>
+												                	<select class="select w65" id="lab_attr_form2">
+										                                <option>선택</option>
+										                            </select>
+												                	<label for="lab_attr_form2" class="unit_ml">층</label>
+												                </td>
+												                <td>
+												                	<input type="text" class="inp w95" title="위치" placeholder="위치등록" />
+												                </td>
+												                <td><a href="#" class="btn_cm btn_plus"><span class="blind">추가</span></a></td>
+												            </tr>
+												        </tbody>
+												    </table>
+												</div>
+												<!-- //tbl_inner -->
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_rental_dep">임대 보증금</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<input type="text" class="inp w25 tr" id="lab_rental_dep" />
+												<label for="lab_rental_dep">원</label>
+												<span class="chk_area unit_tml2"><input type="radio" class="rd" name="rd_no" id="rd_no" /><label for="rd_no">없음</label></span>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_contr_date">계약일</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="inp_area w25">
+			                                        <input type="text" class="inp" id="lab_contr_date" title="시작 기간" />
+			                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+			                                    </div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_date">계약기간</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="ilb" style="width:52.1%">
+													<div class="split date_area">
+					                                    <div class="cell inp_area">
+					                                        <input type="text" class="inp" id="lab_date" title="시작 기간" />
+					                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+					                                    </div>
+					                                    <span class="cell txt_c">~</span>
+					                                    <div class="cell inp_area">
+					                                        <input type="text" class="inp" title="종료 기간" />
+					                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+					                                    </div>
+					                                </div>
+				                                </div>
+				                                <span class="unit_tml2">5년 6개월</span>
+											</td>
+										</tr>
+										<tr>
+											<th>임대료<strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<!-- tbl_inner -->
+												<div class="tbl_col tbl_inner">
+												    <table class="tbl">
+												        <colgroup>
+												            <col style="width:4%;">
+												            <col style="width:8%;">
+												            <col style="width:34%;">
+												            <col style="width:15%;">
+												            <col style="width:15%;">
+												            <col style="width:auto;">
+												            <col style="width:7%;">
+												        </colgroup>
+												        <thead>
+												            <tr>
+												                <th scope="col">No.</th>
+												                <th scope="col">구분</th>
+												                <th scope="col">기간</th>
+												                <th scope="col">정액/수수료</th>
+												                <th scope="col">미니멈게런티</th>
+												                <th scope="col">특약</th>
+												                <th scope="col">옵션추가</th>
+												            </tr>
+												        </thead>
+												        <tbody>
+												            <tr>
+												                <td>1</td>
+												                <td>
+												                	<select class="select w100" title="갑/을 선택">
+									                                	<option selected="selected">갑</option>
+									                                	<option>을</option>
+									                                </select>
+												                </td>
+												                <td>
+												                	<div class="split date_area">
+									                                    <div class="cell inp_area">
+									                                        <input type="text" class="inp" title="시작 기간" />
+									                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+									                                    </div>
+									                                    <span class="cell txt_c">~</span>
+									                                    <div class="cell inp_area">
+									                                        <input type="text" class="inp" title="종료 기간" />
+									                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+									                                    </div>
+									                                </div>
+												                </td>
+												                <td class="tl">
+												                	<input type="text" class="inp w85 tr" title="정액" id="lab_fees" />
+																	<label for="lab_fees" class="unit_ml">원</label>
+												                </td>
+												                <td class="tl">
+												                	<input type="text" class="inp w85 tr" title="미니멈게런티" id="lab_minimal" readonly="readonly" />
+																	<label for="lab_minimal" class="unit_ml">원</label>
+												                </td>
+												                <td><input type="text" class="inp w100" title="특약" placeholder="특약" /></td>
+												                <td><a href="#" class="btn_cm btn_minus"><span class="blind">삭제</span></a></td>
+												            </tr>
+												            <tr>
+												                <td>2</td>
+												                <td>
+												                	<select class="select w100" title="갑/을 선택">
+									                                	<option>갑</option>
+									                                	<option selected="selected">을</option>
+									                                </select>
+												                </td>
+												                <td>
+												                	<div class="split date_area">
+									                                    <div class="cell inp_area">
+									                                        <input type="text" class="inp" title="시작 기간" />
+									                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+									                                    </div>
+									                                    <span class="cell txt_c">~</span>
+									                                    <div class="cell inp_area">
+									                                        <input type="text" class="inp" title="종료 기간" />
+									                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+									                                    </div>
+									                                </div>
+												                </td>
+												                <td class="tl">
+												                	<input type="text" class="inp w85 tr" title="수수료" id="lab_fees2" />
+																	<label for="lab_fees2" class="unit_ml">%</label>
+												                </td>
+												                <td class="tl">
+												                	<input type="text" class="inp w85 tr" title="미니멈게런티" id="lab_minimal2" />
+																	<label for="lab_minimal2" class="unit_ml">원</label>
+												                </td>
+												                <td><input type="text" class="inp w100" title="특약" placeholder="특약" /></td>
+												                <td><a href="#" class="btn_cm btn_plus"><span class="blind">추가</span></a></td>
+												            </tr>
+												        </tbody>
+												    </table>
+												</div>
+												<!-- //tbl_inner -->
+											</td>
+										</tr>
+										<tr>
+											<th>터미널 ID</th>
+											<td>
+												<!-- tbl_inner -->
+												<div class="tbl_col tbl_inner">
+												    <table class="tbl">
+												        <colgroup>
+												            <col style="width:12%;">
+												            <col style="width:34%;">
+												            <col style="width:44%;">
+												            <col style="width:auto;">
+												        </colgroup>
+												        <thead>
+												            <tr>
+												                <th scope="col">No.</th>
+												                <th scope="col">매장구분</th>
+												                <th scope="col">터미널 ID</th>
+												                <th scope="col">항목추가</th>
+												            </tr>
+												        </thead>
+												        <tbody>
+												            <tr>
+												            	<td>1</td>
+												                <td>
+												                	<select class="select w90" title="매장구분">
+										                                <option>선택</option>
+										                                <option>정상매장</option>
+										                                <option>행사매장</option>
+										                            </select>
+												                </td>
+												                <td>
+																	<input type="text" class="inp w90" title="터미널 ID" />
+												                </td>
+												                <td><a href="#" class="btn_cm btn_minus"><span class="blind">삭제</span></a></td>
+												            </tr>
+												            <tr>
+												            	<td>2</td>
+												                <td>
+												                	<select class="select w90" title="매장구분">
+										                                <option>선택</option>
+										                                <option>정상매장</option>
+										                                <option>행사매장</option>
+										                            </select>
+												                </td>
+												                <td>
+																	<input type="text" class="inp w90" title="터미널 ID" />
+												                </td>
+												                <td><a href="#" class="btn_cm btn_plus"><span class="blind">추가</span></a> </td>
+												            </tr>
+												        </tbody>
+												    </table>
+												</div>
+												<!-- //tbl_inner -->
+											</td>
+										</tr>
+										<tr>
+											<th>계약서</th>
+											<td>
+												<div w3-include-html="../include/cm_filebox.html"></div>
+											</td>
+										</tr>
+										<tr>
+											<th>공문</th>
+											<td>
+												<div w3-include-html="../include/cm_filebox.html"></div>
+											</td>
+										</tr>
+										<tr>
+											<th>특약서</th>
+											<td>
+												<div w3-include-html="../include/cm_filebox.html"></div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_etc">비고</label></th>
+											<td>
+												<textarea rows="3" cols="10" placeholder="내용을 입력해 주세요" class="textarea" id="lab_etc"></textarea>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //tbl_row -->
+						</div><!-- //bbs -->
+
+						<div class="btn_area">
+							<button type="button" class="btnL styA">저장</button>
+							<button type="button" class="btnL styB">취소</button>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>
