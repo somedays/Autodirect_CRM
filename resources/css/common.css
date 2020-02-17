@@ -702,6 +702,7 @@ a.txt_overflow{display:block;}
 .bbs_write .ico_reply{position:absolute;top:20px;left:20px;}
 .bbs_write .ico_reply .txt{padding-left:10px;color:#646d81;font-size:14px;vertical-align:middle;}
 .bbs_write.gray{background-color:#f4f6fa;border-color:#9bbcd8;}
+.bbs_write .tab_toggle li .txt {min-width:35px;}
 .cols .bbs_write{padding:44px 60px;}
 
 .bbs_result{padding:75px 30px;text-align:center;font-family:'notokr-DemiLight';}
@@ -833,10 +834,10 @@ a.txt_overflow{display:block;}
 .tab_sty3 .on a, .tab_sty3 .on a:hover{background-color:#5988b2;z-index:1;border-color:#5988b2;color:#fff;}
 /* tab_toggle */
 .tab_toggle{display:inline-block;border:1px solid #d5dae8;border-radius:1px;vertical-align:middle;}
-.tab_toggle li .txt{display:block;padding:5px 8px;text-align:center;border-left:1px solid #d5dae8;font-size:13px;color:#4f5d7a;font-family:'NanumBarunGothic';letter-spacing:0;z-index:1;min-width:35px;}
+.tab_toggle li .txt{display:block;padding:5px 8px;text-align:center;border-left:1px solid #d5dae8;font-size:13px;color:#4f5d7a;font-family:'NanumBarunGothic';letter-spacing:0;z-index:1;min-width:25px;}
 .tab_toggle li:first-child .txt{border-left:none;}
 .tab_toggle input[type="radio"]{position:absolute;top:0;left:0;width:1px;height:1px;overflow:hidden;z-index:0;}
-.tab_toggle li.on a, .tab_toggle input[type="radio"]:checked + label{background-color:#222a3c;color:#fff;border-color:#222a3c;}
+.tab_toggle li.on a, .tab_toggle input[type="radio"]:checked + label{background-color:#5988b2;color:#fff;border-color:#5988b2;}
 
 /* step_sty1 */
 .step_sty1{background-color:#f3f5f7;}
@@ -870,7 +871,7 @@ a.txt_overflow{display:block;}
 /* 카테고리 */
 .category_wrap{overflow:hidden;}
 .category_wrap .category{float:left;}
-.category{display:inline-block;padding:3px 5px 0;padding-top:5px\9;height:16px;margin-top:-1px;border-radius:2px;text-align:center;color:#fff;font-size:10px;letter-spacing:0;line-height:1.1;font-family:'notokr-DemiLight';vertical-align:middle;box-sizing:border-box;}
+.category{display:inline-block;padding:3px 5px 0;padding-top:5px\9;height:18px;margin-top:-1px;border-radius:2px;text-align:center;color:#fff;font-size:11px;letter-spacing:0;line-height:1.1;font-family:'notokr-DemiLight';vertical-align:middle;box-sizing:border-box;}
 .category.cate1{background-color:#5d84a2;}
 .category.cate2{background-color:#8f939b;}
 .category[class*='cate_arr']{position:relative;padding:3px 1px 0 6px;height:18px;margin-right:9px;border-radius:2px;font-size:12px;font-family:'NanumBarunGothic';box-shadow:0 1px 1px rgba(0,0,0,0.1);z-index:1;}
