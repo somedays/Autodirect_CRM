@@ -1,0 +1,543 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>사용자 관리</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+	<link rel="stylesheet" href="../resources/css/jquery-ui.css" />
+	<link rel="stylesheet" href="../resources/js/themes/default/style.css" />
+	<link rel="stylesheet" href="../resources/css/jquery.dataTables.css" />
+
+	<script src="../resources/js/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+	<!-- Tree -->
+	<script src="../resources/js/jstree.min.js"></script>
+	<!-- Data Table -->
+	<script src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">사용자 관리</h1>
+				</div><!-- //sub_tit -->
+
+				<!-- Search 영역 - Table 기능 사용 시 개발 불필요.
+				<form action="none" method="post">
+					<fieldset>
+						<div class="split search_box" id="search_box">
+							<div class="cell">
+								<table class="tbl col2">
+									<colgroup>
+										<col style="width:1%;">
+										<col style="width:auto;">
+										<col style="width:1%;">
+										<col style="width:auto;">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label class="tit_fld" for="lab_group">구분</label></th>
+											<td>
+												<select class="select" id="lab_group">
+													<option>이름</option>
+													<option>전화번호</option>
+													<option>ID</option>
+													<option>카카오톡</option>
+												</select>
+											</td>
+											<th><label class="tit_fld" for="lab_store">검색어</label></th>
+											<td>
+												<div class="inp_area">
+													<input type="text" class="inp" id="lab_store">
+													<a href="#" class="btn_cm btn_search"><span class="blind">매장검색</span></a>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="cellR btn_area">
+								<button type="button" class="btnS styE pd1">조회</button>
+							</div>
+						</div>
+					</fieldset>
+				</form> -->
+
+				<div class="cols_wrap">
+					<div class="cols_row">
+						<div class="cols col_1_3">
+							<div class="split tit_area">
+								<h2 class="cell tit_deps2">조직도 관리</h2>
+								<div class="cellR btn_area">
+							        <a href="#" class="btnS styB">추가</a>
+							        <a href="#" class="btnS styB">수정</a>
+							        <a href="#" class="btnS styB">삭제</a>
+							        <a href="#" class="btnS styA">저장</a>
+							    </div>
+							</div><!-- //tbl_top -->
+							<!-- sheet_table -->
+							<div class="tbl_sheet p10 lineH15" id="org_tree">
+							</div>
+							<!-- //sheet_table -->
+						</div><!-- //cols -->
+						<div class="cols col_2_3">
+							<div class="split tit_area">
+								<h2 class="cell tit_deps2">직원 관리</h2>
+								<div class="cellR btn_area">
+									<a href="user_registration.html" class="btnS styA">등록</a>
+								</div>
+							</div><!-- //tbl_top -->
+							
+							<!-- sheet_table -->
+							<div class="tbl_sheet noBorder hAuto">
+								<!-- table_col -->
+								<div class="tbl_col">
+								    <table class="tbl" id="example">
+								        <colgroup>
+								            <col style="width:60px;" />
+								            <col style="width:110px;" />
+								            <col style="width:140px;" />
+								            <col style="width:auto;" />
+								            <col style="width:auto;" />
+								            <col style="width:80px;" />
+								            <col style="width:120px;" />
+								        </colgroup>
+								        <thead>
+								            <tr>
+								                <th scope="col">번호</th>
+								                <th scope="col">이름</th>
+								                <th scope="col">전화번호</th>
+								                <th scope="col">Email(ID)</th>
+								                <th scope="col">카카오톡ID</th>
+								                <th scope="col">활성여부</th>
+								                <th scope="col">입사일</th>
+								            </tr>
+								        </thead>
+								        <tbody>
+								            <tr>
+								            	<td class="tc">001</td>
+								            	<td>김길동</td>
+								            	<td>010-2222-2222</td>
+								            	<td><a href="#" class="alink">admin1@gmail.com</a></td>
+								            	<td>Kakao3</td>
+								            	<td class="tc">Y</td>
+								            	<td class="tc">2020-01-10</td>
+								            </tr>
+								            <tr>
+								            	<td class="tc">001</td>
+								            	<td>김길동</td>
+								            	<td>010-2222-2222</td>
+								            	<td><a href="#" class="alink">admin1@gmail.com</a></td>
+								            	<td>Kakao3</td>
+								            	<td class="tc">Y</td>
+								            	<td class="tc">2020-01-10</td>
+								            </tr>
+								            <tr>
+								            	<td class="tc">001</td>
+								            	<td>김길동</td>
+								            	<td>010-2222-2222</td>
+								            	<td><a href="#" class="alink">admin1@gmail.com</a></td>
+								            	<td>Kakao3</td>
+								            	<td class="tc">Y</td>
+								            	<td class="tc">2020-01-10</td>
+								            </tr>
+								            <tr>
+								            	<td class="tc">001</td>
+								            	<td>김길동</td>
+								            	<td>010-2222-2222</td>
+								            	<td><a href="#" class="alink">admin1@gmail.com</a></td>
+								            	<td>Kakao3</td>
+								            	<td class="tc">Y</td>
+								            	<td class="tc">2020-01-10</td>
+								            </tr>
+								            <tr>
+								            	<td class="tc">001</td>
+								            	<td>김길동</td>
+								            	<td>010-2222-2222</td>
+								            	<td><a href="#" class="alink">admin1@gmail.com</a></td>
+								            	<td>Kakao3</td>
+								            	<td class="tc">Y</td>
+								            	<td class="tc">2020-01-10</td>
+								            </tr>
+								            <tr>
+								            	<td class="tc">001</td>
+								            	<td>김길동</td>
+								            	<td>010-2222-2222</td>
+								            	<td><a href="#" class="alink">admin1@gmail.com</a></td>
+								            	<td>Kakao3</td>
+								            	<td class="tc">Y</td>
+								            	<td class="tc">2020-01-10</td>
+								            </tr>
+								        </tbody>
+								    </table>
+								</div>
+								<!-- //table_col -->
+							</div>
+							<!-- //sheet_table -->
+						</div><!-- //cols -->
+					</div><!-- //cols_row -->
+				</div><!-- //cols_wrap -->
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+<!-- popup_layer -->
+<div class="popup pl_win">
+	<div class="pop_box">
+		<div class="pop_wrap">
+			<div class="inner w820"><!-- 팝업 가로사이즈 -->
+				<h1 class="tit_deps1">직원 상세 정보</h1>
+				<div class="pop_content">
+					<!-- 컨텐츠 시작 -->
+					<div class="bbs bbs_write">
+						<!-- tbl_row -->
+						<div class="tbl_row">
+							<table class="tbl">
+								<colgroup>
+									<col style="width:140px;"/>
+									<col style="width:auto;"/>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th><label for="user_name">이름</label><strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<input type="text" class="inp w100" id="user_name" />
+										</td>
+									</tr>
+									<tr>
+										<th><label for="user_email">ID(이메일)</label><strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<input type="text" class="inp w100" id="user_email" />
+										</td>
+									</tr>
+									<tr>
+										<th><label for="user_password">비밀번호</label><strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<input type="text" class="inp w100" id="user_password" />
+										</td>
+									</tr>
+									<tr>
+										<th>입사일<strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<div class="split date_area w30">
+												<div class="cell inp_area">
+													<input type="text" class="inp" id="datepicker" title="입사일" />
+													<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th><label for="permission_level">권한등급</label><strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<select class="select w30" id="permission_level">
+												<option>권한등급</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th><label for="user_company">소속</label><strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<select class="select w30" id="user_company">
+												<option>오토다이렉트카</option>
+											</select>
+											<select class="select w30" id="user_department">
+												<option>소속부서</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th><label for="lab_tel">업무용 전화번호</label></th>
+										<td>
+											<div class="split tel_area w60">
+												<div class="cell w30">
+													<select class="select" title="연락처 첫번째자리" id="lab_tel">
+														<option>선택</option>
+														<option>010</option>
+													</select>
+												</div>
+												<span class="cell txt_c">-</span>
+												<div class="cell w35"><input type="text" class="inp" title="연락처 중간자리"></div>
+												<span class="cell txt_c">-</span>
+												<div class="cell w35"><input type="text" class="inp" title="연락처 끝자리"></div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th><label for="lab_hp">개인용 전화번호</label><strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<div class="split tel_area w60">
+												<div class="cell w30">
+													<select class="select" title="휴대전화 첫번째자리" id="lab_hp">
+														<option>선택</option>
+													</select>
+												</div>
+												<span class="cell txt_c">-</span>
+												<div class="cell w35"><input type="text" class="inp" title="휴대전화 중간자리"></div>
+												<span class="cell txt_c">-</span>
+												<div class="cell w35"><input type="text" class="inp" title="휴대전화 끝자리"></div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th><label for="user_password">카카오톡 계정</label></th>
+										<td>
+											<input type="text" class="inp w100" id="user_password" />
+										</td>
+									</tr>
+									<tr>
+										<th><label for="user_password">근무상태</label></th>
+										<td>
+											<div class="tab tab_toggle">
+												<ul class="tab_list">
+													<li><input type="radio" name="btn_date_set" id="btn_date_set1" checked="checked"><label for="btn_date_set1" class="txt">ON</label></li>
+													<li><input type="radio" name="btn_date_set" id="btn_date_set2"><label for="btn_date_set2" class="txt">OFF</label></li>
+												</ul> 
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th><label for="user_password">로그인상태</label></th>
+										<td>
+											<div class="tab tab_toggle">
+												<ul class="tab_list">
+													<li><input type="radio" name="login_status_yn" id="login_status_y" checked="checked"><label for="login_status_y" class="txt">YES</label></li>
+													<li><input type="radio" name="login_status_yn" id="login_status_n"><label for="login_status_n" class="txt">NO</label></li>
+												</ul> 
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //tbl_row -->
+					</div><!-- //bbs -->
+					<!-- //컨텐츠 끝 -->
+				</div><!-- //pop_content -->
+				<div class="btn_area">
+					<button type="submit" class="btnL styA">저장</button>
+					<button type="button" class="btnL styA">삭제</button>
+					<button type="button" onclick="$('.popup').removeClass('on');" class="btnL styB">취소</button>
+				</div>
+				<a href="#" onclick="$('.popup').removeClass('on');" class="btn_cm btn_close2"><span class="blind">닫기</span></a>
+			</div><!-- //inner -->
+		</div><!-- //pop_wrap -->
+	</div><!-- //pop_box -->
+</div>
+<!-- //popup_layer -->
+<script type="text/javascript">
+
+  var _treeData = [
+    {
+      "id":"root",
+      "text":"회사",
+      "children":[
+        {
+          "id":"team_A",
+          "text":"영업1팀",
+          "children":[
+            {"id":"user01", "text":"사용자01", "type":"user"},
+            {"id":"user02", "text":"사용자02", "type":"user"},
+            {"id":"user03", "text":"사용자03", "type":"user"},
+            {"id":"user04", "text":"사용자04", "type":"user"}
+          ],
+          "type":"team"
+        },
+        {
+          "id":"team_B",
+          "text":"영업2팀",
+          "children":[
+            {"id":"user05", "text":"사용자05", "type":"user"},
+            {"id":"user06", "text":"사용자06", "type":"user"}
+          ],
+          "type":"team"
+        },
+        {
+          "id":"team_C",
+          "text":"영업3팀",
+          "children":[],
+          "type":"team"
+        }
+      ],
+      "type":"root"}
+  ];
+
+  $(document).ready( function(){
+
+	// Date Picker
+	$( function() {
+		$( "#datepicker" ).datepicker({
+			dateFormat: "yy.mm.dd"
+		});
+	} );
+
+	// Data Table
+	$('#example').DataTable();
+	// Tree
+	$("#org_tree").jstree({
+        "core": {
+          "animation" : 0,
+          "check_callback" : true,
+          "data" : _treeData
+        },
+        "types" : {
+          "#" : {
+            "max_chidren" : 1,
+            "max_depth" : 3,
+            "valid_chidren" : ["root"]
+          },
+          "root" : {
+            "valid_chidren" : ["team"]
+          },
+          "team" : {
+            "valid_chidren" : ["user"]
+          },
+          "user" : {
+            "valid_chidren" : []
+          }
+        },
+        "plugins" : ["contextmenu", "dnd", "state", "types", "wholerow"],
+        "contextmenu" : {
+          "items" : function($node) {
+              console.log("node['type'] = "+$node["type"])
+              var selectedNodeObject = $node;
+
+              if( $node['type'] == 'root' ){
+                var items = {
+                  'Create' : {
+                    'separator_before': false,
+                    'separator_after': false,
+                    'label' : '팀 만들기',
+                    'action' : function(obj) {
+                      var defaultTeamName = "영업 00팀";
+                      var data = {teamName : defaultTeamName};
+                      // 바로 등록 하기 보다 팝업을 띄워 팀명을 받도록 해야 할 것 같음...
+                      $.ajax({
+                        "url" : "",
+                        "type" : "post",
+                        "data" : JSON.stringfy(data),
+                        "cache" : false,
+                        "dataType" : "json",
+                        "contentType" : "application/json; charset=UTF-8",
+                        "success" : function(teamIdx){
+                          if( teamIdx > 0 ){
+                            var tree = $("org_tree").jstree(true);
+                            $node = tree.create_node($node, {"text" : teamName, "type" : "team", "id" : teamIdx});
+                            tree.deselect_all();
+                            tree.select_node($node);
+                          }
+                        },
+                        "error" : function(error) {}
+                      });
+                    }
+                  }
+                };
+
+                return items;
+
+              } else if( $node['type'] == 'team' ){
+                var items = {
+                  'Create' : {
+                    'separator_before': false,
+                    'separator_after': true,
+                    'label' : '직원 추가',
+                    'action' : function(obj){
+                      // 신규 직원 추가 로직 구현
+                    }
+                  },
+                  'Rename' : {
+                    'separator_before': false,
+                    'separator_after': false,
+                    'label' : '팀 이름 바꾸기',
+                    'action' : function(obj) {
+                      // 팀 이름 변경 로직 구현
+                    }
+                  },
+                  'Remove' : {
+                    'separator_before': false,
+                    'separator_after': false,
+                    'label' : '팀 삭제',
+                    'action' : function(obj) {
+                      // 팀 삭제 로직 구현(팀원이 있는 경우 팀 삭제 불가)
+                    }
+                  }
+                };
+
+                // 팀원이 존재하는 경우 팀 삭제 불가(팀 삭제 메뉴 제거)
+                if( $node.children.length > 0 ){
+                  items['Remove'] = null;
+                }
+
+                return items;
+              } else if( $node['type'] == 'user'){
+                var items = {
+                  'Remove' : {
+                    'separator_before': false,
+                    'separator_after': false,
+                    'label' : '사용자 삭제',
+                    'action' : function(obj) {
+                      // 팀원(사용자) 삭제 로직 구현(디비 삭제 하지 않고, 상태만 변경)
+                    }
+                  }
+                };
+
+                return items;
+              } else {
+                return "";
+              }
+          }
+        }
+      }).bind('loaded.jstree', function(event, data){
+        console.log(event.type);
+      }).bind('create_node.jstree', function(event, data){
+        console.log(event.type);
+      }).bind('delete_node.jstree', function(event, data){
+        console.log(event.type);
+      }).bind('rename_node.jstree', function(event, data){
+        console.log(event.type);
+      }).bind('edit_node.jstree', function(event, data){
+        console.log(event.type);
+      }).bind('move_node.jstree', function(event, data){
+        // 드래그 앤 드롭을 통한 노드 이동 시 호출됨
+        console.log(event.type);
+      }).bind('open_node.jstree', function(event, data){
+        console.log(event.type);
+      });
+
+	  $("#example .alink").on('click',function (){
+		$(".popup").addClass('on');
+	  });
+
+    } // end of function()
+  );
+</script>
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../resources/js/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

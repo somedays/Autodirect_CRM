@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>사용자 등록</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">사용자 등록</h1>
+				</div><!-- //sub_tit -->
+				
+				<form action="none" method="post">
+					<fieldset>
+						<div class="bbs bbs_write">
+							<!-- tbl_row -->
+							<div class="tbl_row">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:140px;"/>
+										<col style="width:auto;"/>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label for="user_name">이름</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<input type="text" class="inp w100" id="user_name" />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="user_email">ID(이메일)</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<input type="text" class="inp w100" id="user_email" />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="user_password">비밀번호</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<input type="text" class="inp w100" id="user_password" />
+											</td>
+										</tr>
+										<tr>
+											<th>입사일<strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="split date_area w20">
+                                                    <div class="cell inp_area">
+                                                        <input type="text" class="inp" id="lab_date" title="시작 기간" />
+                                                        <a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+                                                    </div>
+                                                </div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="permission_level">권한등급</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<select class="select w25" id="permission_level">
+													<option>권한등급</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="user_company">소속</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<select class="select w25" id="user_company">
+													<option>오토다이렉트카</option>
+												</select>
+												<select class="select w25" id="user_department">
+													<option>소속부서</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_tel">업무용 전화번호</label></th>
+											<td>
+												<div class="split tel_area w50">
+													<div class="cell w30">
+														<select class="select" title="연락처 첫번째자리" id="lab_tel">
+															<option>선택</option>
+															<option>010</option>
+														</select>
+													</div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w35"><input type="text" class="inp" title="연락처 중간자리"></div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w35"><input type="text" class="inp" title="연락처 끝자리"></div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="lab_hp">개인용 전화번호</label><strong class="txt_ess">* 필수입력</strong></th>
+											<td>
+												<div class="split tel_area w50">
+													<div class="cell w30">
+														<select class="select" title="휴대전화 첫번째자리" id="lab_hp">
+															<option>선택</option>
+														</select>
+													</div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w35"><input type="text" class="inp" title="휴대전화 중간자리"></div>
+													<span class="cell txt_c">-</span>
+													<div class="cell w35"><input type="text" class="inp" title="휴대전화 끝자리"></div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="user_password">카카오톡 계정</label></th>
+											<td>
+												<input type="text" class="inp w100" id="user_password" />
+											</td>
+										</tr>
+										<tr>
+											<th><label for="user_password">근무상태</label></th>
+											<td>
+												<div class="tab tab_toggle">
+													<ul class="tab_list">
+														<li><input type="radio" name="btn_date_set" id="btn_date_set1" checked="checked"><label for="btn_date_set1" class="txt">ON</label></li>
+														<li><input type="radio" name="btn_date_set" id="btn_date_set2"><label for="btn_date_set2" class="txt">OFF</label></li>
+													</ul> 
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><label for="user_password">로그인상태</label></th>
+											<td>
+												<div class="tab tab_toggle">
+													<ul class="tab_list">
+														<li><input type="radio" name="login_status_yn" id="login_status_y" checked="checked"><label for="login_status_y" class="txt">YES</label></li>
+														<li><input type="radio" name="login_status_yn" id="login_status_n"><label for="login_status_n" class="txt">NO</label></li>
+													</ul> 
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="btn_area">
+							<button type="button" onclick="location.href='user_org_management.html'" class="btnL styA">저장</button>
+							<button type="button" onclick="location.href='user_org_management.html'" class="btnL styB">취소</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../resources/js/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

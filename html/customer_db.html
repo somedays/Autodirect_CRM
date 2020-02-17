@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>사용자 관리</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+	<link rel="stylesheet" href="../resources/css/jquery-ui.css" />
+	<link rel="stylesheet" href="../resources/js/themes/default/style.css" />
+	<link rel="stylesheet" href="../resources/css/jquery.dataTables.css" />
+
+	<script src="../resources/js/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+	<!-- Data Table -->
+	<script src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">전체고객 DB</h1>
+				</div><!-- //sub_tit -->
+				
+				<!-- tabs -->
+                <div class="tab tab_sty3">
+                    <ul class="tab_list">
+                        <li class="on"><!--활성화시 on처리 --><a class="txt" href="#">전체보기</a></li>
+                        <li><a class="txt" href="#">상담요청</a></li>
+                        <li><a class="txt" href="#">상담완료</a></li>
+                        <li><a class="txt" href="#">부재중</a></li>
+                        <li><a class="txt" href="#">부재완료</a></li>
+                        <li><a class="txt" href="#">통화대기</a></li>
+                        <li><a class="txt" href="#">도움주기</a></li>
+                        <li><a class="txt" href="#">단기렌트</a></li>
+                        <li><a class="txt" href="#">기타</a></li>
+                    </ul>
+                </div>
+				<!-- //tabs -->
+				
+				<form action="none" method="post">
+					<fieldset>
+						<div class="split search_box" id="search_box">
+							<div class="cell">
+								<table class="tbl col3">
+									<colgroup>
+										<col style="width:60%;">
+										<col style="width:1%;">
+										<col style="width:auto;">
+									</colgroup>
+									<tbody>
+										<tr>
+											<td colspan="3">
+												<div class="split w60">
+													<div class="cell w30 pr">
+														<select class="select" title="유입처">
+															<option>유입처</option>
+														</select>
+													</div>
+													<div class="cell w30 pr">
+														<select class="select" title="진행도">
+															<option>진행도</option>
+														</select>
+													</div>
+													<div class="cell w30 pr">
+														<select class="select" title="제조국">
+															<option>제조국</option>
+														</select>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="split w100">
+													<div class="cell w30 pr">
+														<input type="text" class="inp" placeholder="고객명(T)">
+													</div>
+													<div class="cell w30 pr">
+														<input type="text" class="inp" placeholder="사업자명(T)">
+													</div>
+													<div class="cell w30 pr">
+														<input type="text" class="inp" placeholder="전화번호(‘-’제외) (T)">
+													</div>
+												</div>
+											</td>
+											<th><label for="lab_email">유입 날짜</label></th>
+											<td>
+												<div class="split date_area">
+													<div class="cell inp_area">
+														<input type="text" class="inp" title="시작 기간">
+														<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+													</div>
+													<span class="cell txt_c">~</span>
+													<div class="cell inp_area">
+														<input type="text" class="inp" title="종료 기간">
+														<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="cellR btn_area">
+								<button type="button" class="btnS styE pd1">조회</button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+
+				<div class="cols">
+					<div class="split tit_area">
+						<h2 class="cell tit_deps2">전체 고객 DB</h2>
+					</div><!-- //tbl_top -->
+					<!-- sheet_table -->
+					<div class="tbl_sheet noBorder hAuto">
+						<!-- table_col -->
+						<div class="tbl_col">
+							<table class="tbl" id="example2">
+								<colgroup>
+									<col style="width:60px;" />
+									<col style="width:120px;" />
+									<col style="width:100px;" />
+									<col style="width:100px;" />
+									<col style="width:100px;" />
+									<col style="width:120px;" />
+									<col style="width:auto;" />
+									<col style="width:150px;" />
+									<col style="width:100px;" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">번호</th>
+										<th scope="col">유입처</th>
+										<th scope="col">고객명</th>
+										<th scope="col">제조국</th>
+										<th scope="col">진행도</th>
+										<th scope="col">전화번호</th>
+										<th scope="col">차량정보</th>
+										<th scope="col">등록일시<br>(배정일시)</th>
+										<th scope="col"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tc">001</td>
+										<td class="tc">오토DC</td>
+										<td>김길동</td>
+										<td class="tc">국산</td>
+										<td class="tc">진행중</td>
+										<td>01088884484</td>
+										<td class="tl">그랜저 2.5</td>
+										<td class="tc">20-01-01 12:00:00<br>20-01-01 12:00:00</td>
+										<td class="tc"><a href="#" class="btnXS styF">상담예약</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table_col -->
+					</div>
+					<!-- //sheet_table -->
+				</div>
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script>
+
+	$(document).ready( function(){  
+	  // Data Table
+	  $('#example2')
+		.dataTable( {
+			responsive: true,
+			columnDefs: [
+				{ targets: [-1, -3], className: 'dt-body-right' }
+			]
+		} );
+	});
+</script>
+</body>
+</html>
