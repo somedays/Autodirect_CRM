@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>사용자 등록</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">고객 등록</h1>
+                </div><!-- //sub_tit -->
+                <div class="tab tab_sty2">
+                    <ul class="tab_list main_tab">
+                        <li class="on"><!--활성화시 on처리 --><a href="#tab_on1" class="txt">상세 등록</a></li>
+                        <li><a href="#tab_on2" class="txt">간편 등록</a></li>
+                    </ul>
+                </div>
+                <div class="tab_area" id="tab_on1">
+                    <form action="none" method="post">
+                        <fieldset>      
+                            <!-- 영업자 진행정보 -->
+                            <div class="bbs bbs_write">
+                                <div class="split tit_area">
+                                    <h2 class="cell tit_deps3">영업자 진행정보</h2>
+                                </div>
+                                <div class="tbl_row">
+                                    <table class="tbl">
+                                        <colgroup>
+                                            <col style="width:auto;"/>
+                                            <col style="width:34%;"/>
+                                            <col style="width:20%;"/>
+                                            <col style="width:34%;"/>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th><label for="user_name">담당자</label></th>
+                                                <td>
+                                                    <div class="split box_nowrap">
+                                                        <div class="cell">
+                                                            <select class="select">
+                                                                <option>담당자</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="cell"><a href="#" class="btnM styA">계약진행</a></div>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2"></td>
+                                            </tr>
+                                            <tr>
+                                                <th><label for="user_name">접수현황</label></th>
+                                                <td>
+                                                    <select class="select w100">
+                                                        <option>접수현황</option>
+                                                    </select>
+                                                </td>
+                                                <th><label for="user_name">진행도</label></th>
+                                                <td>
+                                                    <select class="select w100">
+                                                        <option>진행도</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab tab_sty4">
+                                <ul class="tab_list sub_tab">
+                                    <li class="on"><a href="#sub_tab_area1" class="txt">고객정보</a></li>
+                                    <li><a href="#sub_tab_area2" class="txt">상담내역</a></li>
+                                </ul>
+                            </div>
+                            <div class="sub_tab_area" id="sub_tab_area1">
+                                <div class="bbs bbs_write">
+                                    <!-- 고객정보 -->
+                                    <div class="split tit_area">
+                                        <h2 class="cell tit_deps3">고객 정보</h2>
+                                    </div>
+                                    <div class="tbl_row">
+                                        <table class="tbl">
+                                            <colgroup>
+                                                <col style="width:auto;"/>
+                                                <col style="width:34%;"/>
+                                                <col style="width:20%;"/>
+                                                <col style="width:34%;"/>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th><label>유입처</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>유입처</option>
+                                                        </select>
+                                                    </td>
+                                                    <th><label>고객구분</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>고객구분</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label>구입방법</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>구입방법</option>
+                                                        </select>
+                                                    </td>
+                                                    <th><label>이용기간</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>기간선택</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label for="customer_name">고객명</label></th>
+                                                    <td>
+                                                        <input type="text" class="inp w100" id="customer_name" />
+                                                    </td>
+                                                    <th><label for="company_name">사업자명</label></th>
+                                                    <td>
+                                                        <input type="text" class="inp w100" id="company_name" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label for="customer_tel">고객 연락처</label></th>
+                                                    <td>
+                                                        <div class="split tel_area">
+                                                            <div class="cell w30">
+                                                                <select class="select" title="연락처 첫번째자리" id="customer_tel">
+                                                                    <option>선택</option>
+                                                                    <option>010</option>
+                                                                </select>
+                                                            </div>
+                                                            <span class="cell txt_c">-</span>
+                                                            <div class="cell w35"><input type="text" class="inp" title="연락처 중간자리"></div>
+                                                            <span class="cell txt_c">-</span>
+                                                            <div class="cell w35"><input type="text" class="inp" title="연락처 끝자리"></div>
+                                                        </div>
+                                                    </td>
+                                                    <th><label for="customer_tel2">예비 전화번호</label></th>
+                                                    <td>
+                                                        <div class="split tel_area">
+                                                            <div class="cell w30">
+                                                                <select class="select" title="휴대전화 첫번째자리" id="customer_tel2">
+                                                                    <option>선택</option>
+                                                                </select>
+                                                            </div>
+                                                            <span class="cell txt_c">-</span>
+                                                            <div class="cell w35"><input type="text" class="inp" title="휴대전화 중간자리"></div>
+                                                            <span class="cell txt_c">-</span>
+                                                            <div class="cell w35"><input type="text" class="inp" title="휴대전화 끝자리"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label for="customer_email">이메일</label></th>
+                                                    <td>
+                                                        <input type="text" class="inp w100" id="customer_email" />
+                                                    </td>
+                                                    <th><label for="customer_fax">팩스</label></th>
+                                                    <td>
+                                                        <div class="split tel_area">
+                                                            <div class="cell w30">
+                                                                <select class="select" title="휴대전화 첫번째자리" id="customer_fax">
+                                                                    <option>선택</option>
+                                                                </select>
+                                                            </div>
+                                                            <span class="cell txt_c">-</span>
+                                                            <div class="cell w35"><input type="text" class="inp" title="휴대전화 중간자리"></div>
+                                                            <span class="cell txt_c">-</span>
+                                                            <div class="cell w35"><input type="text" class="inp" title="휴대전화 끝자리"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label for="customer_message">고객문의</label></th>
+                                                    <td colspan="3">
+                                                        <textarea class="textarea w100" id="customer_message"></textarea>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label for="customer_memo">한줄메모</label></th>
+                                                    <td colspan="3">
+                                                        <input type="text" class="inp w100" id="customer_memo" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="btn_area">
+                                    <button type="button" onclick="location.href='user_org_management.html'" class="btnL styA">저장</button>
+                                    <button type="button" onclick="location.href='user_org_management.html'" class="btnL styB">취소</button>
+                                </div>
+                            </div>
+                            <div class="sub_tab_area" id="sub_tab_area2">
+                                <div class="bbs bbs_write">
+                                    <div class="split">
+                                        <div class="cell w100">
+                                            <select class="select point w100"><option>진행상황 선택</option></select>
+                                            <input type="file" class="inp w100 marT3" />
+                                        </div>	
+                                        <div class="cellR pl vt">
+                                            <button type="button" class="btnM styA" style="width:100px;">등록</button>
+                                            <button type="button" class="btnXS styC w100 marT3">전체삭제</button>
+                                        </div>
+                                    </div>
+                                    <div class="split tit_area marT1">
+                                        <h2 class="cell tit_deps2">2020.02.19</h2>
+                                    </div>
+                                    <ul class="comment_list">
+                                        <li class="split">
+                                            <strong class="cell txt_name"><span class="btn_cm btn_time"> 10:00</span></strong>
+                                            <p class="cell comment_cont">
+                                                선택한 진행 상황이 나옵니다.
+                                                <span class="txt_date">영업 담당자: 홍길동</span>
+                                            </p>
+                                        </li>
+                                        <li class="split">
+                                            <strong class="cell txt_name"><span class="btn_cm btn_time"> 10:00</span></strong>
+                                            <p class="cell comment_cont">
+                                                선택한 진행 상황이 나옵니다.
+                                                <span class="txt_date">영업 담당자: 홍길동</span>
+                                            </p>
+                                        </li>
+                                        <li class="split">
+                                            <strong class="cell txt_name"><span class="btn_cm btn_time"> 10:00</span></strong>
+                                            <p class="cell comment_cont">
+                                                선택한 진행 상황이 나옵니다.
+                                                <span class="txt_date">영업 담당자: 홍길동</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <div class="split tit_area marT1">
+                                        <h2 class="cell tit_deps2">2020.02.19</h2>
+                                    </div>
+                                    <ul class="comment_list">
+                                        <li class="split">
+                                            <strong class="cell txt_name"><span class="btn_cm btn_time"> 10:00</span></strong>
+                                            <p class="cell comment_cont">
+                                                선택한 진행 상황이 나옵니다.
+                                                <span class="txt_date">영업 담당자: 홍길동</span>
+                                            </p>
+                                        </li>
+                                        <li class="split">
+                                            <strong class="cell txt_name"><span class="btn_cm btn_time"> 10:00</span></strong>
+                                            <p class="cell comment_cont">
+                                                선택한 진행 상황이 나옵니다.
+                                                <span class="txt_date">영업 담당자: 홍길동</span>
+                                            </p>
+                                        </li>
+                                        <li class="split">
+                                            <strong class="cell txt_name"><span class="btn_cm btn_time"> 10:00</span></strong>
+                                            <p class="cell comment_cont">
+                                                선택한 진행 상황이 나옵니다.
+                                                <span class="txt_date">영업 담당자: 홍길동</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="tab_area" id="tab_on2">
+                    <div style="background-color:#e3efd9">카테고리2</div>
+                </div>
+            </div>
+			<!-- //contents 컨텐츠 영역 -->
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../resources/js/ui.js"></script>
+<script>
+	w3IncludeHTML();
+    tabToggle('.tab_list.main_tab li a', 'tab_area', 0);
+    tabToggle('.tab_list.sub_tab li a', 'sub_tab_area', 0);
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>
