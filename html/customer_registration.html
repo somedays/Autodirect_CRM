@@ -91,7 +91,11 @@
                             <div class="tab tab_sty4">
                                 <ul class="tab_list sub_tab">
                                     <li class="on"><a href="#sub_tab_area1" class="txt">고객정보</a></li>
-                                    <li><a href="#sub_tab_area2" class="txt">상담내역</a></li>
+                                    <li><a href="#sub_tab_area2" class="txt">상담 내역</a></li>
+                                    <li><a href="#sub_tab_area3" class="txt">CS 상담 내역</a></li>
+                                    <li><a href="#sub_tab_area4" class="txt">차량 정보 1</a></li>
+                                    <li><a href="#sub_tab_area5" class="txt">차량 정보 2</a></li>
+                                    <li><a href="#sub_tab_area6" class="txt">차량 정보 3</a></li>
                                 </ul>
                             </div>
                             <div class="sub_tab_area" id="sub_tab_area1">
@@ -221,6 +225,9 @@
                             </div>
                             <div class="sub_tab_area" id="sub_tab_area2">
                                 <div class="bbs bbs_write">
+                                    <div class="split tit_area">
+                                        <h2 class="cell tit_deps3">상담 내역</h2>
+                                    </div>
                                     <div class="split">
                                         <div class="cell w100">
                                             <select class="select point w100"><option>진행상황 선택</option></select>
@@ -285,11 +292,670 @@
                                     </ul>
                                 </div>
                             </div>
+                            <div class="sub_tab_area" id="sub_tab_area3">
+                                <div class="bbs bbs_write">
+                                    <div class="split tit_area">
+                                        <h2 class="cell tit_deps3">CS 상담 내역</h2>
+                                    </div>
+                                    <div class="split">
+                                        <div class="cell w100">
+                                            <select class="select point w100"><option>진행상황 선택</option></select>
+                                            <input type="file" class="inp w100 marT3" />
+                                        </div>	
+                                        <div class="cellR pl vt">
+                                            <button type="button" class="btnM styA" style="width:100px;">등록</button>
+                                            <button type="button" class="btnXS styC w100 marT3">전체삭제</button>
+                                        </div>
+                                    </div>
+                                    <div class="split tit_area marT1">
+                                        <h2 class="cell tit_deps2">2020.02.19</h2>
+                                    </div>
+                                    <ul class="comment_list">
+                                        <li class="split">
+                                            <strong class="cell txt_name"><span class="btn_cm btn_time"> 10:00</span></strong>
+                                            <p class="cell comment_cont">
+                                                선택한 진행 상황이 나옵니다.
+                                                <span class="txt_date">영업 담당자: 홍길동</span>
+                                            </p>
+                                        </li>
+                                        <li class="split">
+                                            <strong class="cell txt_name"><span class="btn_cm btn_time"> 10:00</span></strong>
+                                            <p class="cell comment_cont">
+                                                선택한 진행 상황이 나옵니다.
+                                                <span class="txt_date">영업 담당자: 홍길동</span>
+                                            </p>
+                                        </li>
+                                        <li class="split">
+                                            <strong class="cell txt_name"><span class="btn_cm btn_time"> 10:00</span></strong>
+                                            <p class="cell comment_cont">
+                                                선택한 진행 상황이 나옵니다.
+                                                <span class="txt_date">영업 담당자: 홍길동</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <div class="split tit_area marT1">
+                                        <h2 class="cell tit_deps2">2020.02.19</h2>
+                                    </div>
+                                    <ul class="comment_list">
+                                        <li class="split">
+                                            <strong class="cell txt_name"><span class="btn_cm btn_time"> 10:00</span></strong>
+                                            <p class="cell comment_cont">
+                                                선택한 진행 상황이 나옵니다.
+                                                <span class="txt_date">영업 담당자: 홍길동</span>
+                                            </p>
+                                        </li>
+                                        <li class="split">
+                                            <strong class="cell txt_name"><span class="btn_cm btn_time"> 10:00</span></strong>
+                                            <p class="cell comment_cont">
+                                                선택한 진행 상황이 나옵니다.
+                                                <span class="txt_date">영업 담당자: 홍길동</span>
+                                            </p>
+                                        </li>
+                                        <li class="split">
+                                            <strong class="cell txt_name"><span class="btn_cm btn_time"> 10:00</span></strong>
+                                            <p class="cell comment_cont">
+                                                선택한 진행 상황이 나옵니다.
+                                                <span class="txt_date">영업 담당자: 홍길동</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sub_tab_area" id="sub_tab_area4">
+                                <div class="bbs bbs_write">
+                                    <!-- 고객정보 -->
+                                    <div class="split tit_area">
+                                        <h2 class="cell tit_deps3">차량 정보 1</h2>
+                                    </div>
+                                    <div class="tbl_col2">
+                                        <table class="tbl">
+                                            <colgroup>
+                                                <col style="width:15%;"/>
+                                                <col style="width:20%;"/>
+                                                <col style="width:30%;"/>
+                                                <col style="width:35%;"/>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th class="tc"><label>제조사</label></th>
+                                                    <th class="tc"><label>차량</label></th>
+                                                    <th class="tc"><label>등급</label></th>
+                                                    <th class="tc"><label>옵션(다중선택 : ctrl + click)</label></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <select class="select w100" size="5">
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="select w100" size="5">
+                                                            <option>차량</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="select w100" size="5">
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="select w100" size="5" multiple>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tbl_row">
+                                        <table class="tbl">
+                                            <colgroup>
+                                                <col style="width:auto;"/>
+                                                <col style="width:34%;"/>
+                                                <col style="width:20%;"/>
+                                                <col style="width:34%;"/>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th><label>보증금</label></th>
+                                                    <td>
+                                                        <div class="split box_nowrap">
+                                                            <div class="cell w30">
+                                                                <select class="select">
+                                                                    <option>비율</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="cell w40"><input type="text" class="inp tr" value="700,000" readonly="readonly"></div>
+                                                            <div class="cell w30">
+                                                                <select class="select">
+                                                                    <option>기간</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <th><label>선수금</label></th>
+                                                    <td>
+                                                        <div class="split box_nowrap">
+                                                            <div class="cell w30">
+                                                                <select class="select">
+                                                                    <option>비율</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="cell w40"><input type="text" class="inp tr" value="700,000" readonly="readonly"></div>
+                                                            <div class="cell w30">
+                                                                <select class="select">
+                                                                    <option>기간</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label>연주행거리</label></th>
+                                                    <td><input type="text" class="inp w100"></td>
+                                                    <th><label>이용기간</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>24개월</option>
+                                                            <option>36개월</option>
+                                                            <option>48개월</option>
+                                                            <option>60개월</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label>보험나이</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>만 21세 이상</option>
+                                                            <option>만 26세 이상</option>
+                                                        </select>
+                                                    </td>
+                                                    <th><label>구입시기</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>즉시계약</option>
+                                                            <option>1개월이내</option>
+                                                            <option>3개월이내</option>
+                                                            <option>6개월이내</option>
+                                                            <option>1년이내</option>
+                                                            <option>1년이상</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label for="customer_message">차량 가격</label></th>
+                                                    <td colspan="3">
+                                                        <h1 class="tit_deps2 pointCol1">500,000,000</h1>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="btn_area">
+                                    <button type="button" onclick="location.href='user_org_management.html'" class="btnL styA">저장</button>
+                                    <button type="button" onclick="location.href='user_org_management.html'" class="btnL styB">취소</button>
+                                </div>
+                            </div>
+                            <div class="sub_tab_area" id="sub_tab_area5">
+                                <div class="bbs bbs_write">
+                                    <!-- 고객정보 -->
+                                    <div class="split tit_area">
+                                        <h2 class="cell tit_deps3">차량 정보 2</h2>
+                                    </div>
+                                    <div class="tbl_col2">
+                                        <table class="tbl">
+                                            <colgroup>
+                                                <col style="width:15%;"/>
+                                                <col style="width:20%;"/>
+                                                <col style="width:30%;"/>
+                                                <col style="width:35%;"/>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th class="tc"><label>제조사</label></th>
+                                                    <th class="tc"><label>차량</label></th>
+                                                    <th class="tc"><label>등급</label></th>
+                                                    <th class="tc"><label>옵션(다중선택 : ctrl + click)</label></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <select class="select w100" size="5">
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="select w100" size="5">
+                                                            <option>차량</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="select w100" size="5">
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="select w100" size="5" multiple>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tbl_row">
+                                        <table class="tbl">
+                                            <colgroup>
+                                                <col style="width:auto;"/>
+                                                <col style="width:34%;"/>
+                                                <col style="width:20%;"/>
+                                                <col style="width:34%;"/>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th><label>보증금</label></th>
+                                                    <td>
+                                                        <div class="split box_nowrap">
+                                                            <div class="cell w30">
+                                                                <select class="select">
+                                                                    <option>비율</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="cell w40"><input type="text" class="inp tr" value="700,000" readonly="readonly"></div>
+                                                            <div class="cell w30">
+                                                                <select class="select">
+                                                                    <option>기간</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <th><label>선수금</label></th>
+                                                    <td>
+                                                        <div class="split box_nowrap">
+                                                            <div class="cell w30">
+                                                                <select class="select">
+                                                                    <option>비율</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="cell w40"><input type="text" class="inp tr" value="700,000" readonly="readonly"></div>
+                                                            <div class="cell w30">
+                                                                <select class="select">
+                                                                    <option>기간</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label>연주행거리</label></th>
+                                                    <td><input type="text" class="inp w100"></td>
+                                                    <th><label>이용기간</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>24개월</option>
+                                                            <option>36개월</option>
+                                                            <option>48개월</option>
+                                                            <option>60개월</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label>보험나이</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>만 21세 이상</option>
+                                                            <option>만 26세 이상</option>
+                                                        </select>
+                                                    </td>
+                                                    <th><label>구입시기</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>즉시계약</option>
+                                                            <option>1개월이내</option>
+                                                            <option>3개월이내</option>
+                                                            <option>6개월이내</option>
+                                                            <option>1년이내</option>
+                                                            <option>1년이상</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label for="customer_message">차량 가격</label></th>
+                                                    <td colspan="3">
+                                                        <h1 class="tit_deps2 pointCol1">500,000,000</h1>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="btn_area">
+                                    <button type="button" onclick="location.href='user_org_management.html'" class="btnL styA">저장</button>
+                                    <button type="button" onclick="location.href='user_org_management.html'" class="btnL styB">취소</button>
+                                </div>
+                            </div>
+                            <div class="sub_tab_area" id="sub_tab_area6">
+                                <div class="bbs bbs_write">
+                                    <!-- 고객정보 -->
+                                    <div class="split tit_area">
+                                        <h2 class="cell tit_deps3">차량 정보 3</h2>
+                                    </div>
+                                    <div class="tbl_col2">
+                                        <table class="tbl">
+                                            <colgroup>
+                                                <col style="width:15%;"/>
+                                                <col style="width:20%;"/>
+                                                <col style="width:30%;"/>
+                                                <col style="width:35%;"/>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th class="tc"><label>제조사</label></th>
+                                                    <th class="tc"><label>차량</label></th>
+                                                    <th class="tc"><label>등급</label></th>
+                                                    <th class="tc"><label>옵션(다중선택 : ctrl + click)</label></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <select class="select w100" size="5">
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="select w100" size="5">
+                                                            <option>차량</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                            <option>제조사</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="select w100" size="5">
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                            <option>등급</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="select w100" size="5" multiple>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                            <option>옵션명 (가격)</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tbl_row">
+                                        <table class="tbl">
+                                            <colgroup>
+                                                <col style="width:auto;"/>
+                                                <col style="width:34%;"/>
+                                                <col style="width:20%;"/>
+                                                <col style="width:34%;"/>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th><label>보증금</label></th>
+                                                    <td>
+                                                        <div class="split box_nowrap">
+                                                            <div class="cell w30">
+                                                                <select class="select">
+                                                                    <option>비율</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="cell w40"><input type="text" class="inp tr" value="700,000" readonly="readonly"></div>
+                                                            <div class="cell w30">
+                                                                <select class="select">
+                                                                    <option>기간</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <th><label>선수금</label></th>
+                                                    <td>
+                                                        <div class="split box_nowrap">
+                                                            <div class="cell w30">
+                                                                <select class="select">
+                                                                    <option>비율</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="cell w40"><input type="text" class="inp tr" value="700,000" readonly="readonly"></div>
+                                                            <div class="cell w30">
+                                                                <select class="select">
+                                                                    <option>기간</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label>연주행거리</label></th>
+                                                    <td><input type="text" class="inp w100"></td>
+                                                    <th><label>이용기간</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>24개월</option>
+                                                            <option>36개월</option>
+                                                            <option>48개월</option>
+                                                            <option>60개월</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label>보험나이</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>만 21세 이상</option>
+                                                            <option>만 26세 이상</option>
+                                                        </select>
+                                                    </td>
+                                                    <th><label>구입시기</label></th>
+                                                    <td>
+                                                        <select class="select w100">
+                                                            <option>즉시계약</option>
+                                                            <option>1개월이내</option>
+                                                            <option>3개월이내</option>
+                                                            <option>6개월이내</option>
+                                                            <option>1년이내</option>
+                                                            <option>1년이상</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th><label for="customer_message">차량 가격</label></th>
+                                                    <td colspan="3">
+                                                        <h1 class="tit_deps2 pointCol1">500,000,000</h1>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="btn_area">
+                                    <button type="button" onclick="location.href='user_org_management.html'" class="btnL styA">저장</button>
+                                    <button type="button" onclick="location.href='user_org_management.html'" class="btnL styB">취소</button>
+                                </div>
+                            </div>
                         </fieldset>
                     </form>
                 </div>
                 <div class="tab_area" id="tab_on2">
-                    <div style="background-color:#e3efd9">카테고리2</div>
+                    <div class="cols">
+                        <div class="split sub_tit">
+                            <h1 class="cell tit_deps2">고객 등록</h1>
+                        </div><!-- //sub_tit -->
+                        <form action="none" method="post">
+                            <fieldset>
+                                <!-- search_box -->
+                                <div class="split search_box" id="search_box">
+                                    <div class="cell">
+                                        <table class="tbl col1"><!-- col1/col2/col3으로 나누어잠 (없을경우 100%)-->
+                                            <colgroup>
+                                                <col style="width:1%;">
+                                                <col style="width:auto;">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th><label class="tit_fld" for="lab_date">유입처</label></th>
+                                                    <td>
+                                                        <select class="select">
+                                                            <option>유입처</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div><!-- //cell -->
+                                </div>
+                                <!--//search_box -->
+                            </fieldset>
+                        </form>
+                        <!-- sheet_table -->
+                        <div class="tbl_sheet noBorder hAuto">
+                            <!-- table_col -->
+                            <div class="tbl_col">
+                                <table class="tbl" id="example2">
+                                    <colgroup>
+                                        <col style="width:150px;" />
+                                        <col style="width:250px;" />
+                                        <col style="width:auto;" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">이름</th>
+                                            <th scope="col">고객 연락처</th>
+                                            <th scope="col">상담메모</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                            <td><input type="text" class="inp w100"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //table_col -->
+                        </div>
+                        <!-- //sheet_table -->
+                    </div> 
+                    <div class="btn_area">
+                        <button type="button" onclick="location.href='user_org_management.html'" class="btnL styA">저장</button>
+                        <button type="button" onclick="location.href='user_org_management.html'" class="btnL styB">취소</button>
+                    </div>
                 </div>
             </div>
 			<!-- //contents 컨텐츠 영역 -->
