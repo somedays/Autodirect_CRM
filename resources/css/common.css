@@ -626,7 +626,7 @@ a.txt_overflow{display:block;}
 .tbl_col > table > tbody > tr > td,
 .tbl_col > table > tfoot > tr > td,
 .tbl_col > [class*='_wrap'] > table > tbody > tr > td,
-.tbl_col > [class*='_wrap'] > table > tfoot > tr > td{height:25px;padding:5px 8px 3px 8px;background-color:#fff;border-left:1px solid #ced3dc;line-height:1;}
+.tbl_col > [class*='_wrap'] > table > tfoot > tr > td{height:30px;padding:5px 8px 3px 8px;background-color:#fff;border-left:1px solid #ced3dc;line-height:1;}
 .tbl_col > table > tbody > tr > td:first-child,
 .tbl_col > table > tfoot > tr > td:first-child,
 .tbl_col > [class*='_wrap'] > table > tbody > tr > td:first-child,
@@ -635,17 +635,22 @@ a.txt_overflow{display:block;}
 .tbl_col > table > tbody > tr.selected > td,
 .tbl_col > [class*='_wrap'] > table > tbody > tr:hover > td,
 .tbl_col.tbody_loop > table > tbody:hover > tr > td{background-color:#e7f4f9 !important;}
+.tbl_col > [class*='_wrap'] > table > tbody > tr.total > td {background-color:#dfdfdf !important;}
 .tbl_col > [class*='_wrap'] > table > tbody > tr.selected > td {background-color:#d1f0fc !important;}
 .tbl_col > table > tfoot > tr > th,
 .tbl_col > table > tfoot > tr > td,
 .tbl_col > [class*='_wrap'] > table > tfoot > tr > th,
-.tbl_col > [class*='_wrap'] > table > tfoot > tr > td{background-color:#f9f9f9}
+.tbl_col > [class*='_wrap'] > table > tfoot > tr > td{background-color:#5988b2;color:#fff;font-size:14px;}
 .tbl_col > table > tbody > .check_yellow > td,
 .tbl_col > table > .check_yellow > tr > td{background-color:#fffbf0 !important}
 .tbl_col > table > tbody > .check_red > td,
 .tbl_col > table > .check_red > tr > td{background-color:#fff2f3 !important}
 .tbl_col > table > tbody > .check_disabled > td,
 .tbl_col > table > .check_disabled > tr > td{background-color:#f9f9f9 !important}
+.tbl_col > table > tbody > .group_tt > td,
+.tbl_col > table > tbody > .group_tt > td:hover {background-color:#9fb8ce !important;color:#fff;text-align:left;font-size:14px;}
+.tbl_col > table > tbody > .sub_total > td,
+.tbl_col > table > .sub_total > tr > td{background-color:#fafafa !important}
 .tbl_col .th_wp{position:relative;padding:4px 0;}
 .tbl_col .th_sort{position:absolute;right:-2px;top:50%;width:22px;margin-top:-11px;}
 .tbl_col .th_sort > .btn_cm{float:right;}
