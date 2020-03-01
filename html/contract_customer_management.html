@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>계약고객관리</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+	<link rel="stylesheet" href="../resources/css/jquery-ui.css" />
+	<link rel="stylesheet" href="../resources/js/themes/default/style.css" />
+	<link rel="stylesheet" href="../resources/css/jquery.dataTables.css" />
+
+	<script src="../resources/js/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+	<!-- Data Table -->
+	<script src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">계약고객관리</h1>
+				</div><!-- //sub_tit -->
+				<form action="none" method="post">
+					<fieldset>
+						<div class="split search_box" id="search_box">
+							<div class="cell">
+								<table class="tbl col3">
+									<colgroup>
+										<col style="width:60%;">
+										<col style="width:auto;">
+									</colgroup>
+									<tbody>
+										<tr>
+											<td colspan="3">
+												<div class="split w80">
+													<div class="cell w25 pr">
+														<input type="text" class="inp" placeholder="고객명(T)">
+													</div>
+													<div class="cell w25 pr">
+														<input type="text" class="inp" placeholder="사업자명(T)">
+													</div>
+													<div class="cell w25 pr">
+														<input type="text" class="inp" placeholder="전화번호(‘-’제외) (T)">
+													</div>
+													<div class="cell w25">
+														<select class="select">
+                                                            <option>계약 지역</option>
+                                                        </select>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="split w100">
+													<div class="cell w30 pr">
+														<input type="text" class="inp" placeholder="영업담당(T)">
+													</div>
+													<div class="cell w30 pr">
+														<input type="text" class="inp" placeholder="계약담당(T)">
+													</div>
+													<div class="cell w30 pr">
+														<select class="select">
+                                                            <option>미팅 일자</option>
+                                                        </select>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="split date_area w50">
+													<div class="cell inp_area">
+														<input type="text" class="inp" title="시작 기간">
+														<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+													</div>
+													<span class="cell txt_c">~</span>
+													<div class="cell inp_area">
+														<input type="text" class="inp" title="종료 기간">
+														<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="cellR btn_area">
+								<button type="button" class="btnS styE pd1">조회</button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+
+				<div class="cols">
+					<!-- sheet_table -->
+					<div class="tbl_sheet noBorder hAuto">
+						<!-- table_col -->
+						<div class="tbl_col">
+							<table class="tbl" id="example2">
+								<colgroup>
+									<col style="width:50px;" />
+									<col style="width:70px;" />
+									<col style="width:100px;" />
+									<col style="width:90px;" />
+									<col style="width:70px;" />
+									<col style="width:70px;" />
+									<col style="width:90px;" />
+									<col style="width:130px;" />
+									<col style="width:180px;" />
+									<col style="width:80px;" />
+									<col style="width:110px;" />
+									<col style="width:90px;" />
+									<col style="width:160px;" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">번호</th>
+                                        <th scope="col">고객명</th>
+										<th scope="col">사업체명</th>
+										<th scope="col">연락처</th>
+										<th scope="col">영업</th>
+										<th scope="col">계약</th>
+										<th scope="col">미팅일자</th>
+										<th scope="col">미팅장소</th>
+										<th scope="col">상세주소</th>
+										<th scope="col">방문시간</th>
+                                        <th scope="col">차종</th>
+                                        <th scope="col">인도일자</th>
+                                        <th scope="col"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tc">001</td>
+										<td class="tc">김길동</td>
+										<td class="tl">(주)회사명</td>
+										<td class="tc">01039382313</td>
+										<td class="tc">김길동</td>
+										<td class="tc">김길동</td>
+										<td class="tc">2020-01-01</td>
+										<td class="tl">서울 서초구</td>
+                                        <td class="tl">보문빌딩 오토다이렉트카</td>
+										<td class="tc">16시</td>
+                                        <td class="tl">그랜저 2.4 프리</td>
+                                        <td class="tc">2020-01-01</td>
+                                        <td class="tc">
+                                            <a href="contract_customer_management.html" class="btnXS styA">상세</a>
+                                            <a href="contract_customer_management.html" class="btnXS styF">수정</a>
+                                            <a href="#" class="btnXS styF">삭제</a>
+                                        </td>
+									</tr>
+									<tr>
+										<td class="tc">001</td>
+										<td class="tc">김길동</td>
+										<td class="tl">(주)회사명</td>
+										<td class="tc">01039382313</td>
+										<td class="tc">김길동</td>
+										<td class="tc">김길동</td>
+										<td class="tc">2020-01-01</td>
+										<td class="tl">서울 서초구</td>
+                                        <td class="tl">보문빌딩 오토다이렉트카</td>
+										<td class="tc">16시</td>
+                                        <td class="tl">그랜저 2.4 프리</td>
+                                        <td class="tc">2020-01-01</td>
+                                        <td class="tc">
+                                            <a href="contract_customer_management.html" class="btnXS styA">상세</a>
+                                            <a href="contract_customer_management.html" class="btnXS styF">수정</a>
+                                            <a href="#" class="btnXS styF">삭제</a>
+                                        </td>
+									</tr>
+									<tr>
+										<td class="tc">001</td>
+										<td class="tc">김길동</td>
+										<td class="tl">(주)회사명</td>
+										<td class="tc">01039382313</td>
+										<td class="tc">김길동</td>
+										<td class="tc">김길동</td>
+										<td class="tc">2020-01-01</td>
+										<td class="tl">서울 서초구</td>
+                                        <td class="tl">보문빌딩 오토다이렉트카</td>
+										<td class="tc">16시</td>
+                                        <td class="tl">그랜저 2.4 프리</td>
+                                        <td class="tc">2020-01-01</td>
+                                        <td class="tc">
+                                            <a href="contract_customer_management.html" class="btnXS styA">상세</a>
+                                            <a href="contract_customer_management.html" class="btnXS styF">수정</a>
+                                            <a href="#" class="btnXS styF">삭제</a>
+                                        </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table_col -->
+					</div>
+					<!-- //sheet_table -->
+				</div>
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script>
+
+	$(document).ready( function(){  
+	  // Data Table
+	  $('#example2')
+		.dataTable( {
+			responsive: true,
+			columnDefs: [
+				{ targets: [-1, -3], className: 'dt-body-right' }
+			]
+		} );
+	});
+
+	$(".btnReservation").on('click',function (){
+		$(".popup").addClass('on');
+	  });
+
+</script>
+</body>
+</html>

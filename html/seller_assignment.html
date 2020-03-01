@@ -199,7 +199,7 @@
                                             <tr>
                                                 <td class="tc">001</td>
                                                 <td class="tc">오토DC</td>
-                                                <td class="tc"><span class="category cs">CS</span> 김길동 <span class="category cate_arr1">2</span></td>
+                                                <td class="tc"><span class="category cs">CS</span> 김길동 <span class="category cate_arr1 btnDBSum">2</span></td>
                                                 <td class="tc">
                                                     <span class="category cate_bd2">상담요청</span>
                                                     <span class="category cate_bd3">상담완료</span>
@@ -212,7 +212,7 @@
                                                 <td class="tc">박길동</td>
                                                 <td class="tc">국산</td>
                                                 <td class="tc">신규</td>
-                                                <td>01088884484 <span class="category cate_arr1">2</span></td>
+                                                <td>01088884484 <span class="category cate_arr1 btnDBSum">2</span></td>
                                                 <td class="tl">그랜저 2.5</td>
                                                 <td class="tc">20-01-01 12:00:00<br>20-01-01 12:00:00</td>
                                                 <td class="tc">11.11.11.11</td>
@@ -359,7 +359,7 @@
 								<h2 class="cell tit_deps2">금일 배정 현황</h2>
 							</div><!-- //tbl_top -->
 							<!-- sheet_table -->
-							<div class="tbl_sheet lineH15" id="org_tree">
+							<div class="tbl_sheet" id="org_tree">
                                 <!-- table_col -->
                                 <div class="tbl_col"> 
                                     <table class="tbl">
@@ -459,11 +459,85 @@
 				</div>
 			</div>
 			<!-- //contents 컨텐츠 영역 -->
-			
 		</div><!-- //article -->
 	</div>
 	<!-- //container -->
 </div><!--// wrap -->
+<!-- popup_layer -->
+<div class="popup pl_win">
+	<div class="pop_box">
+		<div class="pop_wrap">
+			<div class="inner w1080">
+                <h1 class="tit_deps1">중복 고객 처리</h1>
+				<div class="pop_content m25">
+                    <div class="tbl_sheet noBorder hAuto">
+                        <!-- table_col -->
+                        <div class="tbl_col">
+                            <table class="tbl" id="example2">
+                                <colgroup>
+                                    <col style="width:55px;" />
+                                    <col style="width:100px;" />
+                                    <col style="width:120px;" />
+                                    <col style="width:90px;" />
+                                    <col style="width:80px;" />
+                                    <col style="width:80px;" />
+                                    <col style="width:80px;" />
+                                    <col style="width:130px;" />
+                                    <col style="width:100px;" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">유입처</th>
+                                        <th scope="col">담당자</th>
+                                        <th scope="col">접수현황</th>
+                                        <th scope="col">고객명</th>
+                                        <th scope="col">제조국</th>
+                                        <th scope="col">배정구분</th>
+                                        <th scope="col">전화번호</th>
+                                        <th scope="col">DB</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tc"><input type="radio" class="rd" id="rd_a1" name="rd_a" title="라디오"><label for="rd_a1">체크</label></td>
+                                        <td class="tc">오토DC</td>
+                                        <td class="tc">김길동</td>
+                                        <td class="tc"><span class="category cate_bd2">상담요청</span></td>
+                                        <td class="tc">박길동</td>
+                                        <td class="tc">국산</td>
+                                        <td class="tc">신규</td>
+                                        <td>01088884484</td>
+                                        <td class="tc"><button type="button" class="btnXS styA">DB A</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tc"><input type="radio" class="rd" id="rd_a2" name="rd_a" title="라디오" checked="checked"><label for="rd_a2">체크</label></td>
+                                        <td class="tc">오토DC</td>
+                                        <td class="tc">김길동</td>
+                                        <td class="tc"><span class="category cate_bd3">상담완료</span></td>
+                                        <td class="tc">박길동</td>
+                                        <td class="tc">국산</td>
+                                        <td class="tc">신규</td>
+                                        <td class="tc">01088884484</td>
+                                        <td class="tc"><button type="button" class="btnXS styB">DB B</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table_col -->
+                    </div>
+					<!-- //컨텐츠 끝 -->
+				</div><!-- //pop_content -->
+				<div class="btn_area mb20">
+					<button type="submit" class="btnL styA">SUM (병합하기)</button>
+					<button type="button" onclick="$('.popup').removeClass('on');" class="btnL styB">취소</button>
+				</div>
+				<a href="#" onclick="$('.popup').removeClass('on');" class="btn_cm btn_close2"><span class="blind">닫기</span></a>
+			</div><!-- //inner -->
+		</div><!-- //pop_wrap -->
+	</div><!-- //pop_box -->
+</div>
+<!-- //popup_layer -->
 <!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
 <script src="http://www.w3schools.com/lib/w3data.js"></script>
 <script src="../libs/ui.js"></script>
@@ -490,6 +564,10 @@
         $('#assign_manager').click( function () {
             alert( $('#example2').DataTable().rows('.selected').data().length +' row(s) selected' );
         } );
+    
+	    $(".btnDBSum").on('click',function (){
+		    $(".popup").addClass('on');
+    	});
 
 	});
 </script>

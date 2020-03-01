@@ -168,7 +168,7 @@
 										<td>01088884484</td>
 										<td class="tl">그랜저 2.5</td>
 										<td class="tc">20-01-01 12:00:00<br>20-01-01 12:00:00</td>
-										<td class="tc"><a href="#" class="btnXS styF">상담예약</a></td>
+										<td class="tc"><a href="#" class="btnXS styF btnReservation">상담예약</a></td>
 									</tr>
 								</tbody>
 							</table>
@@ -184,6 +184,103 @@
 	</div>
 	<!-- //container -->
 </div><!--// wrap -->
+<!-- popup_layer -->
+<div class="popup pl_win">
+	<div class="pop_box">
+		<div class="pop_wrap">
+			<div class="inner w820"><!-- 팝업 가로사이즈 -->
+				<h1 class="tit_deps1">상담예약</h1>
+				<div class="pop_content">
+					<!-- 컨텐츠 시작 -->
+					<div class="bbs bbs_write">
+						<!-- tbl_row -->
+						<div class="tbl_row">
+							<table class="tbl">
+								<colgroup>
+									<col style="width:140px;"/>
+									<col style="width:auto;"/>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th><label for="customer_name">고객명</label><strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<input type="text" class="inp w100" id="customer_name" />
+										</td>
+									</tr>
+									<tr>
+										<th><label for="customer_tel">전화번호</label></th>
+										<td>
+											<input type="text" class="inp w100" id="customer_tel" />
+										</td>
+									</tr>
+									<tr>
+										<th><label for="progress_status">진행도</label><strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<select id="progress_status" class="select w100">
+												<option>진행도</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th><label for="user_password">간단메모</label></th>
+										<td>
+											
+											<div class="split tel_area w100">
+												<div class="cell w70 pr"><input type="text" class="inp w100" placeholder="간단메모"></div>
+												<div class="cell w30">
+													<select class="select">
+														<option>선택</option>
+														<option style="color:red">Red</option>
+														<option style="color:blue">Blue</option>
+														<option style="color:green">Green</option>
+														<option style="color:purple">Purple</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th><label for="permission_level">상세메모</label></th>
+										<td><textarea class="textarea" style="height:150px"></textarea></td>
+									</tr>
+									<tr>
+										<th>알림 일시 설정<strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<div class="split date_area w60">
+												<div class="cell inp_area w45">
+													<input type="text" class="inp" id="datepicker" title="입사일" />
+													<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+												</div>
+												<div class="cell w30 pl pr">
+													<select class="select">
+														<option>시</option>
+													</select>
+												</div>
+												<div class="cell w25">
+													<select class="select">
+														<option>분</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //tbl_row -->
+					</div><!-- //bbs -->
+					<!-- //컨텐츠 끝 -->
+				</div><!-- //pop_content -->
+				<div class="btn_area">
+					<button type="submit" class="btnL styA">상담예약 등록하기</button>
+					<button type="button" onclick="$('.popup').removeClass('on');" class="btnL styB">취소</button>
+				</div>
+				<a href="#" onclick="$('.popup').removeClass('on');" class="btn_cm btn_close2"><span class="blind">닫기</span></a>
+			</div><!-- //inner -->
+		</div><!-- //pop_wrap -->
+	</div><!-- //pop_box -->
+</div>
+<!-- //popup_layer -->
 <!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
 <script src="http://www.w3schools.com/lib/w3data.js"></script>
 <script src="../libs/ui.js"></script>
@@ -203,6 +300,11 @@
 			]
 		} );
 	});
+
+	$(".btnReservation").on('click',function (){
+		$(".popup").addClass('on');
+	  });
+
 </script>
 </body>
 </html>
