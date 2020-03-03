@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>상담예약 스케줄러</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+	<link rel="stylesheet" href="../resources/css/jquery-ui.css" />
+	<link rel="stylesheet" href="../resources/js/themes/default/style.css" />
+    <link rel="stylesheet" href="../resources/css/jquery.dataTables.css" />
+    <!-- Calendar CSS -->    
+    <link href='../resources/js/fullcalendar/core/main.css' rel='stylesheet' />
+    <link href='../resources/js/fullcalendar/daygrid/main.css' rel='stylesheet' />
+    <link href="../resources/js/fullcalendar/timegrid/main.min.css" rel="stylesheet">
+
+	<script src="../resources/js/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+	<!-- Data Table -->
+    <script src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <!-- Calendar -->
+    <script src='../resources/js/fullcalendar/core/main.js'></script>
+    <script src='../resources/js/fullcalendar/daygrid/main.js'></script>
+    <script src="../resources/js/fullcalendar/timegrid/main.js"></script>
+    <script src="../resources/js/fullcalendar/interaction/main.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+    <!-- header -->
+    <div w3-include-html="../include/layout_header.html"></div>
+    <!-- //header -->
+    
+    <hr />
+    
+    <!-- nav_wrap -->
+    <div w3-include-html="../include/layout_nav.html"></div>
+    <!-- //nav_wrap -->
+
+    <hr />
+
+    <!-- container -->
+    <div id="container" class="container">
+        <div class="article">
+            <!-- tab_win -->
+            <div w3-include-html="../include/layout_tab_win.html"></div>
+            <!-- //tab_win -->
+            
+            <!-- lnb -->
+            <div w3-include-html="../include/layout_lnb.html"></div>
+            <!-- //lnb -->
+
+            <!-- contents 컨텐츠 영역 -->
+            <div class="contents">
+                <div class="split sub_tit">
+                    <h1 class="cell tit_deps1">상담예약 스케줄러</h1>
+                </div><!-- //sub_tit -->
+                <div class="split">
+                    <div class="cell vt w50 pr">
+                        <div class="split tit_area">
+                            <h2 class="cell tit_deps2">2020.03.03 오늘의 할일</h2>
+                        </div>
+                        <div class="schedule_box">
+                            <ul class="schedule_list">
+                                <li class="split">
+                                    <span class="cell sche_time">10:00</span>
+                                    <span class="cell sche_text" style="color:red;">김길동 고객(01011111111) ＇간단 메모‘</span>
+                                </li>
+                                <li class="split">
+                                    <span class="cell sche_time">11:00</span>
+                                    <span class="cell sche_text" style="color:green;">김길동 고객(01011111111) ＇간단 메모‘</span>
+                                </li>
+                                <li class="split">
+                                    <span class="cell sche_time">12:00</span>
+                                    <span class="cell sche_text" style="color:blue;">김길동 고객(01011111111) ＇간단 메모‘</span>
+                                </li>
+                                <li class="split">
+                                    <span class="cell sche_time">13:30</span>
+                                    <span class="cell sche_text" style="color:purple;">김길동 고객(01011111111) ＇간단 메모‘</span>
+                                </li>
+                                <li class="split">
+                                    <span class="cell sche_time">14:00</span>
+                                    <span class="cell sche_text">김길동 고객(01011111111) ＇간단 메모‘</span>
+                                </li>
+                                <li class="split">
+                                    <span class="cell sche_time">15:00</span>
+                                    <span class="cell sche_text">김길동 고객(01011111111) ＇간단 메모‘</span>
+                                </li>
+                                <li class="split">
+                                    <span class="cell sche_time">20:00</span>
+                                    <span class="cell sche_text">김길동 고객(01011111111) ＇간단 메모‘</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cell vt w50">
+                        <div class="split tit_area">
+                            <h2 class="cell tit_deps2">오늘의 유입 내역</h2>
+                        </div>
+                        <div class="schedule_box">
+                            <ul class="schedule_list">
+                                <li class="split">
+                                    <span class="cell sche_time">14:00</span>
+                                    <span class="cell sche_text">오토DC 나길동 고객(0101111111) 유입</span>
+                                </li>
+                                <li class="split">
+                                    <span class="cell sche_time">14:00</span>
+                                    <span class="cell sche_text">오토DC 나길동 고객(0101111111) 유입</span>
+                                </li>
+                                <li class="split">
+                                    <span class="cell sche_time">14:00</span>
+                                    <span class="cell sche_text">오토DC 나길동 고객(0101111111) 유입</span>
+                                </li>
+                                <li class="split">
+                                    <span class="cell sche_time">14:00</span>
+                                    <span class="cell sche_text">오토DC 나길동 고객(0101111111) 유입</span>
+                                </li>
+                                <li class="split">
+                                    <span class="cell sche_time">14:00</span>
+                                    <span class="cell sche_text">오토DC 나길동 고객(0101111111) 유입</span>
+                                </li>
+                                <li class="split">
+                                    <span class="cell sche_time">21:00</span>
+                                    <span class="cell sche_text">오토DC 나길동 고객(0101111111) 유입</span>
+                                </li>
+                                <li class="split">
+                                    <span class="cell sche_time">23:00</span>
+                                    <span class="cell sche_text">오토DC 나길동 고객(0101111111) 유입</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- sheet_table -->
+                <div class="tbl_sheet noBorder lineH100" id="calendar"></div>
+                <!-- //sheet_table -->
+
+            </div>
+            <!-- //contents 컨텐츠 영역 -->
+            
+        </div><!-- //article -->
+    </div>
+    <!-- //container -->
+</div><!--// wrap -->
+<!-- //popup_layer -->
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script>
+function getCalendarEventData(){
+    // 해당 월의 일정 정보를 서버에서 가져와 배열을 반환한다.
+    var _eventData = [
+    {
+        id : '1234',
+        title          : 'All Day Event',
+        start          : '2020-03-10', //또는 new Date(y, m, 1)
+        backgroundColor: '#f56954', //red
+        borderColor    : '#f56954', //red
+        allDay         : true
+    },
+    {
+        id : '5678',
+        title          : 'All Day Event',
+        start          : '2020-03-13', //또는 new Date(y, m, 1)
+        end            : '2020-03-15',
+        backgroundColor: '#00c0ef',
+        borderColor    : '#00c0ef',
+        allDay         : true
+    },
+    {
+        id : '9999',
+        title          : 'All Day Event',
+        start          : '2020-03-13T09:00:00', //또는 new Date(y, m, 1)
+        end            : '2020-03-13T13:00:00',
+        backgroundColor: '#00a65a',
+        borderColor    : '#00a65a',
+        allDay         : false
+    }
+    ];
+
+    return _eventData;
+}
+
+$(function() {
+
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+    defaultView : 'dayGridMonth',
+    header : {
+        left  : 'prev,next today',
+        center: 'title',
+        right : 'dayGridMonth,timeGridWeek,timeGridDay'
+    },
+    plugins : ['interaction', 'dayGrid', 'timeGrid'],
+    events : getCalendarEventData() ,
+    height: 700,
+    editable : true,
+    eventDragStop  : function(info){ /* 이벤트(일정)을 드래그 하여 수정 할 때 호출 */
+        alert('eventDragStop : '+info.event.id);
+        if( info.event.allDay ){
+        alert(info.event.start.toISOString());
+        } else {
+        alert(info.event.start.toISOString() +" : " +info.event.end.toISOString());
+        }
+    },
+    eventResize : function(info){ /* 이벤트(일정) 기간을 마우스로 드래그 하여 조정할 때 호출*/
+        alert('eventResize');
+        alert(info.event.start.toISOString() +" : " +info.event.end.toISOString());
+    },
+    eventClick : function(info){ /* 이벤트(일정) 클릭 시 호출 */
+        /* 선택된 이벤트 상세보기(수정) 창 팝업 */
+        alert('eventClick : ' + info.event.id);
+    },
+    dateClick : function(info){ /* 날짜 칸 클릭 시 호출 */
+        /* 신규 등록 창 팝업 */
+        alert('A day has been clicked! : '+info.dateStr);
+    }
+    });
+
+    calendar.render();
+});
+
+</script>
+</body>
+</html>

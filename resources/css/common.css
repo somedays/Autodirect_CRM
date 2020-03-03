@@ -758,7 +758,7 @@ a.txt_overflow{display:block;}
 /* file_box */
 .box_file{overflow:hidden;font-family:'notokr-DemiLight';}
 .file_upload .unit_tml{font-size:13px;}
-.upload_list{border:1px solid #e9e9e9;margin-top:2px;}
+.upload_list{border:1px solid #e9e9e9;}
 .upload_list > li{table-layout:fixed;border-top:1px solid #f4f4f4;background-color:#fff;box-sizing:border-box;transition:background-color 0.2s;}
 .upload_list > li:first-child{border-top:none;}
 .upload_list .cell, .upload_list .cellR{height:28px;padding:0 10px;box-sizing:border-box;}
@@ -778,6 +778,21 @@ a.txt_overflow{display:block;}
 .file_view > li:first-child{margin-top:0;}
 .file_view .pointCol2{color:#5988b2 !important}
 .file_view .pointCol2:hover{text-decoration:underline;}
+
+/* schedule-box */
+.schedule_box{overflow:hidden;font-family:'notokr-DemiLight';}
+.file_upload .unit_tml{font-size:13px;}
+.schedule_list{border:1px solid #9fb8ce;height:116px;overflow:auto;}
+.schedule_list > li{table-layout:fixed;border-top:1px solid #f4f4f4;background-color:#fff;box-sizing:border-box;transition:background-color 0.2s;}
+.schedule_list > li:first-child{border-top:none;}
+.schedule_list .cell, .upload_list .cellR{height:28px;padding:0 10px;box-sizing:border-box;}
+.schedule_list .sche_text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#4f5d7a;font-size:12px;padding-left:0;}
+.schedule_list .cellR{padding-right:10px;}
+.schedule_list .sche_time{width:60px;padding-right:0;padding-left:15px;font-size:11px;letter-spacing:0;color:#5988b2;white-space:nowrap;}
+.schedule_list .cellR.btn_cm{width:23px;padding-left:0;white-space:nowrap;text-align:center;}
+.schedule_list .cellR.btn_cm:before{padding:3px;transition:background-color 0.2s;border-radius:2px;;}
+.schedule_list li:hover{background-color:#f2f2f2;}
+.schedule_list li:hover .cellR.btn_cm:before{background-position:-409px -23px;background-color:#e66b6b;box-sizing:content-box}
 
 /* 두줄이상 */
 .tbl_group{margin-top:5px;}
