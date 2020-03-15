@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>홈페이지 관리</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">통합 차량 관리(다나와)</h1>
+                </div><!-- //sub_tit -->
+                <form action="none" method="post">
+                    <fieldset> 
+                        <div class="bbs bbs_write">
+                            <div class="tbl_row">
+                                <table class="tbl">
+                                    <colgroup>
+                                        <col style="width:auto;"/>
+                                        <col style="width:34%;"/>
+                                        <col style="width:20%;"/>
+                                        <col style="width:34%;"/>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><label>제조사</label></th>
+                                            <td>
+                                                <select class="select w100">
+                                                    <option>현대</option>
+                                                </select>
+                                            </td>
+                                            <th><label>차량명</label></th>
+                                            <td>
+                                                <select class="select w100">
+                                                    <option>그랜저</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label>활성 여부</label></th>
+                                            <td>
+                                                <div class="tab tab_toggle">
+                                                    <ul class="tab_list">
+                                                        <li><input type="radio" name="btn_date_set" id="btn_date_set1" checked="checked"><label for="btn_date_set1" class="txt">YES</label></li>
+                                                        <li><input type="radio" name="btn_date_set" id="btn_date_set2"><label for="btn_date_set2" class="txt">NO</label></li>
+                                                    </ul> 
+                                                </div>
+                                            </td>
+                                            <th><label>순위</label></th>
+                                            <td>
+                                                <select class="select w100">
+                                                    <option>1</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="split tit_area mt10">
+                                <h2 class="cell tit_deps3">트림</h2>
+                            </div>
+                            <!-- table_col -->
+                            <div class="tbl_col"> 
+                                <table class="tbl">
+                                    <colgroup>
+                                        <col style="width:70px;">
+                                        <col style="width:auto;">
+                                        <col style="width:70px;">
+                                        <col style="width:auto;">
+                                        <col style="width:85px;">
+                                        <col style="width:85px;">
+                                        <col style="width:85px;">
+                                        <col style="width:85px;">
+                                        <col style="width:120px;">
+                                        <col style="width:100px;">
+                                        <col style="width:120px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">라인코드</th>
+                                            <th scope="col">라인명</th>
+                                            <th scope="col">트림코드</th>
+                                            <th scope="col">트림명</th>
+                                            <th scope="col">차종</th>
+                                            <th scope="col">변속기</th>
+                                            <th scope="col">유종</th>
+                                            <th scope="col">배기량</th>
+                                            <th scope="col">트림 기본 가격</th>
+                                            <th scope="col">트림 활성 유무</th>
+                                            <th scope="col">트림별 활성화</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tc">2345</td>
+                                            <td class="tl">2020년형 가솔린 터보 3.3 RWD</td>
+                                            <td class="tc">64100</td>
+                                            <td class="tl">스포츠 엘리트</td>
+                                            <td class="tc">자동</td>
+                                            <td class="tc">중형</td>
+                                            <td class="tc">가솔린</td>
+                                            <td class="tc">3342cc</td>
+                                            <td class="tl">42000000</td>
+                                            <td class="tc">Y</td>
+                                            <td class="tc">
+                                                <div class="tab tab_toggle">
+                                                    <ul class="tab_list">
+                                                        <li><input type="radio" name="btn_date_set2" id="btn_date_set11" checked="checked"><label for="btn_date_set11" class="txt">활성</label></li>
+                                                        <li><input type="radio" name="btn_date_set2" id="btn_date_set12"><label for="btn_date_set12" class="txt">비활성</label></li>
+                                                    </ul> 
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tc">2345</td>
+                                            <td class="tl">2020년형 가솔린 터보 3.3 RWD</td>
+                                            <td class="tc">64100</td>
+                                            <td class="tl">스포츠 엘리트</td>
+                                            <td class="tc">자동</td>
+                                            <td class="tc">중형</td>
+                                            <td class="tc">가솔린</td>
+                                            <td class="tc">3342cc</td>
+                                            <td class="tl">42000000</td>
+                                            <td class="tc">Y</td>
+                                            <td class="tc">
+                                                <div class="tab tab_toggle">
+                                                    <ul class="tab_list">
+                                                        <li><input type="radio" name="btn_date_set2" id="btn_date_set11" checked="checked"><label for="btn_date_set11" class="txt">활성</label></li>
+                                                        <li><input type="radio" name="btn_date_set2" id="btn_date_set12"><label for="btn_date_set12" class="txt">비활성</label></li>
+                                                    </ul> 
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //table_col -->
+                            
+                            <div class="split tit_area mt10">
+                                <h2 class="cell tit_deps3">옵션</h2>
+                            </div>
+                            <!-- table_col -->
+                            <div class="tbl_col"> 
+                                <table class="tbl">
+                                    <colgroup>
+                                        <col style="width:70px;">
+                                        <col style="width:auto;">
+                                        <col style="width:70px;">
+                                        <col style="width:auto;">
+                                        <col style="width:150px;">
+                                        <col style="width:150px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">트림코드</th>
+                                            <th scope="col">트림명</th>
+                                            <th scope="col">옵션코드</th>
+                                            <th scope="col">옵션명</th>
+                                            <th scope="col">인기유무</th>
+                                            <th scope="col">옵션가격</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tc">64100</td>
+                                            <td class="tl">스포츠 엘리트</td>
+                                            <td class="tc">A11</td>
+                                            <td class="tl">12.3인치 3D 클러스터</td>
+                                            <td class="tc"></td>
+                                            <td class="tl">342000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tc">64100</td>
+                                            <td class="tl">스포츠 엘리트</td>
+                                            <td class="tc">A11</td>
+                                            <td class="tl">12.3인치 3D 클러스터</td>
+                                            <td class="tc"></td>
+                                            <td class="tl">342000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //table_col -->
+                            
+                            <div class="split tit_area mt10">
+                                <h2 class="cell tit_deps3">차량색상</h2>
+                            </div>
+                            <!-- table_col -->
+                            <div class="tbl_col"> 
+                                <table class="tbl">
+                                    <colgroup>
+                                        <col style="width:auto;">
+                                        <col style="width:85px;">
+                                        <col style="width:auto;">
+                                        <col style="width:200px;">
+                                        <col style="width:150px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">라인업명</th>
+                                            <th scope="col">색상코드</th>
+                                            <th scope="col">색상명</th>
+                                            <th scope="col">색상 이미지</th>
+                                            <th scope="col">색상 사용 유무</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tl">2020년형 가솔린 터보 3.3 RWD</td>
+                                            <td class="tc">011</td>
+                                            <td class="tl">우유니 화이트</td>
+                                            <td class="tc"><div class="color_box" style="background-color:#FFF;"></div></td>
+                                            <td class="tc">
+                                                <div class="tab tab_toggle">
+                                                    <ul class="tab_list">
+                                                        <li><input type="radio" name="btn_date_set3" id="btn_date_set111" checked="checked"><label for="btn_date_set111" class="txt">사용</label></li>
+                                                        <li><input type="radio" name="btn_date_set3" id="btn_date_set112"><label for="btn_date_set112" class="txt">사용안함</label></li>
+                                                    </ul> 
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tl">2020년형 가솔린 터보 3.3 RWD</td>
+                                            <td class="tc">012</td>
+                                            <td class="tl">블랙</td>
+                                            <td class="tc"><div class="color_box" style="background-color:#121212;"></div></td>
+                                            <td class="tc">
+                                                <div class="tab tab_toggle">
+                                                    <ul class="tab_list">
+                                                        <li><input type="radio" name="btn_date_set4" id="btn_date_set113" checked="checked"><label for="btn_date_set113" class="txt">사용</label></li>
+                                                        <li><input type="radio" name="btn_date_set4" id="btn_date_set114"><label for="btn_date_set114" class="txt">사용안함</label></li>
+                                                    </ul> 
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //table_col -->
+                        </div>
+                        <div class="btn_area">
+                            <button type="button" onclick="location.href='home_car_management.html'" class="btnL styA">저장</button>
+                            <button type="button" onclick="location.href='home_car_management.html'" class="btnL styB">목록으로</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+			<!-- //contents 컨텐츠 영역 -->
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../resources/js/ui.js"></script>
+<script>
+	w3IncludeHTML();
+    tabToggle('.tab_list.main_tab li a', 'tab_area', 0);
+    tabToggle('.tab_list.sub_tab li a', 'sub_tab_area', 0);
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

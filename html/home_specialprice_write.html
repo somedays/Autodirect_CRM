@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>홈페이지 관리</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">특가 등록</h1>
+                </div><!-- //sub_tit -->
+                <form action="none" method="post">
+                    <fieldset>  
+                        <div class="bbs bbs_write">
+                            <!-- 차량 정보 -->
+                            <div class="split tit_area">
+                                <h2 class="cell tit_deps3">차량 정보</h2>
+                            </div>
+                            <div class="tbl_col2">
+                                <table class="tbl">
+                                    <colgroup>
+                                        <col style="width:30%;"/>
+                                        <col style="width:30%;"/>
+                                        <col style="width:40%;"/>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="tc"><label>제조사</label></th>
+                                            <th class="tc"><label>차량</label></th>
+                                            <th class="tc"><label>등급</label></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <select class="select w100" size="5">
+                                                    <option>제조사</option>
+                                                    <option>제조사</option>
+                                                    <option>제조사</option>
+                                                    <option>제조사</option>
+                                                    <option>제조사</option>
+                                                    <option>제조사</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select class="select w100" size="5">
+                                                    <option>차량</option>
+                                                    <option>제조사</option>
+                                                    <option>제조사</option>
+                                                    <option>제조사</option>
+                                                    <option>제조사</option>
+                                                    <option>제조사</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select class="select w100" size="5">
+                                                    <option>등급</option>
+                                                    <option>등급</option>
+                                                    <option>등급</option>
+                                                    <option>등급</option>
+                                                    <option>등급</option>
+                                                    <option>등급</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tbl_row mt10">
+                                <table class="tbl">
+                                    <colgroup>
+                                        <col style="width:auto;"/>
+                                        <col style="width:34%;"/>
+                                        <col style="width:20%;"/>
+                                        <col style="width:34%;"/>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><label for="customer_message">차량명</label></th>
+                                            <td>
+                                                <input type="text" class="inp w100">
+                                            </td>
+                                            <th><label for="customer_message">차량 가격</label></th>
+                                            <td>
+                                                <input type="text" class="inp w100">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label>이용방법</label></th>
+                                            <td colspan="3">
+                                                <div class="fld">
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_d" id="rd_d1" checked=""><label for="rd_d1">장기렌트</label></span>
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_d" id="rd_d1"><label for="rd_d1">리스</label></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="user_name">이용 기간</label></th>
+                                            <td>
+                                                <select class="select w100">
+                                                    <option>36개월</option>
+                                                    <option selected>48개월</option>
+                                                    <option>60개월</option>
+                                                </select>
+                                            </td>
+                                            <th><label for="user_name">보증금</label></th>
+                                            <td>
+                                                <select class="select w100">
+                                                    <option>보증금 0%</option>
+                                                    <option>보증금 30%</option>
+                                                    <option>선수금 30%</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="customer_message">기존 납입료</label></th>
+                                            <td>
+                                                <input type="text" class="inp w100">
+                                            </td>
+                                            <th><label for="customer_message">할인 납입료</label></th>
+                                            <td>
+                                                <input type="text" class="inp w100">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="user_name">연료</label></th>
+                                            <td>
+                                                <select class="select w100">
+                                                    <option>가솔린</option>
+                                                    <option>디젤</option>
+                                                    <option>LPG</option>
+                                                    <option>전기</option>
+                                                    <option>하이브리드</option>
+                                                    <option>플러그인 하이브리드</option>
+                                                </select>
+                                            </td>
+                                            <th><label for="user_name">연비</label></th>
+                                            <td>
+                                                <div class="split box_nowrap">
+                                                    <div class="cell">
+                                                        <input type="text" class="inp w100">
+                                                    </div>
+                                                    <div class="cell">
+                                                        <div class="fld">
+                                                            <span class="chk_area"><input type="radio" class="rd" name="rd_d2" id="rd_d3" checked=""><label for="rd_d3">km/L</label></span>
+                                                            <span class="chk_area"><input type="radio" class="rd" name="rd_d2" id="rd_d4"><label for="rd_d4">km/kWh</label></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="user_name">타임어택 특가</label></th>
+                                            <td>
+                                                <div class="tab tab_toggle">
+                                                    <ul class="tab_list">
+                                                        <li><input type="radio" name="btn_date_set" id="btn_date_set1" checked="checked"><label for="btn_date_set1" class="txt">ON</label></li>
+                                                        <li><input type="radio" name="btn_date_set" id="btn_date_set2"><label for="btn_date_set2" class="txt">OFF</label></li>
+                                                    </ul> 
+                                                </div>
+                                            </td>
+                                            <th><label for="user_name">순위</label></th>
+                                            <td>
+                                                <input type="text" class="inp">
+                                                <a href="#" class="btn_cm btn_up tc"><span class="blind">위로</span></a>
+                                                <a href="#" class="btn_cm btn_down tc"><span class="blind">아래로</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="user_name">친환경</label></th>
+                                            <td>
+                                                <div class="tab tab_toggle">
+                                                    <ul class="tab_list">
+                                                        <li><input type="radio" name="btn_date_set2" id="btn_date_set3" checked="checked"><label for="btn_date_set3" class="txt">ON</label></li>
+                                                        <li><input type="radio" name="btn_date_set2" id="btn_date_set4"><label for="btn_date_set4" class="txt">OFF</label></li>
+                                                    </ul> 
+                                                </div>
+                                            </td>
+                                            <th><label for="user_name">순위</label></th>
+                                            <td>
+                                                <input type="text" class="inp">
+                                                <a href="#" class="btn_cm btn_up tc"><span class="blind">위로</span></a>
+                                                <a href="#" class="btn_cm btn_down tc"><span class="blind">아래로</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="user_name">이벤트 종류</label></th>
+                                            <td colspan="3">
+                                                <div class="fld">
+                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_d2" id="chk_d1"><label for="chk_d1">HOT SALE</label></span>
+                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_d2" id="chk_d2"><label for="chk_d2">예약판매</label></span>
+                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_d2" id="chk_d3"><label for="chk_d3">게릴라 세일</label></span>
+                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_d2" id="chk_d4"><label for="chk_d4">마감임박</label></span>
+                                                    <span class="chk_area"><input type="checkbox" class="chk" name="chk_d2" id="chk_d5"><label for="chk_d5">한정수량</label></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>                      
+                        
+                        <div class="btn_area">
+                            <button type="button" onclick="location.href='contract_customer_management.html'" class="btnL styA">저장</button>
+                            <button type="button" onclick="location.href='contract_customer_management.html'" class="btnL styB">삭제</button>
+                            <button type="button" onclick="location.href='contract_customer_management.html'" class="btnL styB">목록으로</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+			<!-- //contents 컨텐츠 영역 -->
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../resources/js/ui.js"></script>
+<script>
+	w3IncludeHTML();
+    tabToggle('.tab_list.main_tab li a', 'tab_area', 0);
+    tabToggle('.tab_list.sub_tab li a', 'sub_tab_area', 0);
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

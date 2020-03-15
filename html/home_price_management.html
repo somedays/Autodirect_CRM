@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>홈페이지 관리</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">전차종 가격 관리</h1>
+                </div><!-- //sub_tit -->
+                <form action="none" method="post">
+                    <fieldset> 
+                        <!-- 차량 정보 -->
+                        <div class="split tit_area">
+                            <h2 class="cell tit_deps3">차량 선택</h2>
+                        </div>
+                        <div class="tbl_col2">
+                            <table class="tbl">
+                                <colgroup>
+                                    <col style="width:50%;"/>
+                                    <col style="width:50%;"/>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="tc"><label>제조사</label></th>
+                                        <th class="tc"><label>차량</label></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <select class="select w100" size="5">
+                                                <option>제조사</option>
+                                                <option>제조사</option>
+                                                <option>제조사</option>
+                                                <option>제조사</option>
+                                                <option>제조사</option>
+                                                <option>제조사</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="select w100" size="5">
+                                                <option>차량</option>
+                                                <option>제조사</option>
+                                                <option>제조사</option>
+                                                <option>제조사</option>
+                                                <option>제조사</option>
+                                                <option>제조사</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- table_col -->
+                        <div class="tbl_row2 mt10"> 
+                            <table class="tbl">
+                                <colgroup>
+                                    <col style="width:200px;">
+                                    <col style="width:200px;">
+                                    <col style="width:200px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="9">장기렌트</th>
+                                        <th rowspan="3">무보증</th>
+                                        <th>36개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>48개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>60개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="3">보증금 30%</th>
+                                        <th>36개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>48개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>60개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="3">선수금 30%</th>
+                                        <th>36개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>48개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>60개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="9">리스</th>
+                                        <th rowspan="3">무보증</th>
+                                        <th>36개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>48개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>60개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="3">보증금 30%</th>
+                                        <th>36개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>48개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>60개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="3">선수금 30%</th>
+                                        <th>36개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>48개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>60개월</th>
+                                        <td><input type="text" class="inp w100"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table_col -->
+                        <div class="btn_area">
+                            <button type="button" onclick="location.href='contract_customer_management.html'" class="btnL styA">저장</button>
+                            <button type="button" onclick="location.href='contract_customer_management.html'" class="btnL styB">목록으로</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+			<!-- //contents 컨텐츠 영역 -->
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../resources/js/ui.js"></script>
+<script>
+	w3IncludeHTML();
+    tabToggle('.tab_list.main_tab li a', 'tab_area', 0);
+    tabToggle('.tab_list.sub_tab li a', 'sub_tab_area', 0);
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>
