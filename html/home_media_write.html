@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>홈페이지 관리</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">	
+
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">영상 등록</h1>
+                </div><!-- //sub_tit -->
+                <form action="none" method="post">
+                    <fieldset>  
+                        <div class="bbs bbs_write">
+                            <div class="tbl_row mt10">
+                                <table class="tbl">
+                                    <colgroup>
+                                        <col style="width:auto;"/>
+                                        <col style="width:34%;"/>
+                                        <col style="width:20%;"/>
+                                        <col style="width:34%;"/>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><label for="customer_message">영상 제목</label></th>
+                                            <td colspan="3">
+                                                <input type="text" class="inp w100">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="customer_message">내용</label></th>
+                                            <td colspan="3">
+                                                <textarea class="textarea w100"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="user_name">영상 주소</label></th>
+                                            <td colspan="3">
+                                                <div class="split box_nowrap">
+                                                    <div class="cell">
+                                                        <input type="text" class="inp w100">
+                                                    </div>
+                                                    <div class="cell"><a href="#" class="btnS styB">미리보기</a></div>
+                                                </div>
+                                                <!-- 영상 미리보기 영역 -->
+                                                <div style="margin-top:10px;width:100%;height:315px;">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/c5IAq9Po3Jw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label>영상 썸네일</label></th>
+                                            <td colspan="3">
+                                                <input type="file" class="inp w100">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label>노출 위치</label></th>
+                                            <td colspan="3">
+                                                <div class="fld">
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_d" id="rd_d1" checked=""><label for="rd_d1">메인 영상</label></span>
+                                                    <span class="chk_area"><input type="radio" class="rd" name="rd_d" id="rd_d2"><label for="rd_d2">리스트 영상</label></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>                      
+                        
+                        <div class="btn_area">
+                            <button type="button" onclick="location.href='home_media_management.html'" class="btnL styA">저장</button>
+                            <button type="button" onclick="location.href='home_media_management.html'" class="btnL styB">삭제</button>
+                            <button type="button" onclick="location.href='home_media_management.html'" class="btnL styB">목록으로</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+			<!-- //contents 컨텐츠 영역 -->
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../resources/js/ui.js"></script>
+<script>
+	w3IncludeHTML();
+    tabToggle('.tab_list.main_tab li a', 'tab_area', 0);
+    tabToggle('.tab_list.sub_tab li a', 'sub_tab_area', 0);
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

@@ -295,7 +295,7 @@ a.txt_overflow{display:block;}
 
 /* 버튼 스타일 공통 */
 .btnS, .btnM, .btnL, .btnSM, .btnXS{display:inline-block;border-radius:2px;border:1px solid transparent;text-shadow:none !important;vertical-align:middle;color:#fff;text-align:center;font-family:'notokr-DemiLight';transition:background 0.3s;box-sizing:border-box;}
-.btnS, .pl_small .btn_area .btnL{height:30px;line-height:27px;line-height:35px\9;padding:0 10px;font-size:14px;}
+.btnS, .pl_small .btn_area .btnL{height:30px;line-height:27px;line-height:35px\9;padding:0 20px;font-size:14px;}
 .btnSM{height:34px;line-height:32px;line-height:39px\9;padding:0 10px;font-size:13px;}
 .btnM{height:40px;line-height:37px;line-height:47px\9;padding:0 20px;font-size:16px;}
 .btnL{height:50px;line-height:49px;line-height:58px\9;padding:0 30px;font-size:18px;}
@@ -431,7 +431,10 @@ a.txt_overflow{display:block;}
 /* pointColor */
 .pointCol1{color:#e66b6b !important;}
 .pointCol2{color:#32628c !important;}
-.alink{color:#5988b2;text-decoration:underline;}
+.alink{color:#5988b2;text-decoration:none;}
+.alink:hover {text-decoration:underline;}
+
+
 
 /* text제어 */
 .txt_sm{font-size:12px;color:#c4c9d6;}
@@ -638,7 +641,7 @@ a.txt_overflow{display:block;}
 .tbl_col > table > tbody > tr > td,
 .tbl_col > table > tfoot > tr > td,
 .tbl_col > [class*='_wrap'] > table > tbody > tr > td,
-.tbl_col > [class*='_wrap'] > table > tfoot > tr > td{height:30px;padding:5px 8px 3px 8px;background-color:#fff;border-left:1px solid #ced3dc;line-height:1;}
+.tbl_col > [class*='_wrap'] > table > tfoot > tr > td{height:30px;padding:5px 8px 3px 8px;background-color:#fff;border-left:1px solid #ced3dc;line-height:1;box-sizing:border-box;}
 .tbl_col > table > tbody > tr > td:first-child,
 .tbl_col > table > tfoot > tr > td:first-child,
 .tbl_col > [class*='_wrap'] > table > tbody > tr > td:first-child,
