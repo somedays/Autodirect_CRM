@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>재상담요청건 조회</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+	<link rel="stylesheet" href="../resources/css/jquery-ui.css" />
+	<link rel="stylesheet" href="../resources/js/themes/default/style.css" />
+	<link rel="stylesheet" href="../resources/css/jquery.dataTables.css" />
+
+	<script src="../resources/js/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+	<!-- Data Table -->
+	<script src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">재상담요청건 조회</h1>
+				</div><!-- //sub_tit -->				
+				<form action="none" method="post">
+					<fieldset>
+						<div class="split search_box" id="search_box">
+							<div class="cell">
+								<table class="tbl col3">
+									<colgroup>
+										<col style="width:60%;">
+										<col style="width:1%;">
+										<col style="width:auto;">
+									</colgroup>
+									<tbody>
+										<tr>
+											<td colspan="3">
+												<div class="split w40">
+													<div class="cell w50 pr">
+														<input type="text" class="inp" placeholder="직원 ID">
+													</div>
+													<div class="cell inp_area">
+														<input type="text" class="inp" id="lab_date" title="시작 기간">
+														<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="cellR btn_area">
+								<button type="button" class="btnS styE pd1">조회</button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+
+				<div class="cols">
+					<!-- sheet_table -->
+					<div class="tbl_sheet noBorder hAuto">
+						<!-- table_col -->
+						<div class="tbl_col">
+							<table class="tbl" id="example2">
+								<colgroup>
+									<col style="width:60px;" />
+									<col style="width:150px;" />
+									<col style="width:150px;" />
+									<col style="width:100px;" />
+									<col style="width:100px;" />
+									<col style="width:100px;" />
+									<col style="width:100PX;" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">번호</th>
+										<th scope="col">고객명</th>
+										<th scope="col">전화번호</th>
+										<th scope="col">영업담당자</th>
+										<th scope="col">해피콜 횟수</th>
+										<th scope="col">CS ID</th>
+										<th scope="col">최초등록일</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tc">2</td>
+										<td class="tc">홍길동</td>
+										<td class="tc">01039392929</td>
+										<td class="tc">김길동</td>
+										<td class="tc">5</td>
+										<td class="tc">admin</td>
+										<td class="tc">20-01-01</td>
+									</tr>
+									<tr>
+										<td class="tc">2</td>
+										<td class="tc">홍길동</td>
+										<td class="tc">01039392929</td>
+										<td class="tc">김길동</td>
+										<td class="tc">5</td>
+										<td class="tc">admin</td>
+										<td class="tc">20-01-01</td>
+									</tr>
+									<tr>
+										<td class="tc">2</td>
+										<td class="tc">홍길동</td>
+										<td class="tc">01039392929</td>
+										<td class="tc">김길동</td>
+										<td class="tc">5</td>
+										<td class="tc">admin</td>
+										<td class="tc">20-01-01</td>
+									</tr>
+									<tr>
+										<td class="tc">2</td>
+										<td class="tc">홍길동</td>
+										<td class="tc">01039392929</td>
+										<td class="tc">김길동</td>
+										<td class="tc">5</td>
+										<td class="tc">admin</td>
+										<td class="tc">20-01-01</td>
+									</tr>
+									<tr>
+										<td class="tc">2</td>
+										<td class="tc">홍길동</td>
+										<td class="tc">01039392929</td>
+										<td class="tc">김길동</td>
+										<td class="tc">5</td>
+										<td class="tc">admin</td>
+										<td class="tc">20-01-01</td>
+									</tr>
+									<tr>
+										<td class="tc">2</td>
+										<td class="tc">홍길동</td>
+										<td class="tc">01039392929</td>
+										<td class="tc">김길동</td>
+										<td class="tc">5</td>
+										<td class="tc">admin</td>
+										<td class="tc">20-01-01</td>
+									</tr>
+									<tr>
+										<td class="tc">2</td>
+										<td class="tc">홍길동</td>
+										<td class="tc">01039392929</td>
+										<td class="tc">김길동</td>
+										<td class="tc">5</td>
+										<td class="tc">admin</td>
+										<td class="tc">20-01-01</td>
+									</tr>
+									<tr>
+										<td class="tc">2</td>
+										<td class="tc">홍길동</td>
+										<td class="tc">01039392929</td>
+										<td class="tc">김길동</td>
+										<td class="tc">5</td>
+										<td class="tc">admin</td>
+										<td class="tc">20-01-01</td>
+									</tr>
+									<tr>
+										<td class="tc">2</td>
+										<td class="tc">홍길동</td>
+										<td class="tc">01039392929</td>
+										<td class="tc">김길동</td>
+										<td class="tc">5</td>
+										<td class="tc">admin</td>
+										<td class="tc">20-01-01</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table_col -->
+					</div>
+					<!-- //sheet_table -->
+				</div>
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+<!-- popup_layer -->
+<div class="popup pl_win">
+	<div class="pop_box">
+		<div class="pop_wrap">
+			<div class="inner w820"><!-- 팝업 가로사이즈 -->
+				<h1 class="tit_deps1">상담예약</h1>
+				<div class="pop_content">
+					<!-- 컨텐츠 시작 -->
+					<div class="bbs bbs_write">
+						<!-- tbl_row -->
+						<div class="tbl_row">
+							<table class="tbl">
+								<colgroup>
+									<col style="width:140px;"/>
+									<col style="width:auto;"/>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th><label for="customer_name">고객명</label><strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<input type="text" class="inp w100" id="customer_name" />
+										</td>
+									</tr>
+									<tr>
+										<th><label for="customer_tel">전화번호</label></th>
+										<td>
+											<input type="text" class="inp w100" id="customer_tel" />
+										</td>
+									</tr>
+									<tr>
+										<th><label for="progress_status">진행도</label><strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<select id="progress_status" class="select w100">
+												<option>진행도</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th><label for="user_password">간단메모</label></th>
+										<td>
+											
+											<div class="split tel_area w100">
+												<div class="cell w70 pr"><input type="text" class="inp w100" placeholder="간단메모"></div>
+												<div class="cell w30">
+													<select class="select">
+														<option>선택</option>
+														<option style="color:red">Red</option>
+														<option style="color:blue">Blue</option>
+														<option style="color:green">Green</option>
+														<option style="color:purple">Purple</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th><label for="permission_level">상세메모</label></th>
+										<td><textarea class="textarea" style="height:150px"></textarea></td>
+									</tr>
+									<tr>
+										<th>알림 일시 설정<strong class="txt_ess">* 필수입력</strong></th>
+										<td>
+											<div class="split date_area w60">
+												<div class="cell inp_area w45">
+													<input type="text" class="inp" id="datepicker" title="입사일" />
+													<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+												</div>
+												<div class="cell w30 pl pr">
+													<select class="select">
+														<option>시</option>
+													</select>
+												</div>
+												<div class="cell w25">
+													<select class="select">
+														<option>분</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //tbl_row -->
+					</div><!-- //bbs -->
+					<!-- //컨텐츠 끝 -->
+				</div><!-- //pop_content -->
+				<div class="btn_area">
+					<button type="submit" class="btnL styA">상담예약 등록하기</button>
+					<button type="button" onclick="$('.popup').removeClass('on');" class="btnL styB">취소</button>
+				</div>
+				<a href="#" onclick="$('.popup').removeClass('on');" class="btn_cm btn_close2"><span class="blind">닫기</span></a>
+			</div><!-- //inner -->
+		</div><!-- //pop_wrap -->
+	</div><!-- //pop_box -->
+</div>
+<!-- //popup_layer -->
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script>
+
+	$(document).ready( function(){  
+	  // Data Table
+	  $('#example2')
+		.dataTable( {
+			responsive: true,
+			columnDefs: [
+				{ targets: [-1, -3], className: 'dt-body-right' }
+			]
+		} );
+	});
+
+	$(".btnReservation").on('click',function (){
+		$(".popup").addClass('on');
+	  });
+
+</script>
+</body>
+</html>
