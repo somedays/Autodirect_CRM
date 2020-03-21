@@ -1,0 +1,566 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>리포트</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+	<link rel="stylesheet" href="../resources/css/jquery-ui.css" />
+	<link rel="stylesheet" href="../resources/js/themes/default/style.css" />
+	<link rel="stylesheet" href="../resources/css/jquery.dataTables.css" />
+
+	<script src="../resources/js/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">디비 배정 현황</h1>
+				</div><!-- //sub_tit -->
+
+				<form action="none" method="post">
+					<fieldset>
+						<!-- search_box -->
+						<div class="split search_box" id="search_box">
+							<div class="cell">
+								<table class="tbl col1">
+									<colgroup>
+										<col style="width:1%;">
+										<col style="width:auto;">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label class="tit_fld" for="lab_date">기간 조회</label></th>
+											<td>
+												<div class="split date_area">
+													<div class="cell inp_area">
+														<input type="text" class="inp" id="lab_date" title="시작 기간">
+														<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+													</div>
+													<span class="cell txt_c">~</span>
+													<div class="cell inp_area">
+														<input type="text" class="inp" title="종료 기간">
+														<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- //cell -->
+							<div class="cellR btn_area">
+								<button type="button" class="btnS styE pd1">조회</button>
+							</div><!-- //cellR -->
+						</div>
+						<!--//search_box -->
+					</fieldset>
+                </form>
+                
+				<div class="cols">
+					<!-- sheet_table -->
+					<div class="tbl_sheet hAuto">
+                        <div class="tbl_col">
+                            <table class="tbl">
+                                <colgroup>
+                                    <col style="width:150px;">
+                                    <col style="width:150px;">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:auto">
+                                    <col style="width:150px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">유입처</th>
+                                        <th scope="col">세부 유입처</th>
+                                        <th scope="col">19.03</th>
+                                        <th scope="col">19.04</th>
+                                        <th scope="col">19.05</th>
+                                        <th scope="col">19.06</th>
+                                        <th scope="col">19.07</th>
+                                        <th scope="col">19.08</th>
+                                        <th scope="col">19.09</th>
+                                        <th scope="col">종합</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="3">오토다이렉트카</td>
+                                        <td>오토_PC</td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count sub_total">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>오토_모바일</td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count sub_total">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>오토_콜</td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count sub_total">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">오토다이렉트카</td>
+                                        <td>오토_PC</td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count sub_total">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>오토_모바일</td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count sub_total">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>오토_콜</td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count sub_total">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">오토다이렉트카</td>
+                                        <td>오토_PC</td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count sub_total">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>오토_모바일</td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count sub_total">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>오토_콜</td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count sub_total">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2">종합</td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                        <td class="tl contract_count all_total">
+                                            <div><span>전체:</span> <strong>302</strong></div>
+                                            <div><span>계약:</span> <strong>30</strong></div>
+                                            <div><span>계약율:</span> <strong>10%</strong></div>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- //table_col -->
+					</div>
+					<!-- //sheet_table -->
+				</div>
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

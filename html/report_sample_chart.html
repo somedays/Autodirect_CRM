@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>리포트</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+	<link rel="stylesheet" href="../resources/css/jquery-ui.css" />
+	<link rel="stylesheet" href="../resources/js/themes/default/style.css" />
+	<link rel="stylesheet" href="../resources/css/jquery.dataTables.css" />
+
+	<script src="../resources/js/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+	<!-- Data Table -->
+    <script src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <!-- Chart.js -->
+	<script src="../resources/js/Chart.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap sub"><!-- 서브인경우 sub 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+	
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+		<div class="article">
+			<!-- contents 컨텐츠 영역 -->
+			<div class="contents">
+				<div class="split sub_tit">
+					<h1 class="cell tit_deps1">디비 배정 현황</h1>
+				</div><!-- //sub_tit -->
+
+				<form action="none" method="post">
+					<fieldset>
+						<!-- search_box -->
+						<div class="split search_box" id="search_box">
+							<div class="cell">
+								<table class="tbl col1">
+									<colgroup>
+										<col style="width:1%;">
+										<col style="width:auto;">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><label class="tit_fld" for="lab_date">기간 조회</label></th>
+											<td>
+												<div class="split date_area">
+													<div class="cell inp_area">
+														<input type="text" class="inp" id="lab_date" title="시작 기간">
+														<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+													</div>
+													<span class="cell txt_c">~</span>
+													<div class="cell inp_area">
+														<input type="text" class="inp" title="종료 기간">
+														<a href="#" class="btn_cm btn_cal"><span class="blind">날짜선택</span></a>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div><!-- //cell -->
+							<div class="cellR btn_area">
+								<button type="button" class="btnS styE pd1">조회</button>
+							</div><!-- //cellR -->
+						</div>
+						<!--//search_box -->
+					</fieldset>
+                </form>
+                
+				<div class="cols">
+                    <div class="split tit_area mt10">
+                        <h2 class="cell tit_deps2">총 합계 : 2,192</h2>
+                    </div>
+					<!-- sheet_table -->
+					<div class="tbl_sheet lineH15" style="padding:20px;">
+						<canvas id="report_db_assignment" style="width:100%;height:100%;"></canvas>
+					</div>
+					<!-- //sheet_table -->
+				</div>
+			</div>
+			<!-- //contents 컨텐츠 영역 -->
+			
+		</div><!-- //article -->
+	</div>
+	<!-- //container -->
+</div><!--// wrap -->
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+	w3IncludeHTML();
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script>
+    new Chart(document.getElementById("report_db_assignment"), {
+        type: 'bar',
+        data: {
+        labels: ["유입처1", "유입처2", "유입처3", "유입처4", "유입처5", "유입처6", "유입처7", "유입처8", "유입처9", "유입처10"],
+        datasets: [
+            {
+            label: "Population (millions)",
+            backgroundColor: ["#fcb414", "#fcb414","#fcb414","#fcb414","#fcb414","#fcb414","#fcb414","#fcb414","#fcb414","#fcb414"],
+            data: [2478,5267,734,784,433,393,381,664,34,3031]
+            }
+        ]
+        },
+        options: {
+        legend: { display: false },
+        title: {
+            display: false,
+        }
+        }
+    });
+</script>
+</body>
+</html>

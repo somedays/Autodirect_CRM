@@ -679,6 +679,13 @@ a.txt_overflow{display:block;}
 .tbl_col > [class*='_wrap'] > table > tbody > tr > td.sun {background-color:#fdf4f4;}
 .tbl_col > [class*='_wrap'] > table > tbody > tr:hover > td.sun {background-color:#fdf4f4 !important;}
 
+.contract_count {padding:3px 0;}
+.contract_count > div {letter-spacing:0;line-height:17px;}
+.contract_count > div > span {display:inline-block;width:50px;padding-left:5px;box-sizing:border-box;}
+.contract_count > div > strong {letter-spacing:0;}
+.contract_count.sub_total {background-color:#eef5fb;}
+.contract_count.all_total {background-color:#222a3c;}
+
 .sheet_scroll{border:1px solid #9fb8ce;}
 .sheet_scroll .thead_wrap{/* padding-right:20px;*/background-color:#cfdde9;}
 .sheet_scroll .tbody_wrap{overflow-y:scroll;}
@@ -1067,6 +1074,7 @@ a.txt_overflow{display:block;}
 .lineH13{overflow-y:auto;height:474px;}
 .lineH14{overflow-y:auto;height:508px;}
 .lineH15{overflow-y:auto;height:543px;}
+.lineH16{overflow-y:auto;height:643px;}
 .lineH100{overflow-y:auto;height:100%;}
 .graph_wrap{border:1px solid #ccc;text-align:center;}
 .scroll_x{overflow-x:scroll;}
