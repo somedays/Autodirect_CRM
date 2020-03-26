@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="../resources/css/common.css" />
+	<link rel="stylesheet" href="../resources/css/icomoon.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="../resources/css/jquery-ui.css" />
+	<link rel="stylesheet" href="../resources/js/themes/default/style.css" />
+	<link rel="stylesheet" href="../resources/css/jquery.dataTables.css" />
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="../resources/js/1.11.4/jquery-ui.min.js"></script>
+    <script src="../resources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!-- Data Table -->
+	<script src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+</head>
+<body> 
+<div id="wrap" class="wrap"><!-- 메인인경우 main 클래스 추가 -->
+	<!-- header -->
+	<div w3-include-html="../include/layout_header.html"></div>
+	<!-- //header -->
+
+	<hr />
+	
+	<!-- nav_wrap -->
+	<div w3-include-html="../include/layout_nav.html"></div>
+	<!-- //nav_wrap -->
+
+	<hr />
+
+	<!-- container -->
+	<div id="container" class="container">
+        <div class="split sub_tit">
+            <h1 class="cell tit_deps1">3월 24일 화요일 유입처 별 디비 카운트</h1>
+        </div><!-- //sub_tit -->
+        <div class="main_box_btns mem_btns" id="counter_area">
+            <div class="main_box btn_box total">
+                <dl>
+                    <dt>합계</dt>
+                    <dd class="cont">17<small class="txt">건</small></dd>
+                </dl>
+            </div>
+            <div class="main_box btn_box">
+                <dl>
+                    <dt>오토_M</dt>
+                    <dd class="cont">2<small class="txt">건</small></dd>
+                </dl>
+            </div>
+            <div class="main_box btn_box">
+                <dl>
+                    <dt>오토_PC</dt>
+                    <dd class="cont">12<small class="txt">건</small></dd>
+                </dl>
+            </div>
+            <div class="main_box btn_box">
+                <dl>
+                    <dt>오토_콜</dt>
+                    <dd class="cont">2<small class="txt">건</small></dd>
+                </dl>
+            </div>
+            <div class="main_box btn_box">
+                <dl>
+                    <dt>연애인_M</dt>
+                    <dd class="cont">2<small class="txt">건</small></dd>
+                </dl>
+            </div>
+            <div class="main_box btn_box">
+                <dl>
+                    <dt>연애인_PC</dt>
+                    <dd class="cont">2<small class="txt">건</small></dd>
+                </dl>
+            </div>
+            <div class="main_box btn_box">
+                <dl>
+                    <dt>연애인_콜</dt>
+                    <dd class="cont">2<small class="txt">건</small></dd>
+                </dl>
+            </div>
+            <div class="main_box btn_box">
+                <dl>
+                    <dt>오토_M</dt>
+                    <dd class="cont">2<small class="txt">건</small></dd>
+                </dl>
+            </div>
+            <div class="main_box btn_box">
+                <dl>
+                    <dt>오토_PC</dt>
+                    <dd class="cont">12<small class="txt">건</small></dd>
+                </dl>
+            </div>
+            <div class="main_box btn_box">
+                <dl>
+                    <dt>오토_콜</dt>
+                    <dd class="cont">2<small class="txt">건</small></dd>
+                </dl>
+            </div>
+            <div class="main_box btn_box">
+                <dl>
+                    <dt>연애인_M</dt>
+                    <dd class="cont">2<small class="txt">건</small></dd>
+                </dl>
+            </div>
+            <div class="main_box btn_box">
+                <dl>
+                    <dt>연애인_PC</dt>
+                    <dd class="cont">2<small class="txt">건</small></dd>
+                </dl>
+            </div>
+            <div class="main_box btn_box">
+                <dl>
+                    <dt>연애인_콜</dt>
+                    <dd class="cont">2<small class="txt">건</small></dd>
+                </dl>
+            </div>
+        </div>
+        <!-- //card cont -->
+        <div class="split">
+            <div class="cell vt w50 pr">
+                <div class="split tit_area">
+                    <h2 class="cell tit_deps2">오늘 상담 카운트</h2>
+                </div>
+                <div class="tbl_sheet hAuto">
+                    <!-- table_col -->
+                    <div class="tbl_col">
+                        <table class="tbl" id="example1">
+                            <thead>
+                                <tr>
+                                    <th>이름</th>
+                                    <th>상담예약 수</th>
+                                    <th>상담 횟수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">7</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">2</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">15</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">8</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">4</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="cell vt w50 pl">
+                <div class="split tit_area">
+                    <h2 class="cell tit_deps2">이번 달 현황판</h2>
+                </div>
+                <div class="tbl_sheet hAuto">
+                    <!-- table_col -->
+                    <div class="tbl_col">
+                        <table class="tbl" id="example2">
+                            <colgroup>
+                                <col style="width:100px;" />
+                                <col style="width:100px;" />
+                                <col style="width:100px;" />
+                                <col style="width:100px;" />
+                                <col style="width:100px;" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">이름</th>
+                                    <th colspan="2">댓수</th>
+                                    <th colspan="2">상담 횟수</th>
+                                </tr>
+                                <tr>
+                                    <th>렌트</th>
+                                    <th>리스</th>
+                                    <th>렌트</th>
+                                    <th>리스</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">7</td>
+                                    <td class="tc">3</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">2</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                    <td class="tc">15</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                    <td class="tc">8</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                    <td class="tc">1</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">4</td>
+                                    <td class="tc">3</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="tc">김길동</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                    <td class="tc">5</td>
+                                    <td class="tc">3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<!-- //container -->
+
+</div><!--// wrap -->
+
+<!-- 퍼블 레이아웃용 스크립트 개발시 삭제 -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script src="../libs/ui.js"></script>
+<script>
+    w3IncludeHTML();
+
+    $(document).ready( function(){  
+
+        $("#counter_area").mCustomScrollbar({
+            axis:"x",
+            advanced:{autoExpandHorizontalScroll:true}
+        });
+
+	  // Data Table
+	  $('#example1').dataTable( {
+            responsive: true,
+            paging:false,
+            filter:false,
+            info:false
+		} );
+	  // Data Table
+	  $('#example2').dataTable( {
+            responsive: true,
+            paging:false,
+            filter:false,
+            info:false
+		} );
+	});
+</script>
+<!-- //퍼블 레이아웃용 스크립트 개발시 삭제 -->
+</body>
+</html>

@@ -155,7 +155,7 @@ a.txt_overflow{display:block;}
 .mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_draggerRail,
 .mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{width:100%;height:12px;margin:2px 0;}
 .mCustomScrollBox { position:relative;overflow:hidden;height:100%;max-width:100%;outline:none;direction:ltr;}
-.mCSB_inside > .mCSB_container {padding-right:15px;}
+/* .mCSB_inside > .mCSB_container {padding-right:15px;} */
 .mCSB_container {overflow:hidden;width:auto;height:auto;}
 
 /* 영역공통 */
@@ -1301,7 +1301,7 @@ a.txt_overflow{display:block;}
 .main_cont_area{overflow:hidden;/*height: 441px;*/}
 .main_cont_area > [class*='main_box']{margin-bottom:10px;}
 /*.main_cont_area > [class*='main_box']:nth-child(even){float:right;}*/
-.main_box{float:left;width:49.4%;margin-left:0.6%;border:1px solid #ddd;border-radius:2px;box-shadow:0 0 2px #f2f2f2;box-sizing:border-box;}
+.main_box{margin-left:0.6%;}
 .main_box .split{height:39px;padding:0 10px 0 0;border-bottom:1px solid #eaeaea;background-color:#fafafb;}
 .main_box .tab_list li{width:110px;height:39px;margin-bottom:-1px;border-right:1px solid #eaeaea;/*border-bottom:1px solid #eaeaea;*/ color:#4a5d6f;font-size:15px;line-height:39px;text-align:center;box-sizing:border-box;cursor:pointer;}
 .main_box  .tab_list li.on{background-color:#fff;border-bottom:0;}
@@ -1336,18 +1336,19 @@ a.txt_overflow{display:block;}
 .main_chart{height:170px;}
 
 .main_box_btns{overflow:hidden;width:50%;}
-.main_box_btns .main_box{overflow:hidden;float:left;width:24%;height:160px;margin-left:1%;border-radius:5px;background-color:#fff;text-align:center;}
-.main_box_btns .btn_box{position:relative;cursor:pointer;}
+.main_box_btns .main_box{overflow:hidden;float:left;width:24%;height:120px;margin-left:1%;border-radius:5px;background-color:#fff;text-align:center;}
+.main_box_btns .btn_box{position:relative;}
 .main_box_btns .btn_box:before{display:block;position:absolute;top:0;left:50%;content:"";width:10px;height:12px;margin-left:-6px;background:url(../images/bg_ico_cm.png) no-repeat -369px 0;}
-.main_box_btns .btn_box.half{height:79px;}
+.main_box_btns .btn_box.half{height:60px;}
 .main_box_btns .btn_box.half dt{height:auto;}
 
 .main_box_btns .main_box li + li{border-top:1px dashed #ddd;background-color:#fafafb}
 .main_box_btns .main_box li + li:before{bottom:0;top:auto;}
-/*.main_box_btns .main_box:first-child{margin-left:0;}*/
-.main_box_btns .main_box dt{height:79px;padding-top:18px;color:#434957;font-size:16px;box-sizing:border-box;}
+.main_box_btns .main_box:first-child{margin-left:0;}
+.main_box_btns.mem_btns .main_box dl {margin:0;border:1px solid #ddd;border-radius:2px;box-shadow:0 0 2px #f2f2f2;box-sizing:border-box;}
+.main_box_btns .main_box dt{height:60px;line-height:40px;padding-top:16px;color:#434957;font-size:16px;box-sizing:border-box;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;padding:16px 5px 0 5px;}
 .main_box_btns .main_box .date{color:#5988b2;font-size:13px;font-family:notokr-DemiLight;line-height:29px;}
-.main_box_btns .main_box .cont{position:relative;height:79px;border-top:1px dashed #ddd;background-color:#fafafb;color:#e93e3e;font-family:"Century Gothic";font-size:26px;line-height:1.3;box-sizing:border-box;}
+.main_box_btns .main_box .cont{position:relative;height:60px;border-top:1px dashed #ddd;background-color:#fafafb;color:#e93e3e;font-family:"Century Gothic";font-size:26px;line-height:60px;box-sizing:border-box;}
 .main_box_btns .main_box .cont .tit{display:block;position:relative;margin-top:16px;padding-top:6px;border:0;color:#888;font-size:11px;font-family:notokr-DemiLight;}
 .main_box_btns .main_box .cont .tit:before{display:block;content:"";position:absolute;top:0;left:50%;width:10px;height:1px;margin-left:-5px;background-color:#434957;}
 .main_box_btns .main_box .cont .txt{padding:0 4px;color:#888;font-size:14px;font-family:notokr-DemiLight;}
@@ -1355,22 +1356,26 @@ a.txt_overflow{display:block;}
 .main_box_btns .main_box .cont .img_logo img{width:100%;}
 .main_box_btns .main_box .cont .home_name{display:block;margin-top:60px;color:#666;font-size:10.5px;font-family:notokr-DemiLight;}
 
-.main_box_btns .btn_box:hover{border-color:transparent;background-color:#5482af;transition:background-color .2s linear;}
-.main_box_btns .btn_box:hover dt,
-.main_box_btns .btn_box:hover .date,
-.main_box_btns .btn_box:hover .cont,
-.main_box_btns .btn_box:hover .cont small {color:#fff;background-color:transparent;}
-.main_box_btns .btn_box:hover .cont{border-color:rgba(183,200,214,.5);}
-.main_box_btns .btn_box:hover .cont .tit:before{background-color:#fff;}
-.main_box_btns .btn_box:hover:before{background-position:-14px 0;}
+.main_box_btns .btn_box.total dl {border-color:transparent;background-color:#5482af;transition:background-color .2s linear;}
+.main_box_btns .btn_box.total dt,
+.main_box_btns .btn_box.total .date,
+.main_box_btns .btn_box.total .cont,
+.main_box_btns .btn_box.total .cont small {color:#fff;background-color:transparent;}
+.main_box_btns .btn_box.total .cont{border-color:rgba(183,200,214,.5);}
+.main_box_btns .btn_box.total .cont .tit:before{background-color:#fff;}
+.main_box_btns .btn_box.total:before{background-position:-14px 0;}
 
 .main_box_btns.mem_btns{width:100% !important;}
-.main_box_btns.mem_btns .main_box{width:12%;max-width:104px;margin-left:0.4%;margin-bottom:10px;}
+.main_box_btns.mem_btns .main_box {width:120px;height:130px;margin-left:0;padding:0 5px;}
+.main_box_btns.mem_btns .main_box:first-child {padding-left:0;}
+.main_box_btns.mem_btns .main_box:last-child {padding-right:0;}
+
+.main_box_btns + .split {padding-top:15px;}
 
 .main_dr_cont{height:230px;}
 .main_dr_cont .main_dr_list {background-color:#eaeaea;box-sizing:border-box;border-top:1px solid #eaeaea;}
 .main_dr_cont .main_dr_list:after {content:"";display:block;clear:both;}
-.main_dr_cont .main_dr_list li {float:left;width:33.333333%;line-height:30px;text-align:center;cursor:pointer;}
+.main_dr_cont .main_dr_list li {float:left;width:33.333333%;line-height:30px;text-align:center;}
 .main_dr_cont .main_dr_list li span {display:inline-block;font-size:14px;line-height:20px;}
 .main_dr_cont .main_dr_list li.select_week {background-color:#fff;}
 .main_dr_cont .main_dr_list li.select_week span {border-bottom:1px solid #788796;}
